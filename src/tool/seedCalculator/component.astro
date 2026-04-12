@@ -1,0 +1,806 @@
+---
+import { seedCalculator } from './index';
+import { CROPS, SPEED_OPTIONS } from './logic';
+
+const { locale = 'es' } = Astro.props;
+const content = await seedCalculator.i18n[locale as keyof typeof seedCalculator.i18n]?.();
+if (!content) return null;
+const { ui } = content;
+
+const cropBg: Record<string, string> = {
+  corn: 'rgba(234,179,8,0.15)',
+  silage: 'rgba(101,163,13,0.15)',
+  sunflower: 'rgba(249,115,22,0.15)',
+  sorghum: 'rgba(180,83,9,0.15)',
+  soy: 'rgba(22,163,74,0.15)',
+  beet: 'rgba(244,63,94,0.15)',
+  rapeseed: 'rgba(202,138,4,0.15)',
+};
+
+const cropColor: Record<string, string> = {
+  corn: '#a16207',
+  silage: '#3f6212',
+  sunflower: '#c2410c',
+  sorghum: '#92400e',
+  soy: '#166534',
+  beet: '#be123c',
+  rapeseed: '#92400e',
+};
+
+const cropName: Record<string, string> = {
+  corn: ui.cropCorn,
+  silage: ui.cropSilage,
+  sunflower: ui.cropSunflower,
+  sorghum: ui.cropSorghum,
+  soy: ui.cropSoy,
+  beet: ui.cropBeet,
+  rapeseed: ui.cropRapeseed,
+};
+
+const cropNote: Record<string, string> = {
+  corn: ui.noteCorn,
+  silage: ui.noteSilage,
+  sunflower: ui.noteSunflower,
+  sorghum: ui.noteSorghum,
+  soy: ui.noteSoy,
+  beet: ui.noteBeet,
+  rapeseed: ui.noteRapeseed,
+};
+---
+
+<calc-sembradora
+  class="sc-wrap"
+  data-status-standby={ui.statusStandby}
+  data-status-volumetric={ui.statusVolumetric}
+  data-status-optimal={ui.statusOptimal}
+  data-status-high-speed={ui.statusHighSpeed}
+  data-status-plate-limiter={ui.statusPlateLimiter}
+>
+  <section class="sc-section">
+    <h2 class="sc-section-head">
+      <span class="sc-step-badge">1</span>
+      {ui.headCrop}
+    </h2>
+
+    <div class="sc-crop-grid">
+      {CROPS.map((c) => (
+        <button
+          class="crop-btn"
+          data-id={c.id}
+          data-pop={c.pop}
+          data-row={c.row}
+        >
+          <div class="sc-crop-icon" style={`background-color:${cropBg[c.id]}`}>
+            <iconify-icon
+              icon={c.icon}
+              class="sc-crop-glyph"
+              style={`color:${cropColor[c.id]}`}
+              width="24"
+              height="24"
+              aria-hidden="true"
+            ></iconify-icon>
+          </div>
+          <span class="sc-crop-name">{cropName[c.id]}</span>
+          <span class="sc-crop-note">{cropNote[c.id]}</span>
+          <div class="sc-selection-ring"></div>
+        </button>
+      ))}
+    </div>
+  </section>
+
+  <div class="sc-dashboard" data-disabled id="mainDash">
+    <div class="sc-params-col">
+      <h2 class="sc-section-head">
+        <span class="sc-step-badge">2</span>
+        {ui.headParams}
+      </h2>
+
+      <div class="sc-params-card">
+        <div class="sc-slider-group">
+          <label class="sc-slider-label">
+            {ui.labelPopulation}
+            <span class="sc-label-unit">{ui.unitSeedsHa}</span>
+          </label>
+          <div class="sc-slider-row">
+            <input
+              type="range"
+              id="inPop"
+              min="10000"
+              max="600000"
+              step="1000"
+              class="sc-range"
+            />
+            <span id="valPop" class="sc-range-val">0</span>
+          </div>
+        </div>
+
+        <div class="sc-slider-group">
+          <label class="sc-slider-label">
+            {ui.labelRowWidth}
+            <span class="sc-label-unit">{ui.unitCm}</span>
+          </label>
+          <div class="sc-slider-row">
+            <input
+              type="range"
+              id="inRow"
+              min="15"
+              max="100"
+              step="1"
+              class="sc-range"
+            />
+            <span id="valRow" class="sc-range-val">0</span>
+          </div>
+        </div>
+
+        <div class="sc-speed-group">
+          <label class="sc-slider-label">
+            {ui.labelWorkSpeed}
+            <span class="sc-label-unit sc-label-unit-speed">{ui.unitKmh}</span>
+          </label>
+          <div class="sc-speed-bar">
+            {SPEED_OPTIONS.map((s) => (
+              <button class="speed-btn" data-speed={s}>{s}</button>
+            ))}
+          </div>
+          <input type="hidden" id="inSpeed" value="6" />
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-analysis-col">
+      <h2 class="sc-section-head">
+        <span class="sc-step-badge">3</span>
+        {ui.headAnalysis}
+      </h2>
+
+      <div class="sc-result-card">
+        <div class="sc-result-main">
+          <div class="sc-result-label">{ui.labelCalibration}</div>
+          <div class="sc-result-value-row">
+            <span id="outSpacing" class="sc-result-big">--</span>
+            <span class="sc-result-unit">cm</span>
+          </div>
+          <p class="sc-result-desc">{ui.labelSpacingDesc}</p>
+        </div>
+
+        <div class="sc-hz-card">
+          <div class="sc-hz-header">
+            <iconify-icon icon="mdi:engine" class="sc-hz-icon"></iconify-icon>
+            <span class="sc-hz-title">{ui.labelMachineStress}</span>
+          </div>
+          <div class="sc-hz-track">
+            <div id="hzBar" class="sc-hz-bar"></div>
+          </div>
+          <div class="sc-hz-footer">
+            <span id="hzVal" class="sc-hz-val">0 Hz</span>
+            <span id="hzStatus" class="sc-hz-status">{ui.statusStandby}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-metrics-grid">
+        <div class="sc-metric-card">
+          <span id="outSeedsM" class="sc-metric-val">--</span>
+          <span class="sc-metric-label">{ui.labelSeedsM}</span>
+        </div>
+        <div class="sc-metric-card">
+          <span id="outPlantsM2" class="sc-metric-val">--</span>
+          <span class="sc-metric-label">{ui.labelPlantsM2}</span>
+        </div>
+        <div class="sc-metric-card">
+          <span id="outSpeedMs" class="sc-metric-val">--</span>
+          <span class="sc-metric-label">{ui.labelSpeedMs}</span>
+        </div>
+        <div class="sc-metric-card sc-metric-card-amber">
+          <span id="outHaBag" class="sc-metric-val sc-metric-val-amber">--</span>
+          <span class="sc-metric-label sc-metric-label-amber">{ui.labelHaBag}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</calc-sembradora>
+
+<style>
+  .sc-wrap {
+    --sc-bg: #fff;
+    --sc-bg-params: #fff;
+    --sc-bg-speed: #f4f4f5;
+    --sc-border: #e4e4e7;
+    --sc-text: #18181b;
+    --sc-text-muted: #71717a;
+    --sc-accent: #059669;
+    --sc-accent-light: #d1fae5;
+    --sc-result-from: #059669;
+    --sc-result-to: #0d9488;
+    --sc-badge-bg: #000;
+    --sc-badge-text: #fff;
+    --sc-amber-bg: #fffbeb;
+    --sc-amber-border: #fde68a;
+    --sc-amber-text: #d97706;
+    --sc-range-track: #e4e4e7;
+
+    display: block;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 1rem;
+    user-select: none;
+  }
+
+  :global(.theme-dark) .sc-wrap {
+    --sc-bg: #18181b;
+    --sc-bg-params: #18181b;
+    --sc-bg-speed: #27272a;
+    --sc-border: #3f3f46;
+    --sc-text: #fff;
+    --sc-text-muted: #a1a1aa;
+    --sc-badge-bg: #fff;
+    --sc-badge-text: #000;
+    --sc-amber-bg: rgba(120,53,15,0.1);
+    --sc-amber-border: #92400e;
+    --sc-amber-text: #fbbf24;
+    --sc-range-track: #3f3f46;
+  }
+
+  .sc-section {
+    margin-bottom: 3rem;
+  }
+
+  .sc-section-head {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--sc-text);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sc-step-badge {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    background: var(--sc-badge-bg);
+    color: var(--sc-badge-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .sc-crop-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  @media (min-width: 768px) {
+    .sc-crop-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .sc-crop-grid {
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+
+  .crop-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 1rem;
+    background: var(--sc-bg);
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .crop-btn:hover {
+    border-color: var(--sc-border);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .sc-crop-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    transition: filter 0.15s;
+  }
+
+  .sc-crop-glyph {
+    font-size: 1.5rem;
+    display: block;
+  }
+
+  .sc-crop-name {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--sc-text);
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .sc-crop-note {
+    font-size: 0.625rem;
+    color: var(--sc-text-muted);
+    text-align: center;
+    margin-top: 0.25rem;
+    line-height: 1.2;
+  }
+
+  .sc-selection-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.15s, transform 0.15s;
+    pointer-events: none;
+  }
+
+  :global(.crop-btn.active) .sc-selection-ring {
+    opacity: 1;
+    transform: scale(1);
+    border-width: 3px;
+    border-color: #10b981;
+  }
+
+  .sc-dashboard {
+    display: grid;
+    gap: 2rem;
+    transition: opacity 0.5s;
+  }
+
+  @media (min-width: 1024px) {
+    .sc-dashboard {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  .sc-dashboard[data-disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .sc-params-col,
+  .sc-analysis-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .sc-params-card {
+    background: var(--sc-bg-params);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid var(--sc-border);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .sc-slider-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sc-slider-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--sc-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .sc-label-unit {
+    color: var(--sc-accent);
+  }
+
+  .sc-label-unit-speed {
+    color: #3b82f6;
+  }
+
+  .sc-slider-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .sc-range {
+    flex: 1;
+    height: 0.5rem;
+    background: var(--sc-range-track);
+    border-radius: 9999px;
+    appearance: none;
+    cursor: pointer;
+    accent-color: var(--sc-text);
+  }
+
+  .sc-range-val {
+    width: 6rem;
+    text-align: right;
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: var(--sc-text);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sc-speed-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .sc-speed-bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    background: var(--sc-bg-speed);
+    border-radius: 1rem;
+  }
+
+  .speed-btn {
+    flex: 1;
+    padding: 0.75rem 0;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--sc-text-muted);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+  }
+
+  .speed-btn:hover {
+    background: var(--sc-bg);
+    color: var(--sc-text);
+  }
+
+  :global(.speed-btn.active) {
+    background-color: #059669;
+    color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(5,150,105,0.4);
+  }
+
+  .sc-result-card {
+    background: linear-gradient(to top right, var(--sc-result-from), var(--sc-result-to));
+    color: #fff;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 20px 40px rgba(5,150,105,0.25);
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .sc-result-card {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+
+  .sc-result-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.25rem;
+  }
+
+  .sc-result-value-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .sc-result-big {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .sc-result-unit {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .sc-result-desc {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .sc-hz-card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .sc-hz-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .sc-hz-icon {
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .sc-hz-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: #fff;
+  }
+
+  .sc-hz-track {
+    position: relative;
+    height: 1rem;
+    background: rgba(0,0,0,0.2);
+    border-radius: 9999px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+  }
+
+  .sc-hz-bar {
+    height: 100%;
+    background: #fff;
+    border-radius: 9999px;
+    width: 0;
+    transition: width 0.3s;
+  }
+
+  :global(.sc-hz-bar[data-state="volumetric"]) {
+    background: #3b82f6;
+    box-shadow: 0 0 10px rgba(59,130,246,0.5);
+  }
+
+  :global(.sc-hz-bar[data-state="optimal"]) {
+    background: #34d399;
+    box-shadow: 0 0 10px rgba(52,211,153,0.5);
+  }
+
+  :global(.sc-hz-bar[data-state="high"]) {
+    background: #facc15;
+    box-shadow: 0 0 10px rgba(250,204,21,0.5);
+  }
+
+  :global(.sc-hz-bar[data-state="limit"]) {
+    background: #ef4444;
+    box-shadow: 0 0 10px rgba(239,68,68,0.5);
+  }
+
+  .sc-hz-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .sc-hz-val {
+    color: rgba(255,255,255,0.75);
+  }
+
+  :global(.sc-hz-val[data-state="volumetric"]) { color: #bfdbfe; }
+  :global(.sc-hz-val[data-state="optimal"]) { color: #6ee7b7; }
+  :global(.sc-hz-val[data-state="high"]) { color: #fef08a; }
+  :global(.sc-hz-val[data-state="limit"]) { color: #fca5a5; }
+
+  .sc-hz-status {
+    color: rgba(255,255,255,0.75);
+  }
+
+  .sc-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .sc-metrics-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .sc-metric-card {
+    background: var(--sc-bg);
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--sc-border);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .sc-metric-card-amber {
+    background: var(--sc-amber-bg);
+    border-color: var(--sc-amber-border);
+  }
+
+  .sc-metric-val {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: var(--sc-text);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sc-metric-val-amber {
+    color: var(--sc-amber-text);
+  }
+
+  .sc-metric-label {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--sc-text-muted);
+  }
+
+  .sc-metric-label-amber {
+    color: var(--sc-amber-text);
+    opacity: 0.7;
+  }
+</style>
+
+<script>
+  class CalcSembradora extends HTMLElement {
+    els: {
+      mainDash?: HTMLElement | null;
+      inPop?: HTMLInputElement | null;
+      valPop?: HTMLElement | null;
+      inRow?: HTMLInputElement | null;
+      valRow?: HTMLElement | null;
+      speedBtns?: NodeListOf<HTMLElement>;
+      cropBtns?: NodeListOf<HTMLElement>;
+      outSpacing?: HTMLElement | null;
+      hzBar?: HTMLElement | null;
+      hzVal?: HTMLElement | null;
+      hzStatus?: HTMLElement | null;
+      outSeedsM?: HTMLElement | null;
+      outPlantsM2?: HTMLElement | null;
+      outSpeedMs?: HTMLElement | null;
+      outHaBag?: HTMLElement | null;
+    } = {};
+
+    state = { pop: 0, row: 0, speed: 6 };
+
+    connectedCallback() {
+      this.setupElements();
+      this.setupEvents();
+      const def = Array.from(this.els.speedBtns ?? []).find(
+        (b) => (b as HTMLElement).dataset.speed === '6'
+      ) as HTMLElement | undefined;
+      if (def) this.setSpeed(def);
+    }
+
+    setupElements() {
+      const q = <T extends HTMLElement>(s: string) => this.querySelector<T>(s);
+      this.els = {
+        mainDash: q<HTMLElement>('#mainDash'),
+        inPop: q<HTMLInputElement>('#inPop'),
+        valPop: q('#valPop'),
+        inRow: q<HTMLInputElement>('#inRow'),
+        valRow: q('#valRow'),
+        speedBtns: this.querySelectorAll<HTMLElement>('.speed-btn'),
+        cropBtns: this.querySelectorAll<HTMLElement>('.crop-btn'),
+        outSpacing: q('#outSpacing'),
+        hzBar: q('#hzBar'),
+        hzVal: q('#hzVal'),
+        hzStatus: q('#hzStatus'),
+        outSeedsM: q('#outSeedsM'),
+        outPlantsM2: q('#outPlantsM2'),
+        outSpeedMs: q('#outSpeedMs'),
+        outHaBag: q('#outHaBag'),
+      };
+    }
+
+    setupEvents() {
+      this.els.cropBtns?.forEach((btn) => {
+        btn.addEventListener('click', () => this.selectCrop(btn));
+      });
+      this.els.inPop?.addEventListener('input', (e) => {
+        this.updateParam('pop', parseInt((e.target as HTMLInputElement).value));
+      });
+      this.els.inRow?.addEventListener('input', (e) => {
+        this.updateParam('row', parseInt((e.target as HTMLInputElement).value));
+      });
+      this.els.speedBtns?.forEach((btn) => {
+        btn.addEventListener('click', () => this.setSpeed(btn));
+      });
+    }
+
+    setText(el: HTMLElement | null | undefined, val: string) {
+      if (el) el.textContent = val;
+    }
+
+    selectCrop(btn: HTMLElement) {
+      if (this.els.mainDash) delete this.els.mainDash.dataset.disabled;
+      this.els.cropBtns?.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      const pop = parseInt(btn.dataset.pop ?? '0');
+      const row = parseInt(btn.dataset.row ?? '0');
+      if (this.els.inPop) this.els.inPop.value = String(pop);
+      this.updateParam('pop', pop);
+      if (this.els.inRow) this.els.inRow.value = String(row);
+      this.updateParam('row', row);
+    }
+
+    setSpeed(btn: HTMLElement) {
+      this.els.speedBtns?.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      this.state.speed = parseInt(btn.dataset.speed ?? '6');
+      this.calc();
+    }
+
+    updateParam(key: 'pop' | 'row', val: number) {
+      this.state[key] = val;
+      if (key === 'pop') this.setText(this.els.valPop, val.toLocaleString());
+      if (key === 'row') this.setText(this.els.valRow, String(val));
+      this.calc();
+    }
+
+    resolveHzState(hz: number): { state: string; label: string; pct: number } {
+      const d = this.dataset;
+      const pct60 = Math.min(100, (hz / 60) * 100);
+      if (hz > 60) return { state: 'volumetric', label: d.statusVolumetric as string, pct: Math.min(100, (hz / 400) * 100) };
+      if (hz < 25) return { state: 'optimal', label: d.statusOptimal as string, pct: pct60 };
+      if (hz < 50) return { state: 'high', label: d.statusHighSpeed as string, pct: pct60 };
+      return { state: 'limit', label: d.statusPlateLimiter as string, pct: pct60 };
+    }
+
+    setHzState(state: string, label: string, pct: number) {
+      if (this.els.hzBar) {
+        this.els.hzBar.style.width = `${pct}%`;
+        this.els.hzBar.dataset.state = state;
+      }
+      if (this.els.hzVal) this.els.hzVal.dataset.state = state;
+      this.setText(this.els.hzStatus, label);
+    }
+
+    calc() {
+      const { pop, row, speed } = this.state;
+      if (pop <= 0 || row <= 0) return;
+      const spacing = 10_000_000 / (pop * row);
+      const hz = (speed * 27.778) / spacing;
+      const { state, label, pct } = this.resolveHzState(hz);
+      this.setText(this.els.outSpacing, spacing.toFixed(1));
+      this.setText(this.els.hzVal, hz.toFixed(1) + ' Hz');
+      this.setHzState(state, label, pct);
+      this.setText(this.els.outSeedsM, (100 / spacing).toFixed(1));
+      this.setText(this.els.outPlantsM2, (pop / 10000).toFixed(1));
+      this.setText(this.els.outSpeedMs, (speed / 3.6).toFixed(1));
+      this.setText(this.els.outHaBag, (80000 / pop).toFixed(2));
+    }
+  }
+
+  customElements.define('calc-sembradora', CalcSembradora);
+</script>

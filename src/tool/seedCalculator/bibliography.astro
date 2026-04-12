@@ -1,0 +1,8 @@
+---
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { seedCalculator } from './index';
+
+const { locale = 'es' } = Astro.props;
+const content = await seedCalculator.i18n[locale as keyof typeof seedCalculator.i18n]?.();
+---
+{content && <SharedBibliography links={content.bibliography} />}

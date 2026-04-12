@@ -1,11 +1,17 @@
 ---
+import { Icon } from 'astro-icon/components';
 import { seedCalculator } from './index';
 import { CROPS, SPEED_OPTIONS } from './logic';
 
-const { locale = 'es' } = Astro.props;
-const content = await seedCalculator.i18n[locale as keyof typeof seedCalculator.i18n]?.();
-if (!content) return null;
-const { ui } = content;
+const { ui: propUi, locale = 'es' } = Astro.props;
+let ui = propUi;
+
+if (!ui) {
+  const content = await seedCalculator.i18n[locale as keyof typeof seedCalculator.i18n]?.();
+  ui = content?.ui;
+}
+
+if (!ui) return null;
 
 const cropBg: Record<string, string> = {
   corn: 'rgba(234,179,8,0.15)',
@@ -71,14 +77,14 @@ const cropNote: Record<string, string> = {
           data-row={c.row}
         >
           <div class="sc-crop-icon" style={`background-color:${cropBg[c.id]}`}>
-            <iconify-icon
-              icon={c.icon}
+            <Icon
+              name={c.icon}
               class="sc-crop-glyph"
               style={`color:${cropColor[c.id]}`}
               width="24"
               height="24"
               aria-hidden="true"
-            ></iconify-icon>
+            />
           </div>
           <span class="sc-crop-name">{cropName[c.id]}</span>
           <span class="sc-crop-note">{cropNote[c.id]}</span>
@@ -165,7 +171,7 @@ const cropNote: Record<string, string> = {
 
         <div class="sc-hz-card">
           <div class="sc-hz-header">
-            <iconify-icon icon="mdi:engine" class="sc-hz-icon"></iconify-icon>
+            <Icon name="mdi:engine" class="sc-hz-icon" />
             <span class="sc-hz-title">{ui.labelMachineStress}</span>
           </div>
           <div class="sc-hz-track">

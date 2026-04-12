@@ -1,0 +1,14 @@
+---
+import { SEORenderer } from '@jjlmoya/utils-shared';
+import { digitalCarbon } from './index';
+import type { KnownLocale } from '../../types';
+
+interface Props {
+  locale: KnownLocale;
+}
+
+const { locale } = Astro.props;
+const content = await digitalCarbon.i18n[locale]!();
+---
+
+<SEORenderer content={{ locale: locale as string, sections: content.seo }} />

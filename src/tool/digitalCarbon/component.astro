@@ -1,0 +1,582 @@
+---
+import { Icon } from 'astro-icon/components';
+import { digitalCarbon } from './index';
+
+const { ui: propUi, locale = 'es' } = Astro.props;
+let ui = propUi;
+
+if (!ui) {
+  const content = await digitalCarbon.i18n[locale as keyof typeof digitalCarbon.i18n]?.();
+  ui = content?.ui;
+}
+
+if (!ui) return null;
+---
+
+<digital-carbon class="dc-wrap" data-ui={JSON.stringify(ui)}>
+  <div class="dc-container">
+    <div class="dc-inputs">
+      <section class="dc-section">
+        <h2 class="dc-section-head">
+          <Icon name="mdi:magnify" class="dc-head-icon" />
+          {ui.headInputs}
+        </h2>
+
+        <div class="dc-field">
+          <label for="urlInput" class="dc-label">{ui.labelUrl}</label>
+          <div class="dc-search-box">
+             <input type="url" id="urlInput" class="dc-input" placeholder={ui.placeholderUrl} required />
+             <button id="btnAnalyze" class="dc-btn-primary">
+                <span class="btn-text">{ui.btnAnalyze}</span>
+                <span class="btn-loader dc-hidden"><Icon name="mdi:loading" class="dc-spin" /></span>
+             </button>
+          </div>
+          <p id="errorMsg" class="dc-error dc-hidden"></p>
+        </div>
+      </section>
+    </div>
+
+    <div id="resultsWrapper" class="dc-results-wrapper dc-hidden">
+      <div id="resultsGrid" class="dc-results-grid">
+          <div class="dc-result-card main">
+              <div class="dc-rating-badge" id="ratingBadge">A+</div>
+              <div class="dc-rating-info">
+                  <h3 class="dc-rating-title">{ui.resultTitle}</h3>
+                  <p id="ratingDesc" class="dc-rating-desc"></p>
+              </div>
+          </div>
+
+          <div class="dc-stats-grid">
+              <div class="dc-stat-item">
+                  <span class="dc-stat-label">{ui.co2PerVisit}</span>
+                  <div class="dc-stat-value"><span id="resCo2">0</span><small>g</small></div>
+              </div>
+              <div class="dc-stat-item">
+                  <span class="dc-stat-label">{ui.energyPerVisit}</span>
+                  <div class="dc-stat-value"><span id="resEnergy">0</span><small>Wh</small></div>
+              </div>
+              <div class="dc-stat-item full">
+                  <span class="dc-stat-label">{ui.co2Annual}</span>
+                  <div class="dc-stat-value"><span id="resCo2Year">0</span><small>kg</small></div>
+              </div>
+          </div>
+      </div>
+
+      <div class="dc-sidebar">
+          <div id="impactBox" class="dc-impact-box">
+              <h3 class="dc-impact-title">{ui.impactTitle}</h3>
+              <div class="dc-impact-items">
+                  <div class="dc-impact-card">
+                      <Icon name="mdi:tree-outline" class="dc-impact-icon tree" />
+                      <div class="dc-impact-content">
+                          <span id="resTrees" class="dc-impact-val">0</span>
+                          <span class="dc-impact-label">{ui.treesLabel}</span>
+                      </div>
+                  </div>
+                  <div class="dc-impact-card">
+                      <Icon name="mdi:car-side" class="dc-impact-icon car" />
+                      <div class="dc-impact-content">
+                          <span id="resKm" class="dc-impact-val">0</span>
+                          <span class="dc-impact-label">{ui.kmLabel}</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div id="tipsBox" class="dc-tips-box">
+              <h3 class="dc-tips-title">{ui.headTips}</h3>
+              <ul id="tipsList" class="dc-tips-list"></ul>
+          </div>
+          
+          <div class="dc-decoration">
+              <Icon name="mdi:leaf" />
+          </div>
+      </div>
+    </div>
+  </div>
+</digital-carbon>
+
+<style>
+  .dc-wrap {
+    --dc-bg: #fff;
+    --dc-bg-alt: #f8fafc;
+    --dc-border: #e2e8f0;
+    --dc-text: #0f172a;
+    --dc-text-muted: #64748b;
+    --dc-accent: #10b981;
+    --dc-accent-hover: #059669;
+    --dc-error: #ef4444;
+
+    display: block;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  :global(.theme-dark) .dc-wrap {
+    --dc-bg: #0f172a;
+    --dc-bg-alt: #1e293b;
+    --dc-border: #334155;
+    --dc-text: #f1f5f9;
+    --dc-text-muted: #94a3b8;
+  }
+
+  .dc-container {
+    background: var(--dc-bg);
+    border-radius: 2rem;
+    border: 1px solid var(--dc-border);
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  :global(.dc-results-wrapper) {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-top: 1px solid var(--dc-border);
+    animation: dc-slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @media (min-width: 1024px) {
+    :global(.dc-results-wrapper) {
+      grid-template-columns: 1.5fr 1fr;
+    }
+  }
+
+  @keyframes dc-slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .dc-inputs {
+    padding: 3rem;
+  }
+
+  .dc-section-head {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--dc-text);
+  }
+
+  .dc-head-icon {
+    font-size: 2rem;
+    color: var(--dc-accent);
+  }
+
+  .dc-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+    color: var(--dc-text-muted);
+  }
+
+  .dc-search-box {
+    display: flex;
+    gap: 1rem;
+    background: var(--dc-bg-alt);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--dc-border);
+  }
+
+  .dc-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1.125rem;
+    color: var(--dc-text);
+    outline: none;
+  }
+
+  .dc-btn-primary {
+    background: var(--dc-accent);
+    color: #fff;
+    border: none;
+    padding: 0 2rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+  }
+
+  .dc-btn-primary:hover {
+    background: var(--dc-accent-hover);
+    transform: translateY(-2px);
+  }
+
+  .dc-btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .dc-spin {
+    animation: dc-spin 1s linear infinite;
+    font-size: 1.5rem;
+  }
+
+  @keyframes dc-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .dc-error {
+    color: var(--dc-error);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+
+  :global(.btn-text.dc-hidden),
+  :global(.btn-loader.dc-hidden) {
+    display: none;
+  }
+
+  :global(.dc-hidden) {
+    display: none;
+  }
+
+  .dc-results-grid {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .dc-result-card.main {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: var(--dc-bg-alt);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--dc-border);
+  }
+
+  .dc-rating-badge {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.25rem;
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: #fff;
+    flex-shrink: 0;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  .dc-rating-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    color: var(--dc-text);
+  }
+
+  .dc-rating-desc {
+    color: var(--dc-text-muted);
+    line-height: 1.5;
+  }
+
+  .dc-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .dc-stat-item {
+    background: var(--dc-bg-alt);
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    border: 1px solid var(--dc-border);
+  }
+
+  .dc-stat-item.full {
+    grid-column: span 2;
+  }
+
+  .dc-stat-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--dc-text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .dc-stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--dc-text);
+  }
+
+  .dc-stat-value small {
+    font-size: 1rem;
+    margin-left: 0.25rem;
+    color: var(--dc-text-muted);
+  }
+
+  .dc-sidebar {
+    background: var(--dc-bg-alt);
+    padding: 3rem;
+    border-left: 1px solid var(--dc-border);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+  }
+
+  @media (max-width: 1023px) {
+    .dc-sidebar {
+      border-left: none;
+      border-top: 1px solid var(--dc-border);
+    }
+  }
+
+  .dc-impact-title {
+    font-size: 1.125rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--dc-text);
+  }
+
+  .dc-impact-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .dc-impact-card {
+    background: var(--dc-bg);
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    border: 1px solid var(--dc-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .dc-impact-icon {
+    font-size: 2.5rem;
+  }
+
+  .dc-impact-icon.tree { color: #059669; }
+  .dc-impact-icon.car { color: #4b5563; }
+
+  .dc-impact-val {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--dc-text);
+  }
+
+  :global(.dc-impact-label) {
+    font-size: 0.75rem;
+    color: var(--dc-text-muted);
+    font-weight: 600;
+  }
+
+  :global(.dc-tips-title) {
+    font-size: 1.125rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--dc-text);
+  }
+
+  :global(.dc-tips-list) {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  :global(.dc-tips-list li) {
+    padding-left: 2rem;
+    position: relative;
+    font-size: 0.9375rem;
+    color: var(--dc-text-muted);
+    line-height: 1.4;
+  }
+
+  :global(.dc-tips-list li::before) {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--dc-accent);
+    font-weight: 900;
+  }
+
+  .dc-decoration {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    opacity: 0.05;
+    color: var(--dc-accent);
+    pointer-events: none;
+  }
+</style>
+
+<script>
+  import { estimatePageSize, buildResult } from './logic';
+  import type { DCFResult } from './logic';
+
+  class DigitalCarbon extends HTMLElement {
+    ui: Record<string, string> = {};
+    elements: { [key: string]: HTMLElement | null } = {};
+
+    connectedCallback() {
+      this.ui = JSON.parse(this.dataset.ui || '{}');
+      this.setupElements();
+      this.setupListeners();
+    }
+
+    setupElements() {
+      this.elements = {
+        input: this.querySelector('#urlInput'),
+        btn: this.querySelector('#btnAnalyze'),
+        btnText: this.querySelector('.btn-text'),
+        btnLoader: this.querySelector('.btn-loader'),
+        error: this.querySelector('#errorMsg'),
+        badge: this.querySelector('#ratingBadge'),
+        ratingDesc: this.querySelector('#ratingDesc'),
+        resCo2: this.querySelector('#resCo2'),
+        resEnergy: this.querySelector('#resEnergy'),
+        resCo2Year: this.querySelector('#resCo2Year'),
+        resTrees: this.querySelector('#resTrees'),
+        resKm: this.querySelector('#resKm'),
+        results: this.querySelector('#resultsWrapper'),
+      };
+    }
+
+    setupListeners() {
+      const btn = this.elements.btn;
+      btn?.addEventListener('click', () => this.analyze());
+      
+      const input = this.elements.input;
+      input?.addEventListener('keypress', (e: KeyboardEvent) => {
+        if (e.key === 'Enter') this.analyze();
+      });
+    }
+
+    async analyze() {
+      const input = this.elements.input as HTMLInputElement;
+      const url = input.value.trim();
+      
+      if (!url || !url.startsWith('http')) {
+        this.showError(this.ui.errorInvalidUrl);
+        return;
+      }
+
+      this.setLoading(true);
+      this.hideError();
+
+      try {
+        const bytes = await estimatePageSize(url);
+        const result = buildResult(url, bytes);
+        this.showResult(result);
+      } catch {
+        this.showError(this.ui.errorFetchFailed);
+      } finally {
+        this.setLoading(false);
+      }
+    }
+
+    setLoading(loading: boolean) {
+      const btn = this.elements.btn as HTMLButtonElement;
+      const btnText = this.elements.btnText as HTMLElement;
+      const btnLoader = this.elements.btnLoader as HTMLElement;
+
+      if (loading) {
+        btn.disabled = true;
+        btnText.classList.add('dc-hidden');
+        btnLoader.classList.remove('dc-hidden');
+      } else {
+        btn.disabled = false;
+        btnText.classList.remove('dc-hidden');
+        btnLoader.classList.add('dc-hidden');
+      }
+    }
+
+    showError(msg: string) {
+      const error = this.elements.error as HTMLElement;
+      error.textContent = msg;
+      error.classList.remove('dc-hidden');
+    }
+
+    hideError() {
+      const error = this.elements.error as HTMLElement;
+      error.classList.add('dc-hidden');
+    }
+
+    showResult(res: DCFResult) {
+      const results = this.elements.results as HTMLElement;
+      results.classList.remove('dc-hidden');
+
+      const badge = this.elements.badge as HTMLElement;
+      const ratingDesc = this.elements.ratingDesc as HTMLElement;
+      const resCo2 = this.elements.resCo2 as HTMLElement;
+      const resEnergy = this.elements.resEnergy as HTMLElement;
+      const resCo2Year = this.elements.resCo2Year as HTMLElement;
+      const resTrees = this.elements.resTrees as HTMLElement;
+      const resKm = this.elements.resKm as HTMLElement;
+      const tipsList = this.querySelector('#tipsList') as HTMLElement;
+
+      badge.textContent = res.rating.label;
+      badge.style.backgroundColor = res.rating.color;
+      ratingDesc.textContent = this.ui[res.rating.descKey];
+
+      this.animateValue(resCo2, res.co2g, 2);
+      this.animateValue(resEnergy, res.energyWh, 1);
+      this.animateValue(resCo2Year, res.co2Year, 1);
+      this.animateValue(resTrees, res.trees, 1);
+      this.animateValue(resKm, res.km, 0);
+
+      tipsList.innerHTML = res.tipKeys
+        .map((key: string) => `<li>${this.ui[key]}</li>`)
+        .join('');
+    }
+
+    animateValue(el: HTMLElement, end: number | string, decimals = 0) {
+      const val = typeof end === 'string' ? parseFloat(end) : end;
+      const start = 0;
+      const duration = 1000;
+      let startTime: number | null = null;
+
+      const step = (timestamp: number) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        const current = start + (val - start) * progress;
+        el.textContent = current.toFixed(decimals);
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+  }
+
+  customElements.define('digital-carbon', DigitalCarbon);
+</script>

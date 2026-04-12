@@ -1,0 +1,9 @@
+---
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { rainHarvester } from './index';
+
+const { locale = 'es' } = Astro.props;
+const content = await rainHarvester.i18n[locale as keyof typeof rainHarvester.i18n]?.();
+---
+
+{content && <SharedBibliography links={content.bibliography} />}

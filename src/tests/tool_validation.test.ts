@@ -4,8 +4,8 @@ import { natureCategory } from '../data';
 
 describe('Tool Validation Suite', () => {
   describe('Library Registration', () => {
-    it('should have 2 tools in ALL_TOOLS', () => {
-      expect(ALL_TOOLS.length).toBe(2);
+    it('should have 4 tools in ALL_TOOLS', () => {
+      expect(ALL_TOOLS.length).toBe(4);
     });
 
     it('natureCategory should be defined', () => {

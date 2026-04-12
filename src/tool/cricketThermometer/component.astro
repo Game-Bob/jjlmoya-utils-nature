@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 interface Props {
   ui: Record<string, string>;
 }
@@ -38,7 +39,7 @@ const { ui } = Astro.props;
     </div>
 
     <button id="ct-tap-btn" class="ct-tap-btn" type="button">
-      <iconify-icon icon="mdi:grass" class="ct-tap-icon" aria-hidden="true"></iconify-icon>
+      <Icon name="mdi:grass" class="ct-tap-icon" aria-hidden="true" />
       <span class="ct-tap-label">TAP</span>
       <span class="ct-tap-hint">{ui.tapInstruction}</span>
     </button>

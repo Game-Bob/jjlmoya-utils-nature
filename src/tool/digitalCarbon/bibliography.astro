@@ -1,0 +1,9 @@
+---
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { digitalCarbon } from './index';
+
+const { locale = 'es' } = Astro.props;
+const content = await digitalCarbon.i18n[locale as keyof typeof digitalCarbon.i18n]?.();
+---
+
+{content && <SharedBibliography links={content.bibliography} />}

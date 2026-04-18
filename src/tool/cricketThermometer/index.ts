@@ -1,3 +1,4 @@
+import { cricketThermometer } from './entry';
 export * from './entry';
 export const CRICKET_THERMOMETER_TOOL: ToolDefinition = {
   entry: cricketThermometer,

@@ -1,3 +1,4 @@
+import { digitalCarbon } from './entry';
 export * from './entry';
 export const DIGITAL_CARBON_TOOL: ToolDefinition = {
   entry: digitalCarbon,

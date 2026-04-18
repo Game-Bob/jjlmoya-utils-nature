@@ -1,3 +1,4 @@
+import { seedCalculator } from './entry';
 export * from './entry';
 export const SEED_CALCULATOR_TOOL: ToolDefinition = {
   entry: seedCalculator,

@@ -10,3 +10,5 @@ export const ALL_TOOLS: ToolDefinition[] = [
   RAIN_HARVESTER_TOOL,
   DIGITAL_CARBON_TOOL
 ];
+
+export const ALL_ENTRIES = ALL_TOOLS.map(t => t.entry);

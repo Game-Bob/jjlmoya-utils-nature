@@ -15,7 +15,7 @@ export type {
   ToolDefinition,
 } from './types';
 
-export { ALL_TOOLS } from './tools';
+export { ALL_ENTRIES, ALL_TOOLS } from './tools';
 
 export { CricketThermometerComponent, CricketThermometerSEO, CricketThermometerBibliography } from './tool/cricketThermometer';
 export { CRICKET_THERMOMETER_TOOL, cricketThermometer } from './tool/cricketThermometer/index';

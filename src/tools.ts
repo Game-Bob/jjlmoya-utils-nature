@@ -1,3 +1,4 @@
+export { ALL_ENTRIES } from './entries';
 import type { ToolDefinition } from './types';
 import { CRICKET_THERMOMETER_TOOL } from './tool/cricketThermometer/index';
 import { SEED_CALCULATOR_TOOL } from './tool/seedCalculator/index';
@@ -11,4 +12,3 @@ export const ALL_TOOLS: ToolDefinition[] = [
   DIGITAL_CARBON_TOOL
 ];
 
-export const ALL_ENTRIES = ALL_TOOLS.map(t => t.entry);

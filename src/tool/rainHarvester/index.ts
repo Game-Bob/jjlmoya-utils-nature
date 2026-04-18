@@ -1,7 +1,4 @@
 import type { NatureToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import RainHarvesterComponent from './component.astro';
-import RainHarvesterSEO from './seo.astro';
-import RainHarvesterBibliography from './bibliography.astro';
 import type { RainHarvesterUI } from './ui';
 
 export type RainHarvesterLocaleContent = ToolLocaleContent<RainHarvesterUI>;
@@ -31,11 +28,10 @@ export const rainHarvester: NatureToolEntry<RainHarvesterUI> = {
   },
 };
 
-export { RainHarvesterComponent, RainHarvesterSEO, RainHarvesterBibliography };
 
 export const RAIN_HARVESTER_TOOL: ToolDefinition = {
   entry: rainHarvester,
-  Component: RainHarvesterComponent,
-  SEOComponent: RainHarvesterSEO,
-  BibliographyComponent: RainHarvesterBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

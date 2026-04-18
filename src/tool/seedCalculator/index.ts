@@ -1,7 +1,4 @@
 import type { NatureToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import SeedCalculatorComponent from './component.astro';
-import SeedCalculatorSEO from './seo.astro';
-import SeedCalculatorBibliography from './bibliography.astro';
 
 import type { SeedCalculatorUI } from './ui';
 
@@ -32,11 +29,10 @@ export const seedCalculator: NatureToolEntry<SeedCalculatorUI> = {
   },
 };
 
-export { SeedCalculatorComponent, SeedCalculatorSEO, SeedCalculatorBibliography };
 
 export const SEED_CALCULATOR_TOOL: ToolDefinition = {
   entry: seedCalculator,
-  Component: SeedCalculatorComponent,
-  SEOComponent: SeedCalculatorSEO,
-  BibliographyComponent: SeedCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

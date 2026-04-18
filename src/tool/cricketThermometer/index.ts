@@ -1,7 +1,4 @@
 import type { NatureToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import CricketThermometerComponent from './component.astro';
-import CricketThermometerSEO from './seo.astro';
-import CricketThermometerBibliography from './bibliography.astro';
 
 import type { CricketThermometerUI } from './ui';
 
@@ -32,11 +29,10 @@ export const cricketThermometer: NatureToolEntry<CricketThermometerUI> = {
   },
 };
 
-export { CricketThermometerComponent, CricketThermometerSEO, CricketThermometerBibliography };
 
 export const CRICKET_THERMOMETER_TOOL: ToolDefinition = {
   entry: cricketThermometer,
-  Component: CricketThermometerComponent,
-  SEOComponent: CricketThermometerSEO,
-  BibliographyComponent: CricketThermometerBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

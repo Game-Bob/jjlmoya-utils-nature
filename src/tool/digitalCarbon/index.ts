@@ -1,7 +1,4 @@
 import type { NatureToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import DigitalCarbonComponent from './component.astro';
-import DigitalCarbonSEO from './seo.astro';
-import DigitalCarbonBibliography from './bibliography.astro';
 import type { DigitalCarbonUI } from './ui';
 
 export type DigitalCarbonLocaleContent = ToolLocaleContent<DigitalCarbonUI>;
@@ -31,11 +28,10 @@ export const digitalCarbon: NatureToolEntry<DigitalCarbonUI> = {
   },
 };
 
-export { DigitalCarbonComponent, DigitalCarbonSEO, DigitalCarbonBibliography };
 
 export const DIGITAL_CARBON_TOOL: ToolDefinition = {
   entry: digitalCarbon,
-  Component: DigitalCarbonComponent,
-  SEOComponent: DigitalCarbonSEO,
-  BibliographyComponent: DigitalCarbonBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

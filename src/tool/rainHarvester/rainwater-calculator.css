@@ -18,7 +18,7 @@
     user-select: none;
   }
 
-  :global(.theme-dark) .rh-wrap {
+  .theme-dark .rh-wrap {
     --rh-bg: #0f172a;
     --rh-bg-inputs: #1e293b;
     --rh-border: #334155;

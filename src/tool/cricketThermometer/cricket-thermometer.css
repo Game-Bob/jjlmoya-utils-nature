@@ -35,7 +35,7 @@
     transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   }
 
-  :global(.theme-dark) .ct-card {
+  .theme-dark .ct-card {
     --ct-bg-card: #0f172a;
     --ct-bg-image: #1e293b;
     --ct-gradient-from: #0f172a;
@@ -105,7 +105,7 @@
     pointer-events: none;
   }
 
-  :global(.ct-display-wrapper.has-value) .ct-glow {
+  .ct-display-wrapper.has-value .ct-glow {
     opacity: 1;
   }
 
@@ -195,7 +195,7 @@
     transform: scale(0.95);
   }
 
-  :global(.ct-tap-btn.ct-tap-pressed) {
+  .ct-tap-btn.ct-tap-pressed {
     transform: scale(0.95);
   }
 
@@ -249,6 +249,6 @@
     gap: 0.5rem;
   }
 
-  :global(.ct-audio-btn.audio-active) {
+  .ct-audio-btn.audio-active {
     color: var(--ct-audio-active);
   }

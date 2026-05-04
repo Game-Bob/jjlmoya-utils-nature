@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { DigitalCarbonLocaleContent } from '../index';
 
 const slug = 'digital-carbon-footprint-calculator';
@@ -119,10 +120,8 @@ export const content: DigitalCarbonLocaleContent = {
     tipFonts: '실제로 사용하는 폰트 굵기만 로드하세요.',
     tipCache: 'HTTP 캐시 헤더를 구성하여 재다운로드를 방지하세요.',
   },
-  faqTitle: '자주 묻는 질문',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: '웹 지속 가능성 참고 문헌',
   seo: [
     {
       type: 'title',
@@ -225,11 +224,6 @@ export const content: DigitalCarbonLocaleContent = {
       html: '인터넷은 <strong>전 세계 CO₂ 배출량의 2%~4%</strong>를 차지하며, 이는 항공 산업과 맞먹는 수치입니다. 단 몇 킬로바이트라도 줄이는 것은 단순히 웹사이트를 빠르게 만드는 것이 아니라, 디지털 오염을 실질적으로 줄이는 일입니다.',
     },
   ],
-  bibliography: [
-    { name: 'Sustainable Web Design Model', url: 'https://sustainablewebdesign.org/' },
-    { name: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com/' },
-    { name: 'The Green Web Foundation', url: 'https://www.thegreenwebfoundation.org/' },
-    { name: 'W3C - Web Sustainability Guidelines', url: 'https://w3c.github.io/sustyweb/' },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

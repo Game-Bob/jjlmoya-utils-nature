@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { DigitalCarbonLocaleContent } from '../index';
 
 const slug = 'calculadora-pegada-carbono-digital';
@@ -119,10 +120,8 @@ export const content: DigitalCarbonLocaleContent = {
     tipFonts: 'Carregue apenas os pesos tipográficos que realmente utiliza.',
     tipCache: 'Configure cabeçalhos de cache HTTP para evitar novos downloads.',
   },
-  faqTitle: 'Perguntas Frequentes',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Referências de Sustentabilidade Web',
   seo: [
     {
       type: 'title',
@@ -225,11 +224,6 @@ export const content: DigitalCarbonLocaleContent = {
       html: 'A internet representa entre <strong>2% e 4% das emissões globais de CO₂</strong>, um valor comparável à indústria da aviação. Cada kilobyte que elimina não torna apenas o seu website mais rápido: reduz de forma mensurável a poluição digital.',
     },
   ],
-  bibliography: [
-    { name: 'Sustainable Web Design Model', url: 'https://sustainablewebdesign.org/' },
-    { name: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com/' },
-    { name: 'The Green Web Foundation', url: 'https://www.thegreenwebfoundation.org/' },
-    { name: 'W3C - Web Sustainability Guidelines', url: 'https://w3c.github.io/sustyweb/' },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

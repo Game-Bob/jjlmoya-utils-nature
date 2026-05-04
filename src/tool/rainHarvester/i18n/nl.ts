@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { RainHarvesterLocaleContent } from '../index';
 
 const slug = 'regenwater-opvang-calculator';
@@ -159,27 +160,8 @@ export const content: RainHarvesterLocaleContent = {
       html: 'De meest gemaakte fout is het kopen van een tank die alleen is gebaseerd op het budget. Als hij te klein is, verspilt u duizenden liters door overloop. Als hij te groot is, geeft u onnodig geld uit. Een algemene regel is om capaciteit te hebben om <strong>3 maanden</strong> aan gemiddelde neerslag in uw regio op te slaan, zodat u drogere periodes kunt overbruggen.',
     },
   ],
-  faqTitle: 'Veelgestelde vragen',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Wetenschappelijke bronnen',
-  bibliography: [
-    {
-      name: 'FAO - Rainwater Harvesting and Storage',
-      url: 'https://www.fao.org/3/a1348s/a1348s.pdf',
-    },
-    {
-      name: 'Texas A&M AgriLife Extension - Rainwater Harvesting',
-      url: 'https://rainwaterharvesting.tamu.edu/',
-    },
-    {
-      name: 'Brad Lancaster - Rainwater Harvesting for Drylands',
-      url: 'https://www.harvestingrainwater.com/',
-    },
-    {
-      name: 'European Environment Agency - Water Resources',
-      url: 'https://www.eea.europa.eu/en/topics/in-depth/water',
-    },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

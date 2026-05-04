@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
@@ -87,19 +88,8 @@ export const content: ToolLocaleContent<CricketThermometerUI> = {
   slug,
   title,
   description,
-  faqTitle: 'Häufig gestellte Fragen',
   faq: faqData,
-  bibliographyTitle: 'Wissenschaftliche Referenzen',
-  bibliography: [
-    {
-      name: 'The American Naturalist - Die Grille als Thermometer',
-      url: 'https://www.jstor.org/stable/2453256',
-    },
-    {
-      name: 'Wikipedia - Dolbearsches Gesetz',
-      url: 'https://de.wikipedia.org/wiki/Dolbearsches_Gesetz',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -175,7 +165,5 @@ export const content: ToolLocaleContent<CricketThermometerUI> = {
     btnSoundOn: 'Ton: Ein',
     btnSoundOff: 'Ton: Aus',
     unitChirpsMin: 'Zirp/Min',
-    faqTitle: 'Häufig gestellte Fragen',
-    bibliographyTitle: 'Wissenschaftliche Referenzen',
   },
 };

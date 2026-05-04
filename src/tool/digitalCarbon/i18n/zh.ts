@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { DigitalCarbonLocaleContent } from '../index';
 
 const slug = 'digital-carbon-footprint-calculator';
@@ -119,10 +120,8 @@ export const content: DigitalCarbonLocaleContent = {
     tipFonts: '仅加载您实际使用的字体粗细。',
     tipCache: '配置 HTTP 缓存标头以避免重复下载。',
   },
-  faqTitle: '常见问题',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: '网页可持续性参考资料',
   seo: [
     {
       type: 'title',
@@ -225,11 +224,6 @@ export const content: DigitalCarbonLocaleContent = {
       html: '互联网约占<strong>全球 CO₂ 排放量的 2% 到 4%</strong>，这一数字可与航空业相提并论。您消除的每一个字节不仅让网站变快，更在实实在在地减少数字污染。',
     },
   ],
-  bibliography: [
-    { name: 'Sustainable Web Design Model', url: 'https://sustainablewebdesign.org/' },
-    { name: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com/' },
-    { name: 'The Green Web Foundation', url: 'https://www.thegreenwebfoundation.org/' },
-    { name: 'W3C - Web Sustainability Guidelines', url: 'https://w3c.github.io/sustyweb/' },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

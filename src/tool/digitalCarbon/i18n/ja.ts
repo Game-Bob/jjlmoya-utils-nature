@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { DigitalCarbonLocaleContent } from '../index';
 
 const slug = 'digital-carbon-footprint-calculator';
@@ -119,10 +120,8 @@ export const content: DigitalCarbonLocaleContent = {
     tipFonts: '実際に使用するフォントウェイトのみを読み込むようにしてください。',
     tipCache: 'HTTPキャッシュヘッダーを適切に設定し、不要な再ダウンロードを防いでください。',
   },
-  faqTitle: 'よくある質問',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'ウェブ・サステナビリティに関する参考文献',
   seo: [
     {
       type: 'title',
@@ -225,11 +224,6 @@ export const content: DigitalCarbonLocaleContent = {
       html: 'インターネットは<strong>世界全体のCO₂排出量の2%から4%</strong>を占めており、これは航空業界にも匹敵する数字です。不要な数キロバイトを削ることは、単にサイトを速くするだけでなく、デジタル汚染を着実に減らすことにつながります。',
     },
   ],
-  bibliography: [
-    { name: 'Sustainable Web Design Model', url: 'https://sustainablewebdesign.org/' },
-    { name: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com/' },
-    { name: 'The Green Web Foundation', url: 'https://www.thegreenwebfoundation.org/' },
-    { name: 'W3C - Web Sustainability Guidelines', url: 'https://w3c.github.io/sustyweb/' },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

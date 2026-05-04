@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { ToolLocaleContent } from '../../../types';
 import type { SeedCalculatorUI } from '../ui';
 
@@ -87,23 +88,8 @@ export const content: ToolLocaleContent<SeedCalculatorUI> = {
   slug,
   title,
   description,
-  faqTitle: '자주 묻는 질문',
   faq: faqData,
-  bibliographyTitle: '과학적 참고 문헌',
-  bibliography: [
-    {
-      name: 'KWS 스페인',
-      url: 'https://www.kws.com/es/es/',
-    },
-    {
-      name: '스페인 농림수산부 (MAPA)',
-      url: 'https://www.mapa.gob.es/es/agricultura/temas/producciones-agricolas/cultivos-herbaceos/',
-    },
-    {
-      name: 'Yara 스페인',
-      url: 'https://www.yara.es/nutricion-vegetal/maiz/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -207,7 +193,5 @@ export const content: ToolLocaleContent<SeedCalculatorUI> = {
     noteSoy: '높은 밀도',
     noteBeet: '얕은 파종이 중요함',
     noteRapeseed: '매우 작은 종자',
-    faqTitle: '자주 묻는 질문',
-    bibliographyTitle: '과학적 참고 문헌',
   },
 };

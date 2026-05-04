@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { DigitalCarbonLocaleContent } from '../index';
 
 const slug = 'digital-carbon-footprint-calculator';
@@ -119,10 +120,8 @@ export const content: DigitalCarbonLocaleContent = {
     tipFonts: 'Load only the typographic weights you actually use.',
     tipCache: 'Configure HTTP cache headers to avoid re-downloads.',
   },
-  faqTitle: 'Frequently Asked Questions',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Web Sustainability References',
   seo: [
     {
       type: 'title',
@@ -225,11 +224,6 @@ export const content: DigitalCarbonLocaleContent = {
       html: 'The internet represents between <strong>2% and 4% of global CO₂ emissions</strong>, a figure comparable to the aviation industry. Every kilobyte you eliminate doesn\'t just make your website faster: it measurably reduces digital pollution.',
     },
   ],
-  bibliography: [
-    { name: 'Sustainable Web Design Model', url: 'https://sustainablewebdesign.org/' },
-    { name: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com/' },
-    { name: 'The Green Web Foundation', url: 'https://www.thegreenwebfoundation.org/' },
-    { name: 'W3C - Web Sustainability Guidelines', url: 'https://w3c.github.io/sustyweb/' },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

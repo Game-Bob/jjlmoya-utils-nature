@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
@@ -87,19 +88,8 @@ export const content: ToolLocaleContent<CricketThermometerUI> = {
   slug,
   title,
   description,
-  faqTitle: 'Sıkça Sorulan Sorular',
   faq: faqData,
-  bibliographyTitle: 'Bilimsel Referanslar',
-  bibliography: [
-    {
-      name: 'The American Naturalist - The Cricket as a Thermometer',
-      url: 'https://www.jstor.org/stable/2453256',
-    },
-    {
-      name: 'Wikipedia - Dolbear\'s Law',
-      url: 'https://en.wikipedia.org/wiki/Dolbear%27s_law',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -175,7 +165,5 @@ export const content: ToolLocaleContent<CricketThermometerUI> = {
     btnSoundOn: 'Ses: Açık',
     btnSoundOff: 'Ses: Kapalı',
     unitChirpsMin: 'ötüş/dak',
-    faqTitle: 'Sıkça Sorulan Sorular',
-    bibliographyTitle: 'Bilimsel Referanslar',
   },
 };

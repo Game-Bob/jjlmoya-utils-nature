@@ -34,6 +34,4 @@ export interface SeedCalculatorUI extends Record<string, string> {
   noteSoy: string;
   noteBeet: string;
   noteRapeseed: string;
-  faqTitle: string;
-  bibliographyTitle: string;
 }

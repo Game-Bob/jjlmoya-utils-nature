@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { RainHarvesterLocaleContent } from '../index';
 
 const slug = 'kalkulator-wody-deszczowej';
@@ -159,27 +160,8 @@ export const content: RainHarvesterLocaleContent = {
       html: 'Najczęstszym błędem jest zakup zbiornika wyłącznie w oparciu o budżet. Jeśli będzie za mały, zmarnujesz tysiące litrów przez przelew. Jeśli za duży, wydasz pieniądze niepotrzebnie. Przyjmuje się, że optymalna pojemność powinna pozwalać na zmagazynowanie średnich opadów z <strong>3 miesięcy</strong>, co pozwala przetrwać okresy bezdeszczowe.',
     },
   ],
-  faqTitle: 'Często zadawane pytania',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Źródła Naukowe',
-  bibliography: [
-    {
-      name: 'FAO - Rainwater Harvesting and Storage',
-      url: 'https://www.fao.org/3/a1348s/a1348s.pdf',
-    },
-    {
-      name: 'Texas A&M AgriLife Extension - Rainwater Harvesting',
-      url: 'https://rainwaterharvesting.tamu.edu/',
-    },
-    {
-      name: 'Brad Lancaster - Rainwater Harvesting for Drylands',
-      url: 'https://www.harvestingrainwater.com/',
-    },
-    {
-      name: 'European Environment Agency - Water Resources',
-      url: 'https://www.eea.europa.eu/en/topics/in-depth/water',
-    },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

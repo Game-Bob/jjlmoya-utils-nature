@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { ToolLocaleContent } from '../../../types';
 import type { SeedCalculatorUI } from '../ui';
 
@@ -87,23 +88,8 @@ export const content: ToolLocaleContent<SeedCalculatorUI> = {
   slug,
   title,
   description,
-  faqTitle: 'Domande Frequenti',
   faq: faqData,
-  bibliographyTitle: 'Riferimenti Scientifici',
-  bibliography: [
-    {
-      name: 'KWS Spagna',
-      url: 'https://www.kws.com/es/es/',
-    },
-    {
-      name: 'Ministero dell\'Agricoltura Spagnolo (MAPA)',
-      url: 'https://www.mapa.gob.es/es/agricultura/temas/producciones-agricolas/cultivos-herbaceos/',
-    },
-    {
-      name: 'Yara Spagna',
-      url: 'https://www.yara.es/nutricion-vegetal/maiz/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -207,7 +193,5 @@ export const content: ToolLocaleContent<SeedCalculatorUI> = {
     noteSoy: 'Alta popolazione',
     noteBeet: 'Semina superficiale critica',
     noteRapeseed: 'Seme molto piccolo',
-    faqTitle: 'Domande Frequenti',
-    bibliographyTitle: 'Riferimenti Scientifici',
   },
 };

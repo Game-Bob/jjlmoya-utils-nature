@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { DigitalCarbonLocaleContent } from '../index';
 
 const slug = 'digitaler-co2-fussabdruck-rechner';
@@ -119,10 +120,8 @@ export const content: DigitalCarbonLocaleContent = {
     tipFonts: 'Laden Sie nur die Schriftschnitte, die Sie tatsächlich verwenden.',
     tipCache: 'Konfigurieren Sie HTTP-Cache-Header, um erneute Downloads zu vermeiden.',
   },
-  faqTitle: 'Häufig gestellte Fragen',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Referenzen zur Web-Nachhaltigkeit',
   seo: [
     {
       type: 'title',
@@ -225,11 +224,6 @@ export const content: DigitalCarbonLocaleContent = {
       html: 'Das Internet macht zwischen <strong>2 % und 4 % der weltweiten CO₂-Emissionen</strong> aus – ein Wert, der mit der Luftfahrtindustrie vergleichbar ist. Jedes Kilobyte, das Sie einsparen, macht nicht nur Ihre Website schneller: Es reduziert messbar die digitale Verschmutzung.',
     },
   ],
-  bibliography: [
-    { name: 'Sustainable Web Design Model', url: 'https://sustainablewebdesign.org/' },
-    { name: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com/' },
-    { name: 'The Green Web Foundation', url: 'https://www.thegreenwebfoundation.org/' },
-    { name: 'W3C - Web Sustainability Guidelines', url: 'https://w3c.github.io/sustyweb/' },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

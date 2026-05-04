@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { DigitalCarbonLocaleContent } from '../index';
 
 const slug = 'kalkulator-cyfrowego-sladu-weglowego';
@@ -119,10 +120,8 @@ export const content: DigitalCarbonLocaleContent = {
     tipFonts: 'Ładuj tylko te grubości czcionek, których faktycznie używasz.',
     tipCache: 'Skonfiguruj nagłówki pamięci podręcznej HTTP, aby uniknąć ponownego pobierania.',
   },
-  faqTitle: 'Często zadawane pytania',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Źródła dotyczące zrównoważonego rozwoju sieci',
   seo: [
     {
       type: 'title',
@@ -225,11 +224,6 @@ export const content: DigitalCarbonLocaleContent = {
       html: 'Internet odpowiada za <strong>2% do 4% globalnej emisji CO₂</strong>, co jest wartością porównywalną z przemysłem lotniczym. Każdy wyeliminowany kilobajt nie tylko przyspiesza Twoją stronę: mierzalnie zmniejsza cyfrowe zanieczyszczenie.',
     },
   ],
-  bibliography: [
-    { name: 'Sustainable Web Design Model', url: 'https://sustainablewebdesign.org/' },
-    { name: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com/' },
-    { name: 'The Green Web Foundation', url: 'https://www.thegreenwebfoundation.org/' },
-    { name: 'W3C - Web Sustainability Guidelines', url: 'https://w3c.github.io/sustyweb/' },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

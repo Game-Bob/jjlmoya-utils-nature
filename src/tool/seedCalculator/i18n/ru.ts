@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { ToolLocaleContent } from '../../../types';
 import type { SeedCalculatorUI } from '../ui';
 
@@ -87,23 +88,8 @@ export const content: ToolLocaleContent<SeedCalculatorUI> = {
   slug,
   title,
   description,
-  faqTitle: 'Часто задаваемые вопросы',
   faq: faqData,
-  bibliographyTitle: 'Научные источники',
-  bibliography: [
-    {
-      name: 'KWS Испания',
-      url: 'https://www.kws.com/es/es/',
-    },
-    {
-      name: 'Министерство сельского хозяйства Испании (MAPA)',
-      url: 'https://www.mapa.gob.es/es/agricultura/temas/producciones-agricolas/cultivos-herbaceos/',
-    },
-    {
-      name: 'Yara Испания',
-      url: 'https://www.yara.es/nutricion-vegetal/maiz/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -207,7 +193,5 @@ export const content: ToolLocaleContent<SeedCalculatorUI> = {
     noteSoy: 'Высокая норма высева',
     noteBeet: 'Критичен мелкий посев',
     noteRapeseed: 'Очень мелкие семена',
-    faqTitle: 'Часто задаваемые вопросы',
-    bibliographyTitle: 'Научные источники',
   },
 };

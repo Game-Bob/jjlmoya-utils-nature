@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { RainHarvesterLocaleContent } from '../index';
 
 const slug = 'rainwater-calculator';
@@ -159,27 +160,8 @@ export const content: RainHarvesterLocaleContent = {
       html: 'The most common mistake is buying a tank based only on budget. If it is too small, you will waste thousands of liters due to overflow. If it is too large, you will spend money unnecessarily. A general rule is to have capacity to store <strong>3 months</strong> of average rainfall in your area, allowing you to bridge dry seasons.',
     },
   ],
-  faqTitle: 'Frequently Asked Questions',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Scientific References',
-  bibliography: [
-    {
-      name: 'FAO - Rainwater Harvesting and Storage',
-      url: 'https://www.fao.org/3/a1348s/a1348s.pdf',
-    },
-    {
-      name: 'Texas A&M AgriLife Extension - Rainwater Harvesting',
-      url: 'https://rainwaterharvesting.tamu.edu/',
-    },
-    {
-      name: 'Brad Lancaster - Rainwater Harvesting for Drylands',
-      url: 'https://www.harvestingrainwater.com/',
-    },
-    {
-      name: 'European Environment Agency - Water Resources',
-      url: 'https://www.eea.europa.eu/en/topics/in-depth/water',
-    },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { RainHarvesterLocaleContent } from '../index';
 
 const slug = 'regenwasser-ernte-rechner';
@@ -159,27 +160,8 @@ export const content: RainHarvesterLocaleContent = {
       html: 'Der häufigste Fehler ist der Kauf eines Tanks, der nur auf dem Budget basiert. Wenn er zu klein ist, verschwenden Sie Tausende Liter durch Überlauf. Wenn er zu groß ist, geben Sie unnötig Geld aus. Eine allgemeine Regel ist, eine Kapazität für die Speicherung von <strong>3 Monaten</strong> des durchschnittlichen Niederschlags in Ihrer Region zu haben, um Trockenperioden zu überbrücken.',
     },
   ],
-  faqTitle: 'Häufig gestellte Fragen',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Wissenschaftliche Referenzen',
-  bibliography: [
-    {
-      name: 'FAO - Rainwater Harvesting and Storage',
-      url: 'https://www.fao.org/3/a1348s/a1348s.pdf',
-    },
-    {
-      name: 'Texas A&M AgriLife Extension - Rainwater Harvesting',
-      url: 'https://rainwaterharvesting.tamu.edu/',
-    },
-    {
-      name: 'Brad Lancaster - Rainwater Harvesting for Drylands',
-      url: 'https://www.harvestingrainwater.com/',
-    },
-    {
-      name: 'European Environment Agency - Water Resources',
-      url: 'https://www.eea.europa.eu/en/topics/in-depth/water',
-    },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

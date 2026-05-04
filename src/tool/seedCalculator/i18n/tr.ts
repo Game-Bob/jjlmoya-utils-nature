@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { ToolLocaleContent } from '../../../types';
 import type { SeedCalculatorUI } from '../ui';
 
@@ -87,23 +88,8 @@ export const content: ToolLocaleContent<SeedCalculatorUI> = {
   slug,
   title,
   description,
-  faqTitle: 'Sıkça Sorulan Sorular',
   faq: faqData,
-  bibliographyTitle: 'Bilimsel Referanslar',
-  bibliography: [
-    {
-      name: 'KWS İspanya',
-      url: 'https://www.kws.com/es/es/',
-    },
-    {
-      name: 'İspanya Tarım Bakanlığı (MAPA)',
-      url: 'https://www.mapa.gob.es/es/agricultura/temas/producciones-agricolas/cultivos-herbaceos/',
-    },
-    {
-      name: 'Yara İspanya',
-      url: 'https://www.yara.es/nutricion-vegetal/maiz/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -207,7 +193,5 @@ export const content: ToolLocaleContent<SeedCalculatorUI> = {
     noteSoy: 'Yüksek popülasyon',
     noteBeet: 'Kritik sığ ekim',
     noteRapeseed: 'Çok küçük tohum',
-    faqTitle: 'Sıkça Sorulan Sorular',
-    bibliographyTitle: 'Bilimsel Referanslar',
   },
 };

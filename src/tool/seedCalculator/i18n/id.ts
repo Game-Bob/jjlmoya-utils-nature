@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { ToolLocaleContent } from '../../../types';
 import type { SeedCalculatorUI } from '../ui';
 
@@ -87,23 +88,8 @@ export const content: ToolLocaleContent<SeedCalculatorUI> = {
   slug,
   title,
   description,
-  faqTitle: 'Pertanyaan yang Sering Diajukan',
   faq: faqData,
-  bibliographyTitle: 'Referensi Ilmiah',
-  bibliography: [
-    {
-      name: 'KWS Spanyol',
-      url: 'https://www.kws.com/es/es/',
-    },
-    {
-      name: 'Kementerian Pertanian Spanyol (MAPA)',
-      url: 'https://www.mapa.gob.es/es/agricultura/temas/producciones-agricolas/cultivos-herbaceos/',
-    },
-    {
-      name: 'Yara Spanyol',
-      url: 'https://www.yara.es/nutricion-vegetal/maiz/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
@@ -207,7 +193,5 @@ export const content: ToolLocaleContent<SeedCalculatorUI> = {
     noteSoy: 'Populasi tinggi',
     noteBeet: 'Penaburan dangkal kritis',
     noteRapeseed: 'Benih sangat kecil',
-    faqTitle: 'Pertanyaan yang Sering Diajukan',
-    bibliographyTitle: 'Referensi Ilmiah',
   },
 };

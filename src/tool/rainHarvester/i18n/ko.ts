@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { RainHarvesterLocaleContent } from '../index';
 
 const slug = 'rainwater-calculator';
@@ -159,27 +160,8 @@ export const content: RainHarvesterLocaleContent = {
       html: '가장 흔한 실수는 예산에만 맞춰 탱크를 사는 것입니다. 너무 작으면 넘쳐서 물을 낭비하게 되고, 너무 크면 불필요한 비용을 쓰게 됩니다. 일반적인 규칙은 해당 지역 평균 강수량의 <strong>3개월분</strong>을 저장할 수 있는 용량을 확보하여 건기를 대비하는 것입니다.',
     },
   ],
-  faqTitle: '자주 묻는 질문',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: '과학적 참고 문헌',
-  bibliography: [
-    {
-      name: 'FAO - Rainwater Harvesting and Storage',
-      url: 'https://www.fao.org/3/a1348s/a1348s.pdf',
-    },
-    {
-      name: 'Texas A&M AgriLife Extension - Rainwater Harvesting',
-      url: 'https://rainwaterharvesting.tamu.edu/',
-    },
-    {
-      name: 'Brad Lancaster - Rainwater Harvesting for Drylands',
-      url: 'https://www.harvestingrainwater.com/',
-    },
-    {
-      name: 'European Environment Agency - Water Resources',
-      url: 'https://www.eea.europa.eu/en/topics/in-depth/water',
-    },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { DigitalCarbonLocaleContent } from '../index';
 
 const slug = 'dijital-karbon-ayak-izi-hesaplayici';
@@ -119,10 +120,8 @@ export const content: DigitalCarbonLocaleContent = {
     tipFonts: 'Sadece gerçekten kullandığınız yazı tipi ağırlıklarını yükleyin.',
     tipCache: 'Yeniden indirmeleri önlemek için HTTP önbellek başlıklarını yapılandırın.',
   },
-  faqTitle: 'Sıkça Sorulan Sorular',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Web Sürdürülebilirliği Referansları',
   seo: [
     {
       type: 'title',
@@ -225,11 +224,6 @@ export const content: DigitalCarbonLocaleContent = {
       html: 'İnternet, havacılık endüstrisiyle karşılaştırılabilecek bir rakam olan <strong>küresel CO₂ emisyonlarının %2 ile %4\'ünü</strong> temsil etmektedir. Elediğiniz her kilobayt sadece web sitenizi hızlandırmakla kalmaz: dijital kirliliği ölçülebilir şekilde azaltır.',
     },
   ],
-  bibliography: [
-    { name: 'Sustainable Web Design Model', url: 'https://sustainablewebdesign.org/' },
-    { name: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com/' },
-    { name: 'The Green Web Foundation', url: 'https://www.thegreenwebfoundation.org/' },
-    { name: 'W3C - Web Sustainability Guidelines', url: 'https://w3c.github.io/sustyweb/' },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { RainHarvesterLocaleContent } from '../index';
 
 const slug = 'calculadora-agua-da-chuva';
@@ -159,27 +160,8 @@ export const content: RainHarvesterLocaleContent = {
       html: 'O erro mais comum é comprar um tanque baseando-se apenas no orçamento. Se for demasiado pequeno, desperdiçará milhares de litros devido ao transbordo. Se for demasiado grande, gastará dinheiro desnecessariamente. Uma regra geral é ter capacidade para armazenar <strong>3 meses</strong> da pluviosidade média da sua zona, o que lhe permite atravessar as estações secas.',
     },
   ],
-  faqTitle: 'Perguntas Frequentes',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Referências Científicas',
-  bibliography: [
-    {
-      name: 'FAO - Rainwater Harvesting and Storage',
-      url: 'https://www.fao.org/3/a1348s/a1348s.pdf',
-    },
-    {
-      name: 'Texas A&M AgriLife Extension - Rainwater Harvesting',
-      url: 'https://rainwaterharvesting.tamu.edu/',
-    },
-    {
-      name: 'Brad Lancaster - Rainwater Harvesting for Drylands',
-      url: 'https://www.harvestingrainwater.com/',
-    },
-    {
-      name: 'European Environment Agency - Water Resources',
-      url: 'https://www.eea.europa.eu/en/topics/in-depth/water',
-    },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

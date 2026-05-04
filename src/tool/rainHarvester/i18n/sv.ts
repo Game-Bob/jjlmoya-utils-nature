@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { RainHarvesterLocaleContent } from '../index';
 
 const slug = 'regnvatten-kalkylator';
@@ -159,27 +160,8 @@ export const content: RainHarvesterLocaleContent = {
       html: 'Det vanligaste misstaget är att köpa en tank enbart baserat på budget. Om den är för liten kommer du att slösa bort tusentals liter på grund av överfyllnad. Om den är för stor kommer du att spendera pengar i onödan. En allmän regel är att ha kapacitet att lagra <strong>3 månader</strong> av genomsnittlig nederbörd i ditt område, vilket gör att du kan överbrygga torrperioder.',
     },
   ],
-  faqTitle: 'Vanliga frågor',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Vetenskapliga referenser',
-  bibliography: [
-    {
-      name: 'FAO - Rainwater Harvesting and Storage',
-      url: 'https://www.fao.org/3/a1348s/a1348s.pdf',
-    },
-    {
-      name: 'Texas A&M AgriLife Extension - Rainwater Harvesting',
-      url: 'https://rainwaterharvesting.tamu.edu/',
-    },
-    {
-      name: 'Brad Lancaster - Rainwater Harvesting for Drylands',
-      url: 'https://www.harvestingrainwater.com/',
-    },
-    {
-      name: 'European Environment Agency - Water Resources',
-      url: 'https://www.eea.europa.eu/en/topics/in-depth/water',
-    },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

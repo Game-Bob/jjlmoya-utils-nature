@@ -6,6 +6,4 @@ export interface CricketThermometerUI extends Record<string, string> {
   btnSoundOn: string;
   btnSoundOff: string;
   unitChirpsMin: string;
-  faqTitle: string;
-  bibliographyTitle: string;
 }

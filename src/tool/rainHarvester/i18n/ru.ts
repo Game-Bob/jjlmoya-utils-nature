@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { RainHarvesterLocaleContent } from '../index';
 
 const slug = 'kalkulyator-dozhdevoy-vody';
@@ -159,27 +160,8 @@ export const content: RainHarvesterLocaleContent = {
       html: 'Самая распространенная ошибка — покупка бака, исходя только из бюджета. Если он слишком мал, вы будете терять тысячи литров из-за перелива. Если он слишком велик, вы потратите деньги зря. Общее правило — иметь емкость для хранения среднего количества осадков за <strong>3 месяца</strong> в вашем районе, что позволит вам пережить засушливые сезоны.',
     },
   ],
-  faqTitle: 'Часто задаваемые вопросы',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Научные источники',
-  bibliography: [
-    {
-      name: 'FAO - Rainwater Harvesting and Storage',
-      url: 'https://www.fao.org/3/a1348s/a1348s.pdf',
-    },
-    {
-      name: 'Texas A&M AgriLife Extension - Rainwater Harvesting',
-      url: 'https://rainwaterharvesting.tamu.edu/',
-    },
-    {
-      name: 'Brad Lancaster - Rainwater Harvesting for Drylands',
-      url: 'https://www.harvestingrainwater.com/',
-    },
-    {
-      name: 'European Environment Agency - Water Resources',
-      url: 'https://www.eea.europa.eu/en/topics/in-depth/water',
-    },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

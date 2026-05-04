@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { DigitalCarbonLocaleContent } from '../index';
 
 const slug = 'digitale-co2-voetafdruk-calculator';
@@ -119,10 +120,8 @@ export const content: DigitalCarbonLocaleContent = {
     tipFonts: 'Laad alleen de lettertypegewichten die u daadwerkelijk gebruikt.',
     tipCache: 'Configureer HTTP-cache-headers om opnieuw downloaden te voorkomen.',
   },
-  faqTitle: 'Veelgestelde vragen',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Web-duurzaamheidsreferenties',
   seo: [
     {
       type: 'title',
@@ -225,11 +224,6 @@ export const content: DigitalCarbonLocaleContent = {
       html: 'Internet is verantwoordelijk voor tussen de <strong>2% en 4% van de wereldwijde CO₂-emissies</strong>, een cijfer dat vergelijkbaar is met de luchtvaartindustrie. Elke kilobyte die u verwijdert, maakt uw website niet alleen sneller: het vermindert meetbaar de digitale vervuiling.',
     },
   ],
-  bibliography: [
-    { name: 'Sustainable Web Design Model', url: 'https://sustainablewebdesign.org/' },
-    { name: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com/' },
-    { name: 'The Green Web Foundation', url: 'https://www.thegreenwebfoundation.org/' },
-    { name: 'W3C - Web Sustainability Guidelines', url: 'https://w3c.github.io/sustyweb/' },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

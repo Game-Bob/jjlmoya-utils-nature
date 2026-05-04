@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { RainHarvesterLocaleContent } from '../index';
 
 const slug = 'calcolatore-acqua-piovana';
@@ -159,27 +160,8 @@ export const content: RainHarvesterLocaleContent = {
       html: 'L\'errore più comune è acquistare un serbatoio basandosi solo sul budget. Se è troppo piccolo, sprecherai migliaia di litri a causa del troppo pieno. Se è troppo grande, spenderai soldi inutilmente. Una regola generale è di avere una capacità per conservare <strong>3 mesi</strong> di piovosità media nella tua zona, permettendoti di superare le stagioni secche.',
     },
   ],
-  faqTitle: 'Domande Frequenti',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Riferimenti Scientifici',
-  bibliography: [
-    {
-      name: 'FAO - Rainwater Harvesting and Storage',
-      url: 'https://www.fao.org/3/a1348s/a1348s.pdf',
-    },
-    {
-      name: 'Texas A&M AgriLife Extension - Rainwater Harvesting',
-      url: 'https://rainwaterharvesting.tamu.edu/',
-    },
-    {
-      name: 'Brad Lancaster - Rainwater Harvesting for Drylands',
-      url: 'https://www.harvestingrainwater.com/',
-    },
-    {
-      name: 'European Environment Agency - Water Resources',
-      url: 'https://www.eea.europa.eu/en/topics/in-depth/water',
-    },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

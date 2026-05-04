@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { RainHarvesterLocaleContent } from '../index';
 
 const slug = 'kalkulator-air-hujan';
@@ -159,27 +160,8 @@ export const content: RainHarvesterLocaleContent = {
       html: 'Kesalahan paling umum adalah membeli tangki hanya berdasarkan anggaran. Jika terlalu kecil, Anda akan membuang ribuan liter karena meluap. Jika terlalu besar, Anda akan menghabiskan uang secara tidak perlu. Aturan umumnya adalah memiliki kapasitas untuk menyimpan <strong>3 bulan</strong> rata-rata curah hujan di daerah Anda, yang memungkinkan Anda menjembatani musim kemarau.',
     },
   ],
-  faqTitle: 'Pertanyaan yang Sering Diajukan',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Referensi Ilmiah',
-  bibliography: [
-    {
-      name: 'FAO - Rainwater Harvesting and Storage',
-      url: 'https://www.fao.org/3/a1348s/a1348s.pdf',
-    },
-    {
-      name: 'Texas A&M AgriLife Extension - Rainwater Harvesting',
-      url: 'https://rainwaterharvesting.tamu.edu/',
-    },
-    {
-      name: 'Brad Lancaster - Rainwater Harvesting for Drylands',
-      url: 'https://www.harvestingrainwater.com/',
-    },
-    {
-      name: 'European Environment Agency - Water Resources',
-      url: 'https://www.eea.europa.eu/en/topics/in-depth/water',
-    },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

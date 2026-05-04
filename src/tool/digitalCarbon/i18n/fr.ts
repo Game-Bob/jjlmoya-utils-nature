@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { DigitalCarbonLocaleContent } from '../index';
 
 const slug = 'calculateur-empreinte-carbone-numerique';
@@ -119,10 +120,8 @@ export const content: DigitalCarbonLocaleContent = {
     tipFonts: 'Ne chargez que les graisses typographiques que vous utilisez réellement.',
     tipCache: 'Configurez les en-têtes de cache HTTP pour éviter les re-téléchargements.',
   },
-  faqTitle: 'Questions Fréquemment Posées',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Références sur la durabilité du web',
   seo: [
     {
       type: 'title',
@@ -225,11 +224,6 @@ export const content: DigitalCarbonLocaleContent = {
       html: 'Internet représente entre <strong>2% et 4% des émissions mondiales de CO₂</strong>, un chiffre comparable à l\'industrie aéronautique. Chaque kilo-octet éliminé ne rend pas seulement votre site plus rapide : il réduit de manière mesurable la pollution numérique.',
     },
   ],
-  bibliography: [
-    { name: 'Sustainable Web Design Model', url: 'https://sustainablewebdesign.org/' },
-    { name: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com/' },
-    { name: 'The Green Web Foundation', url: 'https://www.thegreenwebfoundation.org/' },
-    { name: 'W3C - Web Sustainability Guidelines', url: 'https://w3c.github.io/sustyweb/' },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

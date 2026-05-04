@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { RainHarvesterLocaleContent } from '../index';
 
 const slug = 'yagmur-suyu-hesaplayici';
@@ -159,27 +160,8 @@ export const content: RainHarvesterLocaleContent = {
       html: 'En yaygın hata, sadece bütçeye göre tank almaktır. Çok küçükse, taşma nedeniyle binlerce litreyi boşa harcarsınız. Çok büyükse, gereksiz yere para harcarsınız. Genel kural, bölgenizdeki ortalama yağışın <strong>3 aylık</strong> miktarını depolayacak kapasiteye sahip olmaktır; bu da kurak mevsimleri atlatmanızı sağlar.',
     },
   ],
-  faqTitle: 'Sıkça Sorulan Sorular',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Bilimsel Referanslar',
-  bibliography: [
-    {
-      name: 'FAO - Rainwater Harvesting and Storage',
-      url: 'https://www.fao.org/3/a1348s/a1348s.pdf',
-    },
-    {
-      name: 'Texas A&M AgriLife Extension - Rainwater Harvesting',
-      url: 'https://rainwaterharvesting.tamu.edu/',
-    },
-    {
-      name: 'Brad Lancaster - Rainwater Harvesting for Drylands',
-      url: 'https://www.harvestingrainwater.com/',
-    },
-    {
-      name: 'European Environment Agency - Water Resources',
-      url: 'https://www.eea.europa.eu/en/topics/in-depth/water',
-    },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

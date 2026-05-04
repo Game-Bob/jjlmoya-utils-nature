@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { RainHarvesterLocaleContent } from '../index';
 
 const slug = 'rainwater-calculator';
@@ -159,27 +160,8 @@ export const content: RainHarvesterLocaleContent = {
       html: '最常见的错误是仅根据预算购买水箱。如果太小，会因溢出浪费数千升水；如果太大，则会造成不必要的资金支出。一般规则是拥有能储存当地 <strong>3 个月</strong>平均降雨量的容量，以帮助您平稳度过旱季。',
     },
   ],
-  faqTitle: '常见问题',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: '科学参考文献',
-  bibliography: [
-    {
-      name: 'FAO - Rainwater Harvesting and Storage',
-      url: 'https://www.fao.org/3/a1348s/a1348s.pdf',
-    },
-    {
-      name: 'Texas A&M AgriLife Extension - Rainwater Harvesting',
-      url: 'https://rainwaterharvesting.tamu.edu/',
-    },
-    {
-      name: 'Brad Lancaster - Rainwater Harvesting for Drylands',
-      url: 'https://www.harvestingrainwater.com/',
-    },
-    {
-      name: 'European Environment Agency - Water Resources',
-      url: 'https://www.eea.europa.eu/en/topics/in-depth/water',
-    },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

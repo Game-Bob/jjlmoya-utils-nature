@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { RainHarvesterLocaleContent } from '../index';
 
 const slug = 'calculateur-eau-pluie';
@@ -159,27 +160,8 @@ export const content: RainHarvesterLocaleContent = {
       html: 'L\'erreur la plus courante est d\'acheter un réservoir en se basant uniquement sur le budget. S\'il est trop petit, vous perdrez des milliers de litres par débordement. S\'il est trop grand, vous dépenserez de l\'argent inutilement. Une règle générale est d\'avoir une capacité de stockage pour <strong>3 mois</strong> de précipitations moyennes dans votre région, vous permettant de traverser les saisons sèches.',
     },
   ],
-  faqTitle: 'Questions Fréquemment Posées',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Références Scientifiques',
-  bibliography: [
-    {
-      name: 'FAO - Collecte et stockage de l\'eau de pluie',
-      url: 'https://www.fao.org/3/a1348s/a1348s.pdf',
-    },
-    {
-      name: 'Texas A&M AgriLife Extension - Rainwater Harvesting',
-      url: 'https://rainwaterharvesting.tamu.edu/',
-    },
-    {
-      name: 'Brad Lancaster - Rainwater Harvesting for Drylands',
-      url: 'https://www.harvestingrainwater.com/',
-    },
-    {
-      name: 'European Environment Agency - Water Resources',
-      url: 'https://www.eea.europa.eu/en/topics/in-depth/water',
-    },
-  ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

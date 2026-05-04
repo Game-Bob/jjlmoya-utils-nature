@@ -1,4 +1,5 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+import { bibliography } from '../bibliography';
 import type { DigitalCarbonLocaleContent } from '../index';
 
 const slug = 'calculadora-huella-carbono-digital';
@@ -119,16 +120,9 @@ export const content: DigitalCarbonLocaleContent = {
     tipFonts: 'Carga solo los pesos tipográficos que realmente usas.',
     tipCache: 'Configura cabeceras de caché HTTP para evitar re-descargas.',
   },
-  faqTitle: 'Preguntas Frecuentes',
   faq: faqData,
   howTo: howToData,
-  bibliographyTitle: 'Referencias de Sostenibilidad Web',
-  bibliography: [
-    { name: 'Sustainable Web Design Model', url: 'https://sustainablewebdesign.org/' },
-    { name: 'Website Carbon Calculator', url: 'https://www.websitecarbon.com/' },
-    { name: 'The Green Web Foundation', url: 'https://www.thegreenwebfoundation.org/' },
-    { name: 'W3C - Web Sustainability Guidelines', url: 'https://w3c.github.io/sustyweb/' },
-  ],
+  bibliography,
   seo: [
     {
       type: 'title',

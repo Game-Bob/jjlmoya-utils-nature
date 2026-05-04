@@ -159,6 +159,7 @@ export default [
     {
         files: ["**/pages/**/*.astro"],
         rules: {
+            "custom/no-css-comments": "off",
             "max-lines-per-function": ["error", { max: 50, skipBlankLines: true, skipComments: true }],
             "complexity": "off",
             "no-comments/disallowComments": "off",

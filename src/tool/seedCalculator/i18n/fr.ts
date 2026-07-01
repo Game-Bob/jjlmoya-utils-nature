@@ -100,7 +100,7 @@ export const content: ToolLocaleContent<SeedCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: "Régler la transmission d'un semoir nécessite de savoir exactement combien de graines doivent tomber par mètre linéaire de sillon. Les manuels des machines donnent souvent des tables approximatives, mais des facteurs comme le <strong>patinage de la roue motrice</strong> ou la taille de la semence peuvent modifier la réalité. Cet outil vous donne la valeur théorique parfaite : l'<strong>espacement cible entre graines</strong>.",
+      html: "Régler la transmission d'un semoir nécessite de savoir exactement combien de graines doivent tomber par mètre linéaire de sillon. Les manuels des machines donnent souvent des tables approximatives, mais des facteurs comme le <strong>patinage de la roue motrice</strong> ou la taille de la semence peuvent modifier la réalité. Cet outil vous donne la valeur théorique parfaite: l'<strong>espacement cible entre graines</strong>.",
     },
     {
       type: 'tip',

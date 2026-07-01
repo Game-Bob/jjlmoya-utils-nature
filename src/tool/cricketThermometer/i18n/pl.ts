@@ -4,7 +4,7 @@ import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
 const slug = 'termometr-swierszczy';
-const title = 'Termometr świerszczowy – Kalkulator temperatury według prawa Dolbeara';
+const title = 'Termometr świerszczowy: Kalkulator temperatury według prawa Dolbeara';
 const description =
   'Nie masz termometru? Posłuchaj świerszczy. Oblicz dokładną temperaturę, licząc cykania za pomocą naszego kalkulatora opartego na prawie Dolbeara.';
 
@@ -104,8 +104,8 @@ export const content: ToolLocaleContent<CricketThermometerUI> = {
     },
     {
       type: 'tip',
-      title: 'Dlaczego świerszcze „śpiewają”?',
-      html: '<p>„Śpiew” świerszcza, czyli <strong>strydulacja</strong>, to w rzeczywistości wołanie godowe. Samce pocierają o siebie skrzydła (nie nogi), aby wydać ten dźwięk. Co ciekawe, ponieważ są to zwierzęta zmiennocieplne (ektotermy), szybkość tego pocierania zależy bezpośrednio od energii cieplnej powietrza.</p>',
+      title: 'Dlaczego świerszcze "śpiewają"?',
+      html: '<p>"Śpiew" świerszcza, czyli <strong>strydulacja</strong>, to w rzeczywistości wołanie godowe. Samce pocierają o siebie skrzydła (nie nogi), aby wydać ten dźwięk. Co ciekawe, ponieważ są to zwierzęta zmiennocieplne (ektotermy), szybkość tego pocierania zależy bezpośrednio od energii cieplnej powietrza.</p>',
     },
     {
       type: 'title',
@@ -146,7 +146,7 @@ export const content: ToolLocaleContent<CricketThermometerUI> = {
     {
       type: 'list',
       items: [
-        '<strong>Termometry miłości:</strong> Niektóre teorie sugerują, że samice wolą samców śpiewających z „właściwą” częstotliwością dla aktualnej temperatury, ponieważ świadczy to o zdrowiu samca i silnym metabolizmie.',
+        '<strong>Termometry miłości:</strong> Niektóre teorie sugerują, że samice wolą samców śpiewających z "właściwą" częstotliwością dla aktualnej temperatury, ponieważ świadczy to o zdrowiu samca i silnym metabolizmie.',
         '<strong>Granica zimna:</strong> Poniżej 10°C (50°F) większość świerszczy przestaje śpiewać, ponieważ ich metabolizm jest zbyt wolny, by podtrzymać wysiłek mięśni.',
         '<strong>Synchronizacja:</strong> W ciepłe noce tysiące świerszczy potrafią zsynchronizować swoje cykanie, tworząc imponujący efekt fali dźwiękowej.',
       ],

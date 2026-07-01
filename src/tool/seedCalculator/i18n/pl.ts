@@ -105,7 +105,7 @@ export const content: ToolLocaleContent<SeedCalculatorUI> = {
     {
       type: 'tip',
       title: 'Wzór matematyczny',
-      html: '<p>Dla agronomów i ciekawskich – oto podstawa obliczeń:</p><pre>Odstęp (cm) = 10 000 000 / (Obsada × Szerokość Rzędu)</pre><ul><li><strong>10 000 000:</strong> Współczynnik konwersji z Ha na cm².</li><li><strong>Obsada:</strong> Liczba nasion na hektar.</li><li><strong>Szerokość Rzędu:</strong> Odległość między rzędami w cm.</li></ul>',
+      html: '<p>Dla agronomów i ciekawskich - oto podstawa obliczeń:</p><pre>Odstęp (cm) = 10 000 000 / (Obsada × Szerokość Rzędu)</pre><ul><li><strong>10 000 000:</strong> Współczynnik konwersji z Ha na cm².</li><li><strong>Obsada:</strong> Liczba nasion na hektar.</li><li><strong>Szerokość Rzędu:</strong> Odległość między rzędami w cm.</li></ul>',
     },
     {
       type: 'title',

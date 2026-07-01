@@ -4,7 +4,7 @@ import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
 const slug = 'thermometre-grillon';
-const title = 'Thermomètre à Grillons – Loi de Dolbear';
+const title = 'Thermomètre à Grillons: Loi de Dolbear';
 const description =
   'Pas de thermomètre ? Écoutez les grillons. Calculez la température exacte en comptant les stridulations avec notre calculateur de la Loi de Dolbear.';
 
@@ -95,7 +95,7 @@ export const content: ToolLocaleContent<CricketThermometerUI> = {
   seo: [
     {
       type: 'title',
-      text: 'Guide Complet : Comment Utiliser la Loi de Dolbear pour Calculer la Température',
+      text: 'Guide Complet: Comment Utiliser la Loi de Dolbear pour Calculer la Température',
       level: 2,
     },
     {
@@ -109,12 +109,12 @@ export const content: ToolLocaleContent<CricketThermometerUI> = {
     },
     {
       type: 'title',
-      text: 'La Science : Ectothermie et Métabolisme',
+      text: 'La Science: Ectothermie et Métabolisme',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Contrairement aux mammifères, qui maintiennent une température corporelle constante, les insectes dépendent de la chaleur externe. Leurs réactions biochimiques suivent l\'<strong>Équation d\'Arrhenius</strong> : plus il fait chaud, plus la réaction est rapide.',
+      html: 'Contrairement aux mammifères, qui maintiennent une température corporelle constante, les insectes dépendent de la chaleur externe. Leurs réactions biochimiques suivent l\'<strong>Équation d\'Arrhenius</strong>: plus il fait chaud, plus la réaction est rapide.',
     },
     {
       type: 'paragraph',
@@ -136,7 +136,7 @@ export const content: ToolLocaleContent<CricketThermometerUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Notre outil fait cela automatiquement : il mesure le temps entre vos tapotements, calcule les stridulations par minute (BPM) et applique la formule instantanément.',
+      html: 'Notre outil fait cela automatiquement: il mesure le temps entre vos tapotements, calcule les stridulations par minute (BPM) et applique la formule instantanément.',
     },
     {
       type: 'title',
@@ -162,8 +162,8 @@ export const content: ToolLocaleContent<CricketThermometerUI> = {
     labelTapping: 'Continuez à tapoter...',
     tapInstruction: 'Chaque fois que vous entendez une stridulation',
     btnReset: 'Réinitialiser',
-    btnSoundOn: 'Son : On',
-    btnSoundOff: 'Son : Off',
+    btnSoundOn: 'Son: On',
+    btnSoundOff: 'Son: Off',
     unitChirpsMin: 'strid./min',
   },
 };

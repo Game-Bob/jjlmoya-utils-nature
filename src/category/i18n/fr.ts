@@ -8,7 +8,7 @@ export const content: CategoryLocaleContent = {
   seo: [
     {
       type: 'title',
-      text: 'Ingénierie Biologique et Durabilité : Données pour la Planète',
+      text: 'Ingénierie Biologique et Durabilité: Données pour la Planète',
       level: 2,
     },
     {
@@ -21,7 +21,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Agriculture de Précision : Étalonnage des Semis et Culture',
+      text: 'Agriculture de Précision: Étalonnage des Semis et Culture',
       level: 2,
     },
     {
@@ -30,7 +30,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Gestion des Ressources en Eau : Récupération d\'Eau de Pluie',
+      text: 'Gestion des Ressources en Eau: Récupération d\'Eau de Pluie',
       level: 2,
     },
     {
@@ -48,7 +48,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Durabilité Numérique : Empreinte Carbone Web',
+      text: 'Durabilité Numérique: Empreinte Carbone Web',
       level: 2,
     },
     {
@@ -71,7 +71,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Rotation des Cultures et Biodiversité : La Science Agricole Millénaire',
+      text: 'Rotation des Cultures et Biodiversité: La Science Agricole Millénaire',
       level: 2,
     },
     {
@@ -80,7 +80,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Conservation du Sol et des Nutriments : Analyse Pédologique',
+      text: 'Conservation du Sol et des Nutriments: Analyse Pédologique',
       level: 2,
     },
     {

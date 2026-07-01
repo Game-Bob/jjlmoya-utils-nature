@@ -4,7 +4,7 @@ import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
 const slug = 'cricket-thermometer';
-const title = 'Cricket Thermometer – Dolbear\'s Law Temperature Calculator';
+const title = 'Cricket Thermometer: Dolbear\'s Law Temperature Calculator';
 const description =
   'No thermometer? Listen to the crickets. Calculate the exact temperature by counting chirps with our Dolbear\'s Law calculator.';
 

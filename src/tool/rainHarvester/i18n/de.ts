@@ -9,7 +9,7 @@ const description = 'Berechnen Sie, wie viel Regenwasser Sie von Ihrem Dach samm
 const faqData = [
   {
     question: 'Wie viel Wasser kann ich tatsächlich von meinem Dach sammeln?',
-    answer: 'Als Faustregel gilt: Pro Quadratmeter Dachfläche und Millimeter Regen können Sie etwa 1 Liter Wasser sammeln. Es entstehen jedoch Verluste durch Verdunstung und Filtration, die mit dem „Abflussbeiwert“ angepasst werden.',
+    answer: 'Als Faustregel gilt: Pro Quadratmeter Dachfläche und Millimeter Regen können Sie etwa 1 Liter Wasser sammeln. Es entstehen jedoch Verluste durch Verdunstung und Filtration, die mit dem "Abflussbeiwert" angepasst werden.',
   },
   {
     question: 'Was ist der Abflussbeiwert?',
@@ -91,7 +91,7 @@ export const content: RainHarvesterLocaleContent = {
     unitM2: 'm²',
     unitMm: 'mm',
     unitLiters: 'Liter',
-    helpRainfall: 'Unbekannt? Suchen Sie bei Google nach „durchschnittlicher jährlicher Niederschlag [Ihre Stadt]“.',
+    helpRainfall: 'Unbekannt? Suchen Sie bei Google nach "durchschnittlicher jährlicher Niederschlag [Ihre Stadt]".',
     efficiencyTitle: 'Effizienzfaktor',
     efficiencyNote: 'Für Filter und Verdunstung wird ein Verlust von 10 % angesetzt.',
     resultTitle: 'Jährliches Erntepotenzial',
@@ -113,7 +113,7 @@ export const content: RainHarvesterLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Die meisten Hausbesitzer sind sich des Potenzials ihres eigenen Daches nicht bewusst. Ein Standarddach kann jedes Jahr Tausende Liter kostenloses Wasser auffangen. Dieses Tool quantifiziert dieses Potenzial, sodass Sie genau berechnen können, wie viel Wasser Sie „ernten“ können, und die ideale Tankgröße für die Speicherung bestimmen können.',
+      html: 'Die meisten Hausbesitzer sind sich des Potenzials ihres eigenen Daches nicht bewusst. Ein Standarddach kann jedes Jahr Tausende Liter kostenloses Wasser auffangen. Dieses Tool quantifiziert dieses Potenzial, sodass Sie genau berechnen können, wie viel Wasser Sie "ernten" können, und die ideale Tankgröße für die Speicherung bestimmen können.',
     },
     {
       type: 'title',

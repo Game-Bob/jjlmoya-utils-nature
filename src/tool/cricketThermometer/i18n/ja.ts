@@ -4,7 +4,7 @@ import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
 const slug = 'cricket-thermometer';
-const title = 'コオロギ温度計 – ドルベアの法則による温度計算機';
+const title = 'コオロギ温度計: ドルベアの法則による温度計算機';
 const description =
   '温度計がない？そんな時はコオロギの声を聞きましょう。ドルベアの法則に基づき、鳴き声を数えるだけで正確な温度を算出します。';
 

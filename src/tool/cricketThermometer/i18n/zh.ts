@@ -4,7 +4,7 @@ import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
 const slug = 'cricket-thermometer';
-const title = '蟋蟀温度计 – 杜倍耳定律温度计算器';
+const title = '蟋蟀温度计: 杜倍耳定律温度计算器';
 const description =
   '没有温度计？听听蟋蟀的声音。使用我们的杜倍耳定律计算器，通过计算鸣叫次数来得出准确温度。';
 
@@ -42,7 +42,7 @@ const howToData = [
   },
   {
     name: '输入数值',
-    text: '跟随鸣叫节奏点击“TAP”按钮几秒钟，计算器会自动计算 BPM（每分钟鸣叫次数）。',
+    text: '跟随鸣叫节奏点击"TAP"按钮几秒钟，计算器会自动计算 BPM（每分钟鸣叫次数）。',
   },
   {
     name: '验证温度',
@@ -104,8 +104,8 @@ export const content: ToolLocaleContent<CricketThermometerUI> = {
     },
     {
       type: 'tip',
-      title: '蟋蟀为什么要“唱歌”？',
-      html: '<p>蟋蟀的“歌声”，即<strong>摩擦发声</strong>，实际上是一种求偶信号。公蟋蟀通过摩擦双翅（而不是腿）来发出这种声音。令人着迷的是，由于它们是冷血动物（变温动物），这种摩擦的速度直接取决于空气的热能。</p>',
+      title: '蟋蟀为什么要"唱歌"？',
+      html: '<p>蟋蟀的"歌声"，即<strong>摩擦发声</strong>，实际上是一种求偶信号。公蟋蟀通过摩擦双翅（而不是腿）来发出这种声音。令人着迷的是，由于它们是冷血动物（变温动物），这种摩擦的速度直接取决于空气的热能。</p>',
     },
     {
       type: 'title',
@@ -146,9 +146,9 @@ export const content: ToolLocaleContent<CricketThermometerUI> = {
     {
       type: 'list',
       items: [
-        '<strong>爱情温度计：</strong> 一些理论认为，母蟋蟀更喜欢在当前温度下以“正确”频率唱歌的公蟋蟀，因为这表明该公蟋蟀身体健康且代谢强健。',
+        '<strong>爱情温度计：</strong> 一些理论认为，母蟋蟀更喜欢在当前温度下以"正确"频率唱歌的公蟋蟀，因为这表明该公蟋蟀身体健康且代谢强健。',
         '<strong>寒冷极限：</strong> 低于 10°C (50°F) 时，大多数蟋蟀会停止唱歌，因为它们的代谢太慢，无法维持肌肉输出。',
-        '<strong>同步鸣叫：</strong> 在温暖的夜晚，成千上万只蟋蟀可以同步鸣叫，产生令人印象深刻的“声波”效果。',
+        '<strong>同步鸣叫：</strong> 在温暖的夜晚，成千上万只蟋蟀可以同步鸣叫，产生令人印象深刻的"声波"效果。',
       ],
     },
     {

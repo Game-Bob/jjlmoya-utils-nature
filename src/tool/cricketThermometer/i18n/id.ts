@@ -4,7 +4,7 @@ import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
 const slug = 'termometer-jangkrik';
-const title = 'Termometer Jangkrik – Kalkulator Suhu Hukum Dolbear';
+const title = 'Termometer Jangkrik: Kalkulator Suhu Hukum Dolbear';
 const description =
   'Tidak ada termometer? Dengarkan jangkrik. Hitung suhu tepat dengan menghitung kerikan menggunakan kalkulator Hukum Dolbear kami.';
 

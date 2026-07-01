@@ -108,7 +108,7 @@ export const content: RainHarvesterLocaleContent = {
   seo: [
     {
       type: 'title',
-      text: 'Récupération de l\'eau de pluie : Autonomie et durabilité',
+      text: 'Récupération de l\'eau de pluie: Autonomie et durabilité',
       level: 2,
     },
     {

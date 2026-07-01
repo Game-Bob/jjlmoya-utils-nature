@@ -4,7 +4,7 @@ import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
 const slug = 'grillen-thermometer';
-const title = 'Grillen Thermometer – Dolbearsches Gesetz Temperaturrechner';
+const title = 'Grillen Thermometer: Dolbearsches Gesetz Temperaturrechner';
 const description =
   'Kein Thermometer zur Hand? Hören Sie den Grillen zu. Berechnen Sie die exakte Temperatur, indem Sie das Zirpen mit unserem Dolbearsches Gesetz Rechner zählen.';
 
@@ -105,7 +105,7 @@ export const content: ToolLocaleContent<CricketThermometerUI> = {
     {
       type: 'tip',
       title: 'Warum singen Grillen?',
-      html: '<p>Der „Gesang“ der Grille, auch <strong>Stridulation</strong> genannt, ist eigentlich ein Paarungsruf. Die Männchen reiben ihre Flügel (nicht ihre Beine) aneinander, um diesen Laut zu erzeugen. Faszinierenderweise hängt die Geschwindigkeit dieses Reibens direkt von der Wärmeenergie der Luft ab, da Grillen wechselwarme Tiere (Ektothermen) sind.</p>',
+      html: '<p>Der "Gesang" der Grille, auch <strong>Stridulation</strong> genannt, ist eigentlich ein Paarungsruf. Die Männchen reiben ihre Flügel (nicht ihre Beine) aneinander, um diesen Laut zu erzeugen. Faszinierenderweise hängt die Geschwindigkeit dieses Reibens direkt von der Wärmeenergie der Luft ab, da Grillen wechselwarme Tiere (Ektothermen) sind.</p>',
     },
     {
       type: 'title',
@@ -146,9 +146,9 @@ export const content: ToolLocaleContent<CricketThermometerUI> = {
     {
       type: 'list',
       items: [
-        '<strong>Thermometer der Liebe:</strong> Einige Theorien besagen, dass Weibchen Männchen bevorzugen, die in der „korrekten“ Frequenz für die aktuelle Temperatur singen, da dies darauf hindeutet, dass das Männchen gesund ist und einen starken Stoffwechsel hat.',
+        '<strong>Thermometer der Liebe:</strong> Einige Theorien besagen, dass Weibchen Männchen bevorzugen, die in der "korrekten" Frequenz für die aktuelle Temperatur singen, da dies darauf hindeutet, dass das Männchen gesund ist und einen starken Stoffwechsel hat.',
         '<strong>Kältegrenze:</strong> Unterhalb von 10°C (50°F) hören die meisten Grillen auf zu singen, da ihr Stoffwechsel zu langsam ist, um die muskuläre Anstrengung aufrechtzuerhalten.',
-        '<strong>Synchronisation:</strong> In warmen Nächten können tausende Grillen ihr Zirpen synchronisieren und so einen beeindruckenden „Wellen“-Klangeffekt erzeugen.',
+        '<strong>Synchronisation:</strong> In warmen Nächten können tausende Grillen ihr Zirpen synchronisieren und so einen beeindruckenden "Wellen"-Klangeffekt erzeugen.',
       ],
     },
     {

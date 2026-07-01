@@ -143,7 +143,7 @@ export const content: DigitalCarbonLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Der <strong>digitale CO₂-Fußabdruck</strong> einer Website wird in Gramm CO₂-Äquivalent (gCO₂e) pro Besuch gemessen. Eine durchschnittliche Website erzeugt etwa 0,5 g CO₂ pro Ladevorgang. Obwohl das unbedeutend scheint, kann eine Seite mit 100.000 monatlichen Besuchen mehr als 600 kg CO₂ pro Jahr emittieren – was einer Fahrt von mehr als 3.000 km mit einem Benziner entspricht.',
+      html: 'Der <strong>digitale CO₂-Fußabdruck</strong> einer Website wird in Gramm CO₂-Äquivalent (gCO₂e) pro Besuch gemessen. Eine durchschnittliche Website erzeugt etwa 0,5 g CO₂ pro Ladevorgang. Obwohl das unbedeutend scheint, kann eine Seite mit 100.000 monatlichen Besuchen mehr als 600 kg CO₂ pro Jahr emittieren - was einer Fahrt von mehr als 3.000 km mit einem Benziner entspricht.',
     },
     {
       type: 'title',
@@ -221,7 +221,7 @@ export const content: DigitalCarbonLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Das Internet macht zwischen <strong>2 % und 4 % der weltweiten CO₂-Emissionen</strong> aus – ein Wert, der mit der Luftfahrtindustrie vergleichbar ist. Jedes Kilobyte, das Sie einsparen, macht nicht nur Ihre Website schneller: Es reduziert messbar die digitale Verschmutzung.',
+      html: 'Das Internet macht zwischen <strong>2 % und 4 % der weltweiten CO₂-Emissionen</strong> aus - ein Wert, der mit der Luftfahrtindustrie vergleichbar ist. Jedes Kilobyte, das Sie einsparen, macht nicht nur Ihre Website schneller: Es reduziert messbar die digitale Verschmutzung.',
     },
   ],
   bibliography,

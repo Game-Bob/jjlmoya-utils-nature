@@ -4,7 +4,7 @@ import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
 const slug = 'termometro-grillo';
-const title = '¿Qué temperatura hace? – Termómetro de Grillos (Ley de Dolbear)';
+const title = '¿Qué temperatura hace?: Termómetro de Grillos (Ley de Dolbear)';
 const description =
   '¿No tienes termómetro? Escucha a los grillos. Calcula la temperatura exacta contando sus chirridos con nuestra calculadora de la Ley de Dolbear.';
 

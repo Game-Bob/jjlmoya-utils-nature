@@ -4,7 +4,7 @@ import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
 const slug = 'termometro-grilo';
-const title = 'Termómetro de Grilo – Calculadora de Temperatura da Lei de Dolbear';
+const title = 'Termómetro de Grilo: Calculadora de Temperatura da Lei de Dolbear';
 const description =
   'Sem termómetro? Ouça os grilos. Calcule a temperatura exata contando os cri-cris com a nossa calculadora da Lei de Dolbear.';
 

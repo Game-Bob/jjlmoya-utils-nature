@@ -4,7 +4,7 @@ import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
 const slug = 'cricket-termometer';
-const title = 'Cırcır Böceği Termometresi – Dolbear Yasası Sıcaklık Hesaplayıcı';
+const title = 'Cırcır Böceği Termometresi: Dolbear Yasası Sıcaklık Hesaplayıcı';
 const description =
   'Termometreniz mi yok? Cırcır böceklerini dinleyin. Dolbear Yasası hesaplayıcımızla ötüşleri sayarak tam sıcaklığı hesaplayın.';
 

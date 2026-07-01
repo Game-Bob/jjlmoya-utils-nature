@@ -9,7 +9,7 @@ const description = 'Oblicz, ile wody deszczowej możesz zebrać ze swojego dach
 const faqData = [
   {
     question: 'Ile wody mogę faktycznie zebrać ze swojego dachu?',
-    answer: 'Ogólna zasada mówi, że z każdego metra kwadratowego dachu i na każdy milimetr deszczu można zebrać około 1 litra wody. Istnieją jednak straty wynikające z parowania i filtracji, korygowane przez „współczynnik spływu”.',
+    answer: 'Ogólna zasada mówi, że z każdego metra kwadratowego dachu i na każdy milimetr deszczu można zebrać około 1 litra wody. Istnieją jednak straty wynikające z parowania i filtracji, korygowane przez "współczynnik spływu".',
   },
   {
     question: 'Co to jest współczynnik spływu?',
@@ -91,7 +91,7 @@ export const content: RainHarvesterLocaleContent = {
     unitM2: 'm²',
     unitMm: 'mm',
     unitLiters: 'Litry',
-    helpRainfall: 'Nie wiesz? Wyszukaj w Google „średnie roczne opady [Twoje miasto]”.',
+    helpRainfall: 'Nie wiesz? Wyszukaj w Google "średnie roczne opady [Twoje miasto]".',
     efficiencyTitle: 'Współczynnik Wydajności',
     efficiencyNote: 'Uwzględniono 10% strat na filtry i parowanie.',
     resultTitle: 'Roczny Potencjał Uzysku',
@@ -113,7 +113,7 @@ export const content: RainHarvesterLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Większość właścicieli domów nie zdaje sobie sprawy z potencjału własnego dachu. Standardowy dach może zebrać tysiące litrów darmowej wody każdego roku. To narzędzie pozwala oszacować ten potencjał, obliczyć dokładnie, ile wody możesz „zebrać” i dobrać idealny zbiornik do jej przechowywania.',
+      html: 'Większość właścicieli domów nie zdaje sobie sprawy z potencjału własnego dachu. Standardowy dach może zebrać tysiące litrów darmowej wody każdego roku. To narzędzie pozwala oszacować ten potencjał, obliczyć dokładnie, ile wody możesz "zebrać" i dobrać idealny zbiornik do jej przechowywania.',
     },
     {
       type: 'title',

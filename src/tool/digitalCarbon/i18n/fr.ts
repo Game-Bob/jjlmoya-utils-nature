@@ -21,7 +21,7 @@ const faqData = [
   },
   {
     question: 'Comment réduire le CO₂ de mon site web ?',
-    answer: 'Le moyen le plus efficace est de réduire le poids de la page : optimisez les images (WebP), minimisez les fichiers CSS y JS, utilisez le chargement différé (lazy loading) y choisissez un hébergeur utilisant des énergies renouvelables.',
+    answer: 'Le moyen le plus efficace est de réduire le poids de la page: optimisez les images (WebP), minimisez les fichiers CSS y JS, utilisez le chargement différé (lazy loading) y choisissez un hébergeur utilisant des énergies renouvelables.',
   },
 ];
 
@@ -125,7 +125,7 @@ export const content: DigitalCarbonLocaleContent = {
   seo: [
     {
       type: 'title',
-      text: 'Calculateur d\'empreinte carbone numérique : Quel est le CO₂ généré par votre site',
+      text: 'Calculateur d\'empreinte carbone numérique: Quel est le CO₂ généré par votre site',
       level: 2,
     },
     {
@@ -139,7 +139,7 @@ export const content: DigitalCarbonLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Chaque fois que vous ouvrez une page web, votre appareil, votre routeur, les câbles sous-marins et les serveurs à l\'autre bout du monde consomment de l\'électricité. Cette électricité est encore largement générée par la combustion d\'énergies fossiles. Résultat : une quantité réelle de <strong>CO₂ émise dans l\'atmosphère à chaque visite</strong>.',
+      html: 'Chaque fois que vous ouvrez une page web, votre appareil, votre routeur, les câbles sous-marins et les serveurs à l\'autre bout du monde consomment de l\'électricité. Cette électricité est encore largement générée par la combustion d\'énergies fossiles. Résultat: une quantité réelle de <strong>CO₂ émise dans l\'atmosphère à chaque visite</strong>.',
     },
     {
       type: 'paragraph',
@@ -221,7 +221,7 @@ export const content: DigitalCarbonLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Internet représente entre <strong>2% et 4% des émissions mondiales de CO₂</strong>, un chiffre comparable à l\'industrie aéronautique. Chaque kilo-octet éliminé ne rend pas seulement votre site plus rapide : il réduit de manière mesurable la pollution numérique.',
+      html: 'Internet représente entre <strong>2% et 4% des émissions mondiales de CO₂</strong>, un chiffre comparable à l\'industrie aéronautique. Chaque kilo-octet éliminé ne rend pas seulement votre site plus rapide: il réduit de manière mesurable la pollution numérique.',
     },
   ],
   bibliography,

@@ -4,7 +4,7 @@ import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
 const slug = 'syrstermometer';
-const title = 'Syrstermometer – Dolbears lag temperaturkalkylator';
+const title = 'Syrstermometer: Dolbears lag temperaturkalkylator';
 const description =
   'Ingen termometer? Lyssna på syrsorna. Beräkna exakt temperatur genom att räkna spelningar med vår kalkylator för Dolbears lag.';
 

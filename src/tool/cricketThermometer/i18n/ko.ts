@@ -4,7 +4,7 @@ import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
 const slug = 'cricket-thermometer';
-const title = '귀뚜라미 온도계 – 돌베어 법칙 온도 계산기';
+const title = '귀뚜라미 온도계: 돌베어 법칙 온도 계산기';
 const description =
   '온도계가 없으신가요? 귀뚜라미 소리에 귀를 기울여 보세요. 돌베어 법칙 계산기를 사용하여 귀뚜라미 울음소리 횟수로 정확한 온도를 계산할 수 있습니다.';
 

@@ -4,7 +4,7 @@ import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
 const slug = 'krekels-thermometer';
-const title = 'Krekels thermometer – Dolbears wet temperatuurcalculator';
+const title = 'Krekels thermometer: Dolbears wet temperatuurcalculator';
 const description =
   'Geen thermometer? Luister naar de krekels. Bereken de exacte temperatuur door het aantal tsjirpen te tellen met onze Dolbears wet calculator.';
 

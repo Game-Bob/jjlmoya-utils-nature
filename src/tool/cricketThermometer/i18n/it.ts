@@ -4,7 +4,7 @@ import type { ToolLocaleContent } from '../../../types';
 import type { CricketThermometerUI } from '../ui';
 
 const slug = 'termometro-a-grillo';
-const title = 'Termometro a Grillo – Calcolatore della Temperatura via Legge di Dolbear';
+const title = 'Termometro a Grillo: Calcolatore della Temperatura via Legge di Dolbear';
 const description =
   'Senza termometro? Ascolta i grilli. Calcola la temperatura esatta contando i friniti con il nostro calcolatore basato sulla Legge di Dolbear.';
 

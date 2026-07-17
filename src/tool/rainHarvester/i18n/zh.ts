@@ -126,7 +126,7 @@ export const content: RainHarvesterLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: '<code style="display:block;padding:1rem;background:var(--bg-alt);border-radius:0.5rem;margin:1rem 0;font-family:monospace;">容量 = 面积 × 降雨量 × 径流系数 × 过滤效率</code>',
+      html: '<code style="display:block;padding:1rem;background:var(-bg-alt);border-radius:0.5rem;margin:1rem 0;font-family:monospace;">容量 = 面积 × 降雨量 × 径流系数 × 过滤效率</code>',
     },
     {
       type: 'list',

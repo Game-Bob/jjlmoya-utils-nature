@@ -126,7 +126,7 @@ export const content: RainHarvesterLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: '<code style="display:block;padding:1rem;background:var(--bg-alt);border-radius:0.5rem;margin:1rem 0;font-family:monospace;">Volym = Area × Nederbörd × Avrinningskoefficient × Filtereffektivitet</code>',
+      html: '<code style="display:block;padding:1rem;background:var(-bg-alt);border-radius:0.5rem;margin:1rem 0;font-family:monospace;">Volym = Area × Nederbörd × Avrinningskoefficient × Filtereffektivitet</code>',
     },
     {
       type: 'list',

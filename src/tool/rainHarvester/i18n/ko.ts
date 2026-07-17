@@ -126,7 +126,7 @@ export const content: RainHarvesterLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: '<code style="display:block;padding:1rem;background:var(--bg-alt);border-radius:0.5rem;margin:1rem 0;font-family:monospace;">용량 = 면적 × 강수량 × 유출 계수 × 필터 효율</code>',
+      html: '<code style="display:block;padding:1rem;background:var(-bg-alt);border-radius:0.5rem;margin:1rem 0;font-family:monospace;">용량 = 면적 × 강수량 × 유출 계수 × 필터 효율</code>',
     },
     {
       type: 'list',

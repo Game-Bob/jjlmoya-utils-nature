@@ -1,8 +1,8 @@
 import type { NatureCategoryEntry } from '../types';
-import { cricketThermometer } from '../tool/cricketThermometer/index';
-import { seedCalculator } from '../tool/seedCalculator/index';
-import { rainHarvester } from '../tool/rainHarvester/index';
-import { digitalCarbon } from '../tool/digitalCarbon/index';
+import { cricketThermometer } from '../tool/cricketThermometer/entry';
+import { seedCalculator } from '../tool/seedCalculator/entry';
+import { rainHarvester } from '../tool/rainHarvester/entry';
+import { digitalCarbon } from '../tool/digitalCarbon/entry';
 
 export const natureCategory: NatureCategoryEntry = {
   icon: 'mdi:leaf',

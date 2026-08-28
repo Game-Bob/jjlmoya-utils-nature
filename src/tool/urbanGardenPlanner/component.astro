@@ -1,0 +1,131 @@
+---
+import { Icon } from 'astro-icon/components';
+import { urbanGardenPlanner } from './index';
+import { DEFAULT_INPUTS } from './logic';
+
+const { ui: propUi, locale = 'en' } = Astro.props;
+let ui = propUi;
+
+if (!ui) {
+  const content = await urbanGardenPlanner.i18n[locale as keyof typeof urbanGardenPlanner.i18n]?.();
+  ui = content?.ui;
+}
+
+if (!ui) return null;
+
+const config = JSON.stringify({ ui, defaults: DEFAULT_INPUTS });
+---
+
+<urban-garden-planner class="ugrp-root">
+  <div class="ugrp-shell">
+    <section class="ugrp-input-panel" aria-labelledby="ugrp-input-heading">
+      <div class="ugrp-kicker">{ui.eyebrow}</div>
+      <h2 id="ugrp-input-heading" class="ugrp-heading">
+        <span class="ugrp-step">1</span>
+        {ui.headInputs}
+      </h2>
+
+      <div class="ugrp-fields">
+        <label class="ugrp-field" for="gardenArea">
+          <span class="ugrp-label"><Icon name="mdi:flower-outline" aria-hidden="true" />{ui.labelGardenArea}</span>
+          <span class="ugrp-input-line">
+            <input id="gardenArea" type="number" min="0" step="0.5" value={DEFAULT_INPUTS.gardenAreaM2} />
+            <span>{ui.unitSquareMeters}</span>
+          </span>
+          <span class="ugrp-help">{ui.helpGardenArea}</span>
+        </label>
+
+        <label class="ugrp-field" for="substrateDepth">
+          <span class="ugrp-label"><Icon name="mdi:layers-outline" aria-hidden="true" />{ui.labelDepth}</span>
+          <span class="ugrp-input-line">
+            <input id="substrateDepth" type="number" min="0" step="1" value={DEFAULT_INPUTS.substrateDepthCm} />
+            <span>{ui.unitCentimeters}</span>
+          </span>
+          <span class="ugrp-help">{ui.helpDepth}</span>
+        </label>
+
+        <label class="ugrp-field" for="collectionArea">
+          <span class="ugrp-label"><Icon name="mdi:home-roof" aria-hidden="true" />{ui.labelCollectionArea}</span>
+          <span class="ugrp-input-line">
+            <input id="collectionArea" type="number" min="0" step="0.5" value={DEFAULT_INPUTS.collectionAreaM2} />
+            <span>{ui.unitSquareMeters}</span>
+          </span>
+          <span class="ugrp-help">{ui.helpCollectionArea}</span>
+        </label>
+
+        <label class="ugrp-field" for="rainfall">
+          <span class="ugrp-label"><Icon name="mdi:weather-rainy" aria-hidden="true" />{ui.labelRainfall}</span>
+          <span class="ugrp-input-line">
+            <input id="rainfall" type="number" min="0" step="1" value={DEFAULT_INPUTS.rainfallMm} />
+            <span>{ui.unitMillimeters}</span>
+          </span>
+          <span class="ugrp-help">{ui.helpRainfall}</span>
+        </label>
+      </div>
+
+      <div class="ugrp-presets">
+        <div class="ugrp-subheading">{ui.presetsTitle}</div>
+        <div class="ugrp-preset-row">
+          <button type="button" class="ugrp-preset" data-preset="4,20,8,15">{ui.presetBalcony}</button>
+          <button type="button" class="ugrp-preset" data-preset="12,30,25,20">{ui.presetRaisedBed}</button>
+          <button type="button" class="ugrp-preset" data-preset="24,35,50,25">{ui.presetCommunity}</button>
+        </div>
+      </div>
+
+      <div class="ugrp-note ugrp-note-assumption">
+        <Icon name="mdi:calculator-variant-outline" aria-hidden="true" />
+        <div><strong>{ui.assumptionTitle}</strong><span>{ui.assumptionText}</span></div>
+      </div>
+    </section>
+
+    <section class="ugrp-result-panel" aria-labelledby="ugrp-scene-heading">
+      <div class="ugrp-result-topline">
+        <div>
+          <div class="ugrp-kicker">{ui.headScene}</div>
+          <h2 id="ugrp-scene-heading" class="ugrp-heading"><span class="ugrp-step ugrp-step-light">2</span>{ui.sceneGardenBed}</h2>
+        </div>
+        <div id="planStatus" class="ugrp-status" aria-live="polite">{ui.statusBalanced}</div>
+      </div>
+
+      <div class="ugrp-landscape" aria-label={ui.headScene} role="img">
+        <div id="rainDots" class="ugrp-rain-dots" aria-hidden="true"></div>
+        <div class="ugrp-cloud"><Icon name="mdi:weather-cloudy" aria-hidden="true" /></div>
+        <div class="ugrp-catchment"><span>{ui.sceneCatchment}</span><i></i></div>
+        <div class="ugrp-pipe"><i></i><b></b></div>
+        <div class="ugrp-bed">
+          <div class="ugrp-bed-frame"></div>
+          <div id="soilFill" class="ugrp-soil-fill" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="ugrp-leaves"><Icon name="mdi:sprout" aria-hidden="true" /><Icon name="mdi:sprout" aria-hidden="true" /><Icon name="mdi:sprout" aria-hidden="true" /></div>
+          <span>{ui.sceneSoil}</span>
+        </div>
+        <div class="ugrp-water-vessel"><div id="waterFill" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div><Icon name="mdi:water-outline" aria-hidden="true" /><span>{ui.sceneWater}</span></div>
+      </div>
+
+      <p id="planStatusNote" class="ugrp-status-note">{ui.statusNote}</p>
+
+      <div class="ugrp-metrics" aria-live="polite">
+        <div class="ugrp-metric ugrp-metric-main"><span>{ui.labelWaterCaptured}</span><strong id="waterValue">0 L</strong></div>
+        <div class="ugrp-metric"><span>{ui.labelSoilNeeded}</span><strong id="soilValue">0 L</strong></div>
+        <div class="ugrp-metric"><span>{ui.labelGardenDepth}</span><strong id="depthValue">0 mm</strong></div>
+        <div class="ugrp-metric"><span>{ui.labelWateringArea}</span><strong id="areaValue">0 m²</strong></div>
+      </div>
+
+      <div class="ugrp-note ugrp-note-limit">
+        <Icon name="mdi:leaf-circle-outline" aria-hidden="true" />
+        <div><strong>{ui.limitationTitle}</strong><span>{ui.limitationText}</span></div>
+      </div>
+    </section>
+  </div>
+</urban-garden-planner>
+
+<script is:inline type="application/json" id="ugrp-config" set:html={config}></script>
+
+<script>
+  import { mountUrbanGardenPlanner } from './controller';
+  const root = document.querySelector<HTMLElement>('urban-garden-planner');
+  const configNode = document.getElementById('ugrp-config');
+  if (root && configNode) {
+    const config = JSON.parse(configNode.textContent || '{}');
+    mountUrbanGardenPlanner(root, config);
+  }
+</script>

@@ -24,3 +24,5 @@ export { SEED_CALCULATOR_TOOL, seedCalculator } from './tool/seedCalculator/inde
 export { RAIN_HARVESTER_TOOL, rainHarvester } from './tool/rainHarvester/index';
 
 export { DIGITAL_CARBON_TOOL, digitalCarbon } from './tool/digitalCarbon/index';
+
+export { URBAN_GARDEN_PLANNER_TOOL, urbanGardenPlanner } from './tool/urbanGardenPlanner/index';

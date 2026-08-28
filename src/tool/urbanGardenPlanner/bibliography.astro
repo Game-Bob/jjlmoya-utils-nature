@@ -1,0 +1,9 @@
+---
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { urbanGardenPlanner } from './index';
+
+const { locale = 'en' } = Astro.props;
+const content = await urbanGardenPlanner.i18n[locale as keyof typeof urbanGardenPlanner.i18n]?.();
+---
+
+{content && <SharedBibliography links={content.bibliography} />}

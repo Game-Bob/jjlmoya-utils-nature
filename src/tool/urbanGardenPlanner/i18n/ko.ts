@@ -1,4 +1,4 @@
-import type { FAQPage, HowToThing, SoftwareApplication, WithContext } from 'schema-dts';
+import type { FAQPage, HowTo, SoftwareApplication, WithContext } from 'schema-dts';
 import { bibliography } from '../bibliography';
 import type { UrbanGardenPlannerLocaleContent } from '../entry';
 
@@ -18,7 +18,7 @@ const howToData = [
   { name: '강수량 시험', text: '강수량을 밀리미터로 입력하고 텃밭 크기와 모인 물을 비교합니다.' },
 ];
 const faqSchema: WithContext<FAQPage> = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqData.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) };
-const howToSchema: WithContext<HowToThing> = { '@context': 'https://schema.org', '@type': 'HowTo', name: title, description, step: howToData.map((step, index) => ({ '@type': 'HowToStep', position: index + 1, name: step.name, text: step.text })) };
+const howToSchema: WithContext<HowTo> = { '@context': 'https://schema.org', '@type': 'HowTo', name: title, description, step: howToData.map((step, index) => ({ '@type': 'HowToStep', position: index + 1, name: step.name, text: step.text })) };
 const appSchema: WithContext<SoftwareApplication> = { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: title, description, applicationCategory: 'UtilityApplication', operatingSystem: 'All', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' }, inLanguage: 'ko' };
 export const content: UrbanGardenPlannerLocaleContent = {
   slug, title, description,

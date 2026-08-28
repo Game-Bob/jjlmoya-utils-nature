@@ -1,4 +1,4 @@
-import type { FAQPage, HowToThing, SoftwareApplication, WithContext } from 'schema-dts';
+import type { FAQPage, HowTo, SoftwareApplication, WithContext } from 'schema-dts';
 import { bibliography } from '../bibliography';
 import type { UrbanGardenPlannerLocaleContent } from '../entry';
 
@@ -26,7 +26,7 @@ const faqSchema: WithContext<FAQPage> = {
   mainEntity: faqData.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })),
 };
 
-const howToSchema: WithContext<HowToThing> = {
+const howToSchema: WithContext<HowTo> = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   name: '计算城市花园的土壤和雨水',

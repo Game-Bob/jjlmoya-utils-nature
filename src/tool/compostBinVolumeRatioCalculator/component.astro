@@ -1,0 +1,77 @@
+---
+import './compost-bin-volume-ratio-calculator.css';
+import type { CompostBinVolumeRatioCalculatorUI } from './ui';
+
+interface Props {
+  ui: CompostBinVolumeRatioCalculatorUI;
+}
+
+const { ui } = Astro.props as Props;
+const initialState = {
+  unitSystem: 'metric',
+  shape: 'rectangular',
+  width: 80,
+  depth: 60,
+  diameter: 60,
+  height: 80,
+  browns: 36,
+  greens: 14,
+  moisture: 'sponge',
+};
+---
+
+<div class="compost-tool" data-compost-tool>
+  <div class="compost-tool-bar">
+    <div class="compost-tool-units" aria-label="Units">
+      <button type="button" data-unit="metric" data-unit-metric aria-pressed="true">{ui.unitMetric}</button>
+      <button type="button" data-unit="imperial" data-unit-imperial aria-pressed="false">{ui.unitImperial}</button>
+    </div>
+    <button type="button" class="compost-tool-reset" data-reset>{ui.resetLabel}</button>
+  </div>
+  <div class="compost-tool-body">
+    <section class="compost-controls" aria-labelledby="compost-controls-title">
+      <div class="compost-section-heading"><span>01</span><h2 id="compost-controls-title">Build the bin</h2></div>
+      <div class="compost-choice-group" role="group" aria-label={ui.shapeTitle}>
+        <span class="compost-choice-group-label">{ui.shapeTitle}</span>
+        <div class="compost-choice-group-buttons">
+          <button type="button" data-shape="rectangular" data-shape-rectangular aria-pressed="true" class="is-active"><span class="compost-shape-icon compost-shape-icon-box"></span>{ui.shapeRectangular}</button>
+          <button type="button" data-shape="cylindrical" data-shape-cylindrical aria-pressed="false"><span class="compost-shape-icon compost-shape-icon-cylinder"></span>{ui.shapeCylindrical}</button>
+        </div>
+      </div>
+      <div class="compost-dimensions" data-dimensions data-shape="rectangular">
+        <label data-rectangular-only><span>{ui.widthLabel}</span><div><input data-input="width" type="number" min="0" step="1" value="80" inputmode="decimal" /><em data-dimension-unit>{ui.dimensionUnitCm}</em></div></label>
+        <label data-rectangular-only><span>{ui.depthLabel}</span><div><input data-input="depth" type="number" min="0" step="1" value="60" inputmode="decimal" /><em data-dimension-unit>{ui.dimensionUnitCm}</em></div></label>
+        <label data-cylinder-only><span>{ui.diameterLabel}</span><div><input data-input="diameter" type="number" min="0" step="1" value="60" inputmode="decimal" /><em data-dimension-unit>{ui.dimensionUnitCm}</em></div></label>
+        <label><span>{ui.heightLabel}</span><div><input data-input="height" type="number" min="0" step="1" value="80" inputmode="decimal" /><em data-dimension-unit>{ui.dimensionUnitCm}</em></div></label>
+      </div>
+      <div class="compost-section-heading compost-section-heading-materials"><span>02</span><h2>{ui.recipeTitle}</h2></div>
+      <div class="compost-volume-inputs">
+        <label><span class="compost-label-dot compost-label-dot-brown"></span>{ui.brownLabel}<div><input data-input="browns" type="number" min="0" step="1" value="36" inputmode="decimal" /><em data-volume-unit>{ui.volumeUnitLiters}</em></div></label>
+        <label><span class="compost-label-dot compost-label-dot-green"></span>{ui.greenLabel}<div><input data-input="greens" type="number" min="0" step="1" value="14" inputmode="decimal" /><em data-volume-unit>{ui.volumeUnitLiters}</em></div></label>
+      </div>
+      <div class="compost-presets" aria-label={ui.recipeTitle}>
+        <button type="button" data-preset="kitchen">{ui.recipeKitchen}</button>
+        <button type="button" data-preset="garden">{ui.recipeGarden}</button>
+        <button type="button" data-preset="leafy">{ui.recipeLeafy}</button>
+      </div>
+      <div class="compost-section-heading compost-section-heading-moisture"><span>03</span><h2>{ui.moistureTitle}</h2></div>
+      <div class="compost-moisture" role="group" aria-label={ui.moistureTitle}>
+        <button type="button" data-moisture="dry" aria-pressed="false">{ui.moistureDry}</button>
+        <button type="button" data-moisture="sponge" aria-pressed="true">{ui.moistureSponge}</button>
+        <button type="button" data-moisture="wet" aria-pressed="false">{ui.moistureWet}</button>
+      </div>
+    </section>
+    <section class="compost-scene" data-compost-scene aria-label={ui.sceneTitle}></section>
+    <section class="compost-result" data-compost-results aria-live="polite"></section>
+  </div>
+  <div class="compost-tool-note"><span aria-hidden="true">◌</span>{ui.localNote}</div>
+  <div hidden data-ui={JSON.stringify(ui)}></div>
+  <script is:inline type="application/json" id="compost-initial-state" set:html={JSON.stringify(initialState)}></script>
+  <script>
+    import { mountCompostCalculator } from './controller';
+    const root = document.querySelector<HTMLElement>('[data-compost-tool]');
+    const uiNode = root?.querySelector('[data-ui]');
+    const ui = uiNode ? JSON.parse(uiNode.getAttribute('data-ui') ?? '{}') : {};
+    if (root) mountCompostCalculator(root, ui);
+  </script>
+</div>

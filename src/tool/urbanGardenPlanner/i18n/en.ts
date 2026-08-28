@@ -1,4 +1,4 @@
-import type { FAQPage, HowToThing, SoftwareApplication, WithContext } from 'schema-dts';
+import type { FAQPage, HowTo, SoftwareApplication, WithContext } from 'schema-dts';
 import { bibliography } from '../bibliography';
 import type { UrbanGardenPlannerLocaleContent } from '../entry';
 
@@ -54,7 +54,7 @@ const faqSchema: WithContext<FAQPage> = {
   })),
 };
 
-const howToSchema: WithContext<HowToThing> = {
+const howToSchema: WithContext<HowTo> = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   name: title,

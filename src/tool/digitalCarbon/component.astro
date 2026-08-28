@@ -144,7 +144,7 @@ if (!ui) return null;
       const url = input.value.trim();
       
       if (!url || !url.startsWith('http')) {
-        this.showError(this.ui.errorInvalidUrl);
+        this.showError(this.ui.errorInvalidUrl ?? "");
         return;
       }
 
@@ -156,7 +156,7 @@ if (!ui) return null;
         const result = buildResult(url, bytes);
         this.showResult(result);
       } catch {
-        this.showError(this.ui.errorFetchFailed);
+        this.showError(this.ui.errorFetchFailed ?? "");
       } finally {
         this.setLoading(false);
       }
@@ -204,7 +204,7 @@ if (!ui) return null;
 
       badge.textContent = res.rating.label;
       badge.style.backgroundColor = res.rating.color;
-      ratingDesc.textContent = this.ui[res.rating.descKey];
+      ratingDesc.textContent = this.ui[res.rating.descKey] ?? "";
 
       this.animateValue(resCo2, res.co2g, 2);
       this.animateValue(resEnergy, res.energyWh, 1);

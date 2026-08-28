@@ -26,3 +26,5 @@ export { RAIN_HARVESTER_TOOL, rainHarvester } from './tool/rainHarvester/index';
 export { DIGITAL_CARBON_TOOL, digitalCarbon } from './tool/digitalCarbon/index';
 
 export { URBAN_GARDEN_PLANNER_TOOL, urbanGardenPlanner } from './tool/urbanGardenPlanner/index';
+
+export { COMPOST_BIN_VOLUME_RATIO_CALCULATOR_TOOL, compostBinVolumeRatioCalculator } from './tool/compostBinVolumeRatioCalculator/index';

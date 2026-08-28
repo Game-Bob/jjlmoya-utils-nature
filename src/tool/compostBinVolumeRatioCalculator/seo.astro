@@ -1,0 +1,23 @@
+---
+import type { SEOSection } from '../../types';
+import { compostBinVolumeRatioCalculator } from './entry';
+
+interface Props {
+  locale?: string;
+}
+
+const { locale = 'en' } = Astro.props as Props;
+const loader = compostBinVolumeRatioCalculator.i18n[locale as keyof typeof compostBinVolumeRatioCalculator.i18n] ?? compostBinVolumeRatioCalculator.i18n.en;
+const content = loader ? await loader() : null;
+const sections = (content?.seo ?? []) as SEOSection[];
+---
+
+<div class="compost-seo" data-locale={locale}>
+  {sections.map((section) => {
+    if (section.type === 'title') return <h2>{section.text}</h2>;
+    if (section.type === 'paragraph') return <p set:html={section.html} />;
+    if (section.type === 'list') return <ul>{section.items.map((item) => <li set:html={item} />)}</ul>;
+    if (section.type === 'tip') return <aside><h3>{section.title}</h3><div set:html={section.html} /></aside>;
+    return null;
+  })}
+</div>

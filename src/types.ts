@@ -5,7 +5,7 @@ export type { SEOSection };
 
 export type KnownLocale =
   | 'ar' | 'da' | 'de' | 'en' | 'es' | 'fi'
-  | 'fr' | 'it' | 'ja' | 'ko' | 'nb' | 'nl'
+  | 'fr' | 'id' | 'it' | 'ja' | 'ko' | 'nb' | 'nl'
   | 'pl' | 'pt' | 'ru' | 'sv' | 'tr' | 'zh';
 
 export interface FAQItem {
@@ -23,7 +23,7 @@ export interface HowToStep {
   text: string;
 }
 
-export interface ToolLocaleContent<TUI extends Record<string, string> = Record<string, string>> {
+export interface ToolLocaleContent<TUI = Record<string, string>> {
   slug: string;
   title: string;
   description: string;
@@ -46,7 +46,7 @@ export type LocaleLoader<T> = () => Promise<T>;
 
 export type LocaleMap<T> = Partial<Record<KnownLocale, LocaleLoader<T>>>;
 
-export interface NatureToolEntry<TUI extends Record<string, string> = Record<string, string>> {
+export interface NatureToolEntry<TUI = Record<string, string>> {
   id: string;
   icons: {
     bg: string;
@@ -57,7 +57,7 @@ export interface NatureToolEntry<TUI extends Record<string, string> = Record<str
 
 export interface NatureCategoryEntry {
   icon: string;
-  tools: NatureToolEntry[];
+  tools: NatureToolEntry<Record<string, string>>[];
   i18n: LocaleMap<CategoryLocaleContent>;
 }
 

@@ -1,0 +1,54 @@
+export interface CompostBinVolumeRatioCalculatorUI extends Record<
+  string,
+  string
+> {
+  unitMetric: string;
+  unitImperial: string;
+  shapeTitle: string;
+  shapeRectangular: string;
+  shapeCylindrical: string;
+  widthLabel: string;
+  depthLabel: string;
+  diameterLabel: string;
+  heightLabel: string;
+  brownLabel: string;
+  greenLabel: string;
+  moistureTitle: string;
+  moistureDry: string;
+  moistureSponge: string;
+  moistureWet: string;
+  moistureAdviceDry: string;
+  moistureAdviceSponge: string;
+  moistureAdviceWet: string;
+  recipeTitle: string;
+  recipeKitchen: string;
+  recipeGarden: string;
+  recipeLeafy: string;
+  sceneTitle: string;
+  resultCapacity: string;
+  resultMaterials: string;
+  resultRatio: string;
+  resultFill: string;
+  brownTarget: string;
+  waterAction: string;
+  airAction: string;
+  statusBalanced: string;
+  statusTooGreen: string;
+  statusTooBrown: string;
+  statusNoGreens: string;
+  statusOverfilled: string;
+  statusDry: string;
+  statusWet: string;
+  statusGoodMoisture: string;
+  statusNote: string;
+  volumeUnitLiters: string;
+  volumeUnitGallons: string;
+  dimensionUnitCm: string;
+  dimensionUnitIn: string;
+  formulaTitle: string;
+  formulaText: string;
+  practicalTitle: string;
+  practicalText: string;
+  localNote: string;
+  resetLabel: string;
+}

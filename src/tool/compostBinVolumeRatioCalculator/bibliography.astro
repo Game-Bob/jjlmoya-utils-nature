@@ -1,18 +1,6 @@
 ---
-import type { BibliographyEntry } from '../../types';
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
 import { bibliography } from './bibliography';
-
-interface Props {
-  locale?: string;
-}
-
-const { locale = 'en' } = Astro.props as Props;
-const entries = bibliography;
 ---
 
-<section class="compost-references" aria-labelledby="compost-references-title" data-locale={locale}>
-  <h2 id="compost-references-title">References</h2>
-  <ul>
-    {entries.map((entry: BibliographyEntry) => <li><a href={entry.url} target="_blank" rel="noreferrer">{entry.name}</a></li>)}
-  </ul>
-</section>
+<SharedBibliography links={bibliography} />

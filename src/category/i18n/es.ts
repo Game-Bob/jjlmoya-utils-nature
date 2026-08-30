@@ -4,7 +4,7 @@ export const content: CategoryLocaleContent = {
   slug: 'naturaleza',
   title: 'Herramientas y Calculadoras de Naturaleza y Agricultura',
   description:
-    'Optimiza tu relación con el entorno con herramientas gratuitas online. Calculadoras de siembra, recolección de agua de lluvia, termómetro de grillos y estimadores de huella de carbono digital.',
+    'Herramientas online gratuitas para siembra, agua de lluvia, temperatura de grillos y estimación de la huella de carbono digital.',
   seo: [
     {
       type: 'title',

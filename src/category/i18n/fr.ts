@@ -4,7 +4,7 @@ export const content: CategoryLocaleContent = {
   slug: 'nature',
   title: 'Outils Nature et Agriculture',
   description:
-    'Optimisez votre relation avec l\'environnement avec des outils gratuits en ligne. Calculateurs de semis, récupération d\'eau de pluie, thermomètre à grillons et estimateurs d\'empreinte carbone numérique.',
+    'Outils gratuits pour les semis, la récupération d\'eau de pluie, la température des grillons et l\'estimation de l\'empreinte carbone numérique.',
   seo: [
     {
       type: 'title',

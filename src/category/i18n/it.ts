@@ -4,7 +4,7 @@ export const content: CategoryLocaleContent = {
   slug: 'natura',
   title: 'Strumenti per Natura e Agricoltura',
   description:
-    'Ottimizza il tuo rapporto con l\'ambiente con strumenti online gratuiti. Calcolatori di semina, raccolta dell\'acqua piovana, termometro dei grilli e stimatori dell\'impronta di carbonio digitale.',
+    'Strumenti online gratuiti per semina, raccolta dell\'acqua piovana, temperatura dei grilli e stima dell\'impronta di carbonio digitale.',
   seo: [
     {
       type: 'title',

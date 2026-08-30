@@ -4,7 +4,7 @@ export const content: CategoryLocaleContent = {
   slug: 'natureza',
   title: 'Ferramentas de Natureza & Agricultura',
   description:
-    'Otimize sua relação com o ambiente com ferramentas online gratuitas. Calculadoras de semeadura, coleta de água da chuva, termômetro de grilos e estimativas de pegada de carbono digital.',
+    'Ferramentas online gratuitas para semeadura, coleta de chuva, temperatura de grilos e estimativa da pegada de carbono digital.',
   seo: [
     {
       type: 'title',

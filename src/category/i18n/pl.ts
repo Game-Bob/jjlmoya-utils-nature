@@ -4,7 +4,7 @@ export const content: CategoryLocaleContent = {
   slug: 'natura',
   title: 'Narzędzia Przyrody i Rolnictwa',
   description:
-    'Optymalizuj swój związek ze środowiskiem dzięki bezpłatnym narzędziom online. Kalkulatory siewu, zbieranie wody deszczowej, termometr świerszczowy i szacunki cyfrowego śladu węglowego.',
+    'Bezpłatne narzędzia online do siewu, zbierania deszczówki, temperatury świerszczy i szacowania cyfrowego śladu węglowego.',
   seo: [
     {
       type: 'title',

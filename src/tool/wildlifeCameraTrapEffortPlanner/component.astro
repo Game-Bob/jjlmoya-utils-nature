@@ -1,0 +1,115 @@
+---
+import { wildlifeCameraTrapEffortPlanner } from './index';
+import { DEFAULT_INPUTS } from './logic';
+
+const { ui: propUi, locale = 'en' } = Astro.props;
+let ui = propUi;
+
+if (!ui) {
+  const content = await wildlifeCameraTrapEffortPlanner.i18n[locale as keyof typeof wildlifeCameraTrapEffortPlanner.i18n]?.();
+  ui = content?.ui;
+}
+
+if (!ui) return null;
+
+const config = JSON.stringify({ ui, defaults: DEFAULT_INPUTS });
+---
+
+<wildlife-camera-trap-effort-planner class="wctep-root">
+  <div class="wctep-shell">
+    <section class="wctep-controls" aria-label={ui.labelSurveyArea}>
+      <div class="wctep-control-topline">
+        <span class="wctep-mark" aria-hidden="true">FIELD / 01</span>
+        <div class="wctep-unit-switch" role="group" aria-label={ui.unitSystemLabel}>
+          <button type="button" data-unit-button="metric" aria-pressed="true">{ui.metricLabel}</button>
+          <button type="button" data-unit-button="imperial" aria-pressed="false">{ui.imperialLabel}</button>
+        </div>
+      </div>
+
+      <div class="wctep-fields">
+        <label class="wctep-field" for="wctep-area">
+          <span class="wctep-label">{ui.labelSurveyArea}</span>
+          <span class="wctep-input-line"><input id="wctep-area" data-input="area" type="number" min="0" step="0.1" inputmode="decimal" /><span data-unit-label="area">{ui.unitHectares}</span></span>
+          <span class="wctep-help">{ui.helpSurveyArea}</span>
+        </label>
+        <label class="wctep-field" for="wctep-cameras">
+          <span class="wctep-label">{ui.labelCameraCount}</span>
+          <span class="wctep-input-line"><input id="wctep-cameras" data-input="cameras" type="number" min="0" step="1" inputmode="numeric" /><span>{ui.unitCameras}</span></span>
+          <span class="wctep-help">{ui.helpCameraCount}</span>
+        </label>
+        <label class="wctep-field" for="wctep-days">
+          <span class="wctep-label">{ui.labelDeploymentDays}</span>
+          <span class="wctep-input-line"><input id="wctep-days" data-input="days" type="number" min="0" step="1" inputmode="numeric" /><span>{ui.unitDays}</span></span>
+          <span class="wctep-help">{ui.helpDeploymentDays}</span>
+        </label>
+        <label class="wctep-field" for="wctep-spacing">
+          <span class="wctep-label">{ui.labelSpacing}</span>
+          <span class="wctep-input-line"><input id="wctep-spacing" data-input="spacing" type="number" min="0" step="1" inputmode="decimal" /><span data-unit-label="spacing">{ui.unitMeters}</span></span>
+          <span class="wctep-help">{ui.helpSpacing}</span>
+        </label>
+        <label class="wctep-field wctep-field-wide" for="wctep-triggers">
+          <span class="wctep-label">{ui.labelTriggerRate}</span>
+          <span class="wctep-input-line"><input id="wctep-triggers" data-input="triggers" type="number" min="0" step="0.1" inputmode="decimal" /><span>{ui.unitEventsPerDay}</span></span>
+          <span class="wctep-help">{ui.helpTriggerRate}</span>
+        </label>
+      </div>
+
+      <div class="wctep-presets">
+        <span class="wctep-section-label">{ui.presetsTitle}</span>
+        <div class="wctep-preset-row">
+          <button type="button" data-preset="backyard">{ui.presetBackyard}</button>
+          <button type="button" data-preset="woodland">{ui.presetWoodland}</button>
+          <button type="button" data-preset="reserve">{ui.presetReserve}</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="wctep-reading" aria-label={ui.mapLabel}>
+      <div class="wctep-map-column">
+        <div class="wctep-reading-head">
+          <span class="wctep-section-label">{ui.mapLabel}</span>
+          <span class="wctep-status" data-status aria-live="polite">{ui.statusBalanced}</span>
+        </div>
+        <div class="wctep-map" data-field-map role="img" aria-label={ui.mapLabel}></div>
+        <div class="wctep-map-key"><span class="wctep-key-station" aria-hidden="true"></span><span>{ui.stationLabel}</span><span class="wctep-key-cell" aria-hidden="true"></span><span>{ui.spacingLabel}</span><strong data-footprint>0%</strong></div>
+        <p class="wctep-caption">{ui.mapCaption}</p>
+      </div>
+
+      <div class="wctep-metrics" aria-live="polite">
+        <div class="wctep-metric wctep-metric-major"><span>{ui.cameraDaysLabel}</span><strong data-camera-days>0</strong></div>
+        <div class="wctep-metric"><span>{ui.expectedEventsLabel}</span><strong data-expected-events>0</strong></div>
+        <div class="wctep-metric"><span>{ui.spacingLabel}</span><strong data-grid-spacing>0 m</strong></div>
+        <div class="wctep-metric"><span>{ui.reviewLoadLabel}</span><strong data-review-load>0</strong></div>
+        <div class="wctep-metric wctep-metric-wide"><span>{ui.areaPerCameraLabel}</span><strong data-area-per-camera>0 m²</strong></div>
+      </div>
+    </section>
+
+    <section class="wctep-review">
+      <div class="wctep-review-copy"><span class="wctep-section-label">{ui.reviewScheduleTitle}</span><p>{ui.reviewScheduleText}</p></div>
+      <ol data-review-list>
+        <li><strong>{ui.reviewDayLabel} 7</strong><span>336 {ui.reviewEventsLabel}</span></li>
+        <li><strong>{ui.reviewDayLabel} 14</strong><span>672 {ui.reviewEventsLabel}</span></li>
+        <li><strong>{ui.reviewDayLabel} 21</strong><span>1008 {ui.reviewEventsLabel}</span></li>
+        <li><strong>{ui.reviewDayLabel} 28</strong><span>1344 {ui.reviewEventsLabel}</span></li>
+      </ol>
+    </section>
+
+    <section class="wctep-notes">
+      <div><span class="wctep-note-label">{ui.assumptionTitle}</span><p>{ui.assumptionText}</p></div>
+      <div><span class="wctep-note-label">{ui.limitationTitle}</span><p>{ui.limitationText}</p></div>
+      <p class="wctep-status-note" data-status-note>{ui.statusNote}</p>
+    </section>
+  </div>
+</wildlife-camera-trap-effort-planner>
+
+<script is:inline type="application/json" id="wctep-config" set:html={config}></script>
+
+<script>
+  import { mountWildlifeCameraTrapEffortPlanner } from './controller';
+  const root = document.querySelector<HTMLElement>('wildlife-camera-trap-effort-planner');
+  const configNode = document.getElementById('wctep-config');
+  if (root && configNode) {
+    const config = JSON.parse(configNode.textContent || '{}');
+    mountWildlifeCameraTrapEffortPlanner(root, config);
+  }
+</script>

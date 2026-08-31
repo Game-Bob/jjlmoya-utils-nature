@@ -15,4 +15,5 @@ import { rainHarvester } from './tool/rainHarvester/entry';
 import { seedCalculator } from './tool/seedCalculator/entry';
 import { urbanGardenPlanner } from './tool/urbanGardenPlanner/entry';
 import { compostBinVolumeRatioCalculator } from './tool/compostBinVolumeRatioCalculator/entry';
-export const ALL_ENTRIES = [cricketThermometer, digitalCarbon, rainHarvester, seedCalculator, urbanGardenPlanner, compostBinVolumeRatioCalculator];
+import { wildlifeCameraTrapEffortPlanner } from './tool/wildlifeCameraTrapEffortPlanner/entry';
+export const ALL_ENTRIES = [cricketThermometer, digitalCarbon, rainHarvester, seedCalculator, urbanGardenPlanner, compostBinVolumeRatioCalculator, wildlifeCameraTrapEffortPlanner];

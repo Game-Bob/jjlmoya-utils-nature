@@ -1,0 +1,9 @@
+---
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { wildlifeCameraTrapEffortPlanner } from './index';
+
+const { locale = 'en' } = Astro.props;
+const content = await wildlifeCameraTrapEffortPlanner.i18n[locale as keyof typeof wildlifeCameraTrapEffortPlanner.i18n]?.();
+---
+
+{content && <SharedBibliography links={content.bibliography} />}

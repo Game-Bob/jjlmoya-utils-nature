@@ -1,5 +1,6 @@
 import type { SEOSection } from '@jjlmoya/utils-shared';
 import type { WithContext, Thing } from 'schema-dts';
+import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 
 export type { SEOSection };
 
@@ -46,7 +47,7 @@ export type LocaleLoader<T> = () => Promise<T>;
 
 export type LocaleMap<T> = Partial<Record<KnownLocale, LocaleLoader<T>>>;
 
-export interface NatureToolEntry<TUI = Record<string, string>> {
+export interface NatureToolEntry<TUI = unknown> {
   id: string;
   icons: {
     bg: string;
@@ -57,14 +58,14 @@ export interface NatureToolEntry<TUI = Record<string, string>> {
 
 export interface NatureCategoryEntry {
   icon: string;
-  tools: NatureToolEntry<Record<string, string>>[];
+  tools: NatureToolEntry[];
   i18n: LocaleMap<CategoryLocaleContent>;
 }
 
 export interface ToolDefinition {
   entry: NatureToolEntry;
-  Component: unknown;
-  SEOComponent: unknown;
-  BibliographyComponent: unknown;
+  Component: () => Promise<{ default: AstroComponentFactory }>;
+  SEOComponent: () => Promise<{ default: AstroComponentFactory }>;
+  BibliographyComponent: () => Promise<{ default: AstroComponentFactory }>;
 }
 

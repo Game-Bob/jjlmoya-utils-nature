@@ -5,10 +5,11 @@ import { rainHarvester } from '../tool/rainHarvester/entry';
 import { digitalCarbon } from '../tool/digitalCarbon/entry';
 import { urbanGardenPlanner } from '../tool/urbanGardenPlanner/entry';
 import { compostBinVolumeRatioCalculator } from '../tool/compostBinVolumeRatioCalculator/entry';
+import { wildlifeCameraTrapEffortPlanner } from '../tool/wildlifeCameraTrapEffortPlanner/entry';
 
 export const natureCategory: NatureCategoryEntry = {
   icon: 'mdi:leaf',
-  tools: [cricketThermometer, seedCalculator, rainHarvester, digitalCarbon, urbanGardenPlanner, compostBinVolumeRatioCalculator],
+  tools: [cricketThermometer, seedCalculator, rainHarvester, digitalCarbon, urbanGardenPlanner, compostBinVolumeRatioCalculator, wildlifeCameraTrapEffortPlanner],
   i18n: {
     en: () => import('./i18n/en').then((m) => m.content),
     es: () => import('./i18n/es').then((m) => m.content),

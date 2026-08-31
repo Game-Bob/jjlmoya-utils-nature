@@ -1,0 +1,35 @@
+import { createSeedCalendarContent } from '../localized';
+
+export const content = createSeedCalendarContent({
+  locale: 'pt',
+  title: 'Calendário de estratificação de sementes e datas de sementeira',
+  description: 'Crie um plano de preparação com datas, contando para trás a partir da sementeira ou para a frente a partir do dia em que as sementes estão prontas.',
+  faq: [
+    { question: 'O que calcula este calendário?', answer: 'Coloca a demolha, as fases húmidas quente e fria e a sementeira em dias concretos, contando para trás da data alvo ou para a frente do início.' },
+    { question: 'Porque existem dois modos de data?', answer: 'Use o modo de sementeira quando o dia está definido, ou o modo sementes prontas quando a preparação começa hoje e quer saber o futuro dia exato da sementeira.' },
+    { question: 'Posso alterar a duração e a temperatura?', answer: 'Sim. Escolha um perfil inicial e ajuste as fases à embalagem, a uma fonte especializada e às condições locais.' },
+    { question: 'O plano garante a germinação?', answer: 'Não. Organiza datas, mas idade, viabilidade, humidade, dormência, bolor e condições de sementeira também afetam o resultado.' },
+  ],
+  howTo: [
+    { name: 'Escolher um perfil', text: 'Selecione a espécie mais próxima para carregar fases iniciais adequadas.' },
+    { name: 'Escolher o modo de data', text: 'Conte para trás do dia de sementeira ou para a frente do dia em que as sementes estão prontas.' },
+    { name: 'Verificar as fases', text: 'Ajuste os dias de demolha, calor e frio e o intervalo de temperatura fria.' },
+    { name: 'Seguir a sequência', text: 'Comece na data inicial, avance por todas as fases e semeie no dia indicado.' },
+  ],
+  seoTitle: 'Planear a janela de preparação',
+  seoIntro: 'A dormência das sementes também é um problema de calendário. Se uma espécie precisa de um período frio e húmido, começar tarde pode fazer perder a janela de sementeira. Um tratamento demasiado longo consome tempo e pode favorecer bolor ou germinação precoce. Este calendário transforma a data alvo numa sequência de tarefas datadas.',
+  seoModes: 'Escolha uma data alvo para contar para trás, ou use o modo sementes prontas para contar para a frente desde o início da preparação. Cada fase tem as suas datas: a demolha liga ao tratamento seguinte e o último tratamento termina na véspera da sementeira. O resultado serve para etiquetar um recipiente ou criar lembretes.',
+  seoPhaseTitle: 'Como ler cada fase',
+  seoPhaseItems: ['<strong>Demolha:</strong> hidrate as sementes durante os dias indicados e não prolongue o tratamento sem uma razão específica.', '<strong>Quente:</strong> mantenha a semente húmida no intervalo quente quando o perfil o pedir.', '<strong>Frio:</strong> mantenha-a húmida e refrigerada, verificando regularmente bolor ou raízes precoces.', '<strong>Sementeira:</strong> passe a semente preparada para um substrato adequado na data alvo.'],
+  seoEvidenceTitle: 'Usar os perfis como ponto de partida',
+  seoEvidence: 'Os perfis não são receitas universais. A variedade, a origem, a idade da semente e as instruções da embalagem podem alterar a dormência. Se um fornecedor fiável recomendar outra duração, edite o perfil e registe a fonte usada em vez de fazer uma média entre recomendações contraditórias.',
+  seoTipTitle: 'Um calendário não é um teste de germinação',
+  seoTip: 'Registe o lote, o meio húmido, a temperatura e as datas. Se surgirem raízes durante o frio, semeie com cuidado. Se as sementes continuarem dormentes, não prolongue o tratamento automaticamente: confirme primeiro a orientação da espécie.',
+  seoChecksTitle: 'Verificações antes de começar',
+  seoChecks: ['Confirme que a data de sementeira combina com luz, geadas e local.', 'Etiquete o recipiente com espécie, início, fim e intervalo térmico.', 'Use um meio húmido mas arejado e verifique-o regularmente.', 'Guarde o plano junto da embalagem para poder rastrear o tratamento.'],
+  seoLimitsTitle: 'O que o resultado não pode dizer',
+  seoLimits: 'A ferramenta não identifica a dormência por fotografia, não testa a viabilidade e não substitui as instruções específicas de uma espécie. Também não prevê o clima local nem garante a germinação. Considere o resultado um cálculo organizado de datas e confirme a biologia numa fonte adequada.',
+  ui: {
+    labelProfile: 'Perfil da semente', labelMode: 'Modo do plano', labelModeSowing: 'Quero semear em', labelModeReady: 'As sementes estão prontas hoje', labelSowingDate: 'Data alvo da sementeira', labelReadyDate: 'Data de preparação', labelSoakDays: 'Dias de demolha', labelWarmDays: 'Dias quentes', labelColdDays: 'Dias frios', labelColdRange: 'Intervalo de frio', labelUnits: 'Unidades de temperatura', labelMetric: 'Métrico °C', labelImperial: 'Imperial °F', labelFrom: 'Temperatura mínima', labelTo: 'Temperatura máxima', labelGenerate: 'Atualizar calendário', labelReset: 'Repor perfil', labelAddCalendar: 'Adicionar ao meu calendário', labelShare: 'Copiar ligação', labelCopied: 'Ligação copiada', labelPrint: 'Imprimir etiqueta compacta', labelTechnique: 'Técnica', labelTodayStatus: 'Estado de hoje', labelDayOf: 'dia de', labelGantt: 'Linha de preparação', labelTimeline: 'Linha de preparação', labelNextAction: 'Fase atual', labelCalendarStarts: 'início do calendário', labelSowingDay: 'dia da sementeira', labelDuration: 'Preparação', labelDays: 'dias', labelTemperature: 'Temperatura', labelReady: 'Semear hoje', labelUpcoming: 'A seguir', labelActive: 'Em curso', labelComplete: 'Plano concluído', labelEditHint: 'Ajuste as sugestões com a embalagem ou uma fonte especializada. A última configuração fica guardada neste dispositivo.', labelWarm: 'Estratificação quente', labelCold: 'Estratificação fria', labelSoak: 'Demolhar sementes', labelSow: 'Semear sementes', noteApple: 'Período frio húmido depois de uma demolha curta', noteLavender: 'Período frio curto antes da sementeira primaveril', noteMilkweed: 'Fase quente seguida de fase fria', noteRose: 'Período frio longo depois da demolha', profileApple: 'Maçã · Malus domestica', profileLavender: 'Lavanda · Lavandula angustifolia', profileMilkweed: 'Serralha · Asclepias syriaca', profileRose: 'Rosa · Rosa spp.', profileStrawberry: 'Morangueiro · Fragaria × ananassa', profilePeach: 'Pessegueiro · Prunus persica', profileCherry: 'Cerejeira doce · Prunus avium', profilePear: 'Pereira · Pyrus communis', profilePoppy: 'Papoila · Papaver spp.', profileSunflower: 'Girassol · Helianthus annuus', profileTomato: 'Tomate · Solanum lycopersicum', profileBasil: 'Manjericão · Ocimum basilicum', instructionSoak: 'Mantenha as sementes hidratadas antes da fase seguinte.', instructionWarm: 'Conserve as sementes húmidas num local quente.', instructionCold: 'Mantenha as sementes húmidas e frias e verifique-as regularmente.', instructionSow: 'Semeie no substrato preparado.', emptyState: 'Defina as datas para criar uma linha de preparação.', warningDate: 'Escolha uma data de sementeira válida.', warningTemperature: 'Verifique duração e temperatura antes de atualizar o calendário.',
+  },
+});

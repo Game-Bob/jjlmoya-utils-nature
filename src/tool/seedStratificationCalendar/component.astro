@@ -1,0 +1,62 @@
+---
+import { seedStratificationCalendar } from './index';
+import { SEED_PROFILES as profileOptions } from './logic';
+import { profileLabels } from './profile-labels';
+import type { KnownLocale } from '../../types';
+import type { SeedStratificationCalendarUI } from './ui';
+
+const { locale = 'en', ui: providedUI } = Astro.props as { locale?: KnownLocale; ui?: SeedStratificationCalendarUI };
+const fallbackContent = await seedStratificationCalendar.i18n[locale]?.();
+const ui = providedUI ?? fallbackContent?.ui;
+if (!ui) return null;
+const labels = profileLabels(ui);
+---
+
+<section class="n-seed-calendar" data-tool="seed-stratification-calendar" data-locale={locale}>
+  <div class="n-calendar-controls">
+    <div class="n-unit-switch" role="group" aria-label={ui.labelUnits}>
+      <span class="n-field-label">{ui.labelUnits}</span>
+      <div class="n-unit-options"><button class="n-unit-button is-active" type="button" data-unit-option="metric" aria-pressed="true">{ui.labelMetric}</button><button class="n-unit-button" type="button" data-unit-option="imperial" aria-pressed="false">{ui.labelImperial}</button></div>
+    </div>
+    <div class="n-mode-switch" role="group" aria-label={ui.labelMode}>
+      <span class="n-field-label">{ui.labelMode}</span>
+      <div class="n-mode-options"><button class="n-mode-button is-active" type="button" data-mode-option="sowing-date" aria-pressed="true">{ui.labelModeSowing}</button><button class="n-mode-button" type="button" data-mode-option="ready-date" aria-pressed="false">{ui.labelModeReady}</button></div>
+    </div>
+    <div class="n-control-block">
+      <label class="n-field-label" for="seed-profile-trigger">{ui.labelProfile}</label>
+      <div class="n-custom-select" data-role="profile-select" data-value="apple">
+        <button id="seed-profile-trigger" class="n-select-trigger" type="button" data-select-trigger aria-haspopup="listbox" aria-expanded="false">{ui.profileApple}<span class="n-chevron" aria-hidden="true"></span></button>
+        <div class="n-select-menu" data-select-menu role="listbox" hidden>
+          {profileOptions.map((profile) => <button class="n-select-option" type="button" data-option={profile.id} role="option" aria-selected={profile.id === 'apple'}>{labels[profile.id]}</button>)}
+        </div>
+      </div>
+    </div>
+    <div class="n-control-block">
+      <label class="n-field-label" data-role="date-label" for="seed-anchor-date">{ui.labelSowingDate}</label>
+      <input id="seed-anchor-date" class="n-field" data-role="anchor-date" type="date" value="2027-04-15" />
+    </div>
+    <div class="n-duration-grid">
+      <label class="n-control-block"><span class="n-field-label">{ui.labelSoakDays}</span><input class="n-field" data-role="soak-days" type="number" min="0" max="30" step="1" value="1" /></label>
+      <label class="n-control-block"><span class="n-field-label">{ui.labelWarmDays}</span><input class="n-field" data-role="warm-days" type="number" min="0" max="180" step="1" value="0" /></label>
+      <label class="n-control-block"><span class="n-field-label">{ui.labelColdDays}</span><input class="n-field" data-role="cold-days" type="number" min="0" max="365" step="1" value="90" /></label>
+    </div>
+    <div class="n-range-block">
+      <div class="n-range-heading"><span class="n-field-label">{ui.labelColdRange}</span><span class="n-range-values"><output data-role="cold-min-value">1 °C / 34 °F</output><span>to</span><output data-role="cold-max-value">5 °C / 41 °F</output></span></div>
+      <div class="n-range-pair"><label><span class="sr-only">{ui.labelFrom}</span><input class="n-range" data-role="cold-min" type="range" min="-5" max="15" value="1" /></label><label><span class="sr-only">{ui.labelTo}</span><input class="n-range" data-role="cold-max" type="range" min="-5" max="15" value="5" /></label></div>
+    </div>
+    <p class="n-edit-hint">{ui.labelEditHint}</p>
+    <div class="n-control-actions"><button class="n-primary-button" type="button" data-role="generate">{ui.labelGenerate}</button><button class="n-quiet-button" type="button" data-role="reset">{ui.labelReset}</button></div>
+    <p class="n-error" data-role="error" role="alert" hidden>{ui.warningTemperature}</p>
+  </div>
+  <div class="n-calendar-results" data-role="results" aria-live="polite"><p class="n-empty-state">{ui.emptyState}</p></div>
+  <div class="n-calendar-actions"><button class="n-secondary-button" type="button" data-role="calendar">{ui.labelAddCalendar}</button><button class="n-secondary-button" type="button" data-role="share">{ui.labelShare}</button><button class="n-secondary-button" type="button" data-role="print">{ui.labelPrint}</button><span class="n-share-status" data-role="share-status" role="status" aria-live="polite"></span></div>
+  <div class="n-print-label" data-role="print-label"><strong data-role="print-profile">{ui.profileApple}</strong><span data-role="print-start"></span><span data-role="print-sowing"></span><span data-role="print-phases"></span></div>
+  <script is:inline type="application/json" data-seed-calendar-ui set:html={JSON.stringify(ui)}></script>
+</section>
+
+<script>
+  import { initializeSeedStratificationCalendar } from './controller';
+  const root = document.querySelector<HTMLElement>('[data-tool="seed-stratification-calendar"]');
+  const uiNode = root?.querySelector('[data-seed-calendar-ui]');
+  if (root && uiNode) initializeSeedStratificationCalendar({ root, ui: JSON.parse(uiNode.textContent ?? '{}'), locale: root.dataset.locale ?? 'en' });
+</script>

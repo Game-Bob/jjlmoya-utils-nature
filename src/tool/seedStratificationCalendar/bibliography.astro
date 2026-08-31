@@ -1,0 +1,9 @@
+---
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { seedStratificationCalendar } from './index';
+
+const { locale = 'en' } = Astro.props;
+const content = await seedStratificationCalendar.i18n[locale as keyof typeof seedStratificationCalendar.i18n]?.();
+---
+
+{content && <SharedBibliography links={content.bibliography} />}

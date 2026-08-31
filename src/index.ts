@@ -30,3 +30,5 @@ export { URBAN_GARDEN_PLANNER_TOOL, urbanGardenPlanner } from './tool/urbanGarde
 export { COMPOST_BIN_VOLUME_RATIO_CALCULATOR_TOOL, compostBinVolumeRatioCalculator } from './tool/compostBinVolumeRatioCalculator/index';
 
 export { WILDLIFE_CAMERA_TRAP_EFFORT_PLANNER_TOOL, wildlifeCameraTrapEffortPlanner } from './tool/wildlifeCameraTrapEffortPlanner/index';
+
+export { SEED_STRATIFICATION_CALENDAR_TOOL, seedStratificationCalendar } from './tool/seedStratificationCalendar/index';

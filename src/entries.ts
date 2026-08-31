@@ -8,6 +8,8 @@ export { seedCalculator } from './tool/seedCalculator/entry';
 export type { SeedCalculatorLocaleContent } from './tool/seedCalculator/entry';
 export { urbanGardenPlanner } from './tool/urbanGardenPlanner/entry';
 export type { UrbanGardenPlannerLocaleContent } from './tool/urbanGardenPlanner/entry';
+export { seedStratificationCalendar } from './tool/seedStratificationCalendar/entry';
+export type { SeedStratificationCalendarLocaleContent } from './tool/seedStratificationCalendar/entry';
 export { natureCategory } from './category';
 import { cricketThermometer } from './tool/cricketThermometer/entry';
 import { digitalCarbon } from './tool/digitalCarbon/entry';

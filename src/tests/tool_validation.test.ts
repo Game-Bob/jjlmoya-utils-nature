@@ -3,8 +3,8 @@ import { ALL_TOOLS, natureCategory } from '../index';
 
 describe('Tool Validation Suite', () => {
   describe('Library Registration', () => {
-    it('should have 7 tools in ALL_TOOLS', () => {
-      expect(ALL_TOOLS.length).toBe(7);
+    it('should have 8 tools in ALL_TOOLS', () => {
+      expect(ALL_TOOLS.length).toBe(8);
     });
 
     it('natureCategory should be defined', () => {

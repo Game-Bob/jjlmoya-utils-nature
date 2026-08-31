@@ -1,0 +1,10 @@
+---
+import { SEORenderer } from '@jjlmoya/utils-shared';
+import { seedStratificationCalendar } from './index';
+import type { KnownLocale } from '../../types';
+
+const { locale = 'en' } = Astro.props as { locale?: KnownLocale };
+const content = await seedStratificationCalendar.i18n[locale]?.();
+---
+
+{content?.seo?.length ? <SEORenderer content={{ locale, sections: content.seo }} /> : null}

@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import type { ToolDefinition } from "../../types";
 import { compostBinVolumeRatioCalculator } from "./entry";
 

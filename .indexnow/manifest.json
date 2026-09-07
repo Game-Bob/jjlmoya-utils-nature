@@ -1,545 +1,545 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-07T06:38:37.009Z",
+  "generatedAt": "2026-09-07T19:57:41.728Z",
   "pages": {
     "https://www.gamebob.dev/de/werkzeuge/kategorien/natur/digitaler-co2-fussabdruck-rechner/": {
-      "hash": "fc3912198d7d24d73c0cb2c236051fd232017124b9b59c1923e6b7de1e56f578",
+      "hash": "b90d3e22b281aff9330b31ce11e259bdd415ac0da1ee6a1953cca2799ac7fe95",
       "route": "/de/werkzeuge/kategorien/natur/digitaler-co2-fussabdruck-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/natur/gartenboden-und-regenwasser-planer/": {
-      "hash": "3cfdb49c39c35063d5637b88b568af4c4e4f94f2d033feb6855b7bf2f3a5fa7d",
+      "hash": "624e433af9089422d6b63e9772c5fc27fbd64a446f6c8b3ff809cbe0eeab5e45",
       "route": "/de/werkzeuge/kategorien/natur/gartenboden-und-regenwasser-planer/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/natur/grillen-thermometer/": {
-      "hash": "f63a5e92506ad3e067060ab5878efd64f5e168d982f3fdc8b729f68c0aad9c84",
+      "hash": "bb2f9a02361c46b14e54641c6b6d652d21c2176b59c5572afec2551d0e9a0811",
       "route": "/de/werkzeuge/kategorien/natur/grillen-thermometer/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/natur/": {
-      "hash": "6225a7c57502ebf2fc7d5b75c0febf1a66fd5c43d31beced45d57d6d02a56c6f",
+      "hash": "8607d4697addeb1e2df053c0713e3d6e0b5cffb54109497fb41206d210b993e9",
       "route": "/de/werkzeuge/kategorien/natur/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/natur/komposter-volumen-braun-gruen-verhaeltnis-rechner/": {
-      "hash": "9489ac8745487d3fbecf4f005a96ff675fee7077a5e7762824886919ddc6ea8c",
+      "hash": "1fb11a36d3ca3ab83e35b29c72a33f92d89e3087e0891f8baab1a1750c910606",
       "route": "/de/werkzeuge/kategorien/natur/komposter-volumen-braun-gruen-verhaeltnis-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/natur/regenwasser-ernte-rechner/": {
-      "hash": "9967154e4febb4ca2c1977e19e01cb93ec578d2a17d3e7499edca0dfa8aa024d",
+      "hash": "f83203316ee03552742a1b3e55fe57013e81fb4c98ecbea286bbee1bbea2ac0e",
       "route": "/de/werkzeuge/kategorien/natur/regenwasser-ernte-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/natur/saatgut-stratifizierungskalender/": {
-      "hash": "6110b7b2089cb65be1ddf171f47e787aea7df6bb10782b91e060cd5cce469709",
+      "hash": "79e5ff820885de2e0c56dea5300892bad48dbd5d563d4ee0bbf302a777c546f6",
       "route": "/de/werkzeuge/kategorien/natur/saatgut-stratifizierungskalender/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/natur/saatgutabstand-saehmaschinen-rechner/": {
-      "hash": "26c9cd20b4290f4f4d1bba39dd432b2a3caeaf2f07da564aa42db194f70ff6e2",
+      "hash": "7b0aeb3b26d83aec746faaa105cb6b3bac2d24f9cfb18d2113f2db0f308e4ac7",
       "route": "/de/werkzeuge/kategorien/natur/saatgutabstand-saehmaschinen-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/natur/wildkamera-einsatzplan-wildtiermonitoring/": {
-      "hash": "974cf185b2ee0b7220a3b5f28baf1de22f9e6232bbf22d780523b5ceeb12801a",
+      "hash": "2ad1d57f08ac9ec260f4412fda76037c6642d89c56f350ded510a70b279c0afb",
       "route": "/de/werkzeuge/kategorien/natur/wildkamera-einsatzplan-wildtiermonitoring/"
     },
     "https://www.gamebob.dev/en/utilities/categories/nature/compost-bin-volume-and-browns-greens-ratio-calculator/": {
-      "hash": "751c879f54f473c8f4e8868b4b730163b048eb43e1176e72eefe46a681b99785",
+      "hash": "2350951c2410bc53ea669134cbc5b6f6d205000076ab9428a3e60791b063b9d2",
       "route": "/en/utilities/categories/nature/compost-bin-volume-and-browns-greens-ratio-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/nature/cricket-thermometer/": {
-      "hash": "d6dd7795948393129570c9a8ed6fd334e6f8eaaf5734fb55c8be63488ef91ddc",
+      "hash": "b5977bd39df93d82dea1df5bb0bce5fe78025b5531b97e8c789d916cd4a48af0",
       "route": "/en/utilities/categories/nature/cricket-thermometer/"
     },
     "https://www.gamebob.dev/en/utilities/categories/nature/digital-carbon-footprint-calculator/": {
-      "hash": "ea3cc4448b8654b2ec190c469a72d79d01cd059cc22603b9e064639919904fbc",
+      "hash": "0061cced9904543c34b21f7e3916e3a4adc2d6ce2d219073893e324ba4d1af1b",
       "route": "/en/utilities/categories/nature/digital-carbon-footprint-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/nature/": {
-      "hash": "f68d8d2d279dbac967ef9686a2780819efa45cb82b8e76ddf670d9d780b53a70",
+      "hash": "e831759554d25d556728c9c7a36f1b453cdec0b844ad0f664c77715c4637fc61",
       "route": "/en/utilities/categories/nature/"
     },
     "https://www.gamebob.dev/en/utilities/categories/nature/rainwater-calculator/": {
-      "hash": "4b64b6002e2aa919a6a2efa68546a2c5fa71cd4320b1061b62e889a3b0100d08",
+      "hash": "02755358a5b8d742c4fa1773cbea89ed5645aa927fc777ebf25ba9558bbe9b54",
       "route": "/en/utilities/categories/nature/rainwater-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/nature/seed-calculator/": {
-      "hash": "54c6dd6a709978cc509f777d7bd93182ed5e9eeca6e13156871fad154be6060e",
+      "hash": "dfee67791fdc6970ac49b5250313f0bd60c92efe51a2850b162ab5883fc7c6ae",
       "route": "/en/utilities/categories/nature/seed-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/nature/seed-stratification-calendar/": {
-      "hash": "6465a358fe26c57167e042ddcce54bef1c17045d3c355b2a85f3ee49b32d0560",
+      "hash": "cdf1e7456405cc7c6dfea634880f2f438387c6a4341becb03eec5ddc928b65ed",
       "route": "/en/utilities/categories/nature/seed-stratification-calendar/"
     },
     "https://www.gamebob.dev/en/utilities/categories/nature/urban-garden-rainwater-and-soil-planner/": {
-      "hash": "34813645714c09e9f12cbd21e21b0b3f81ace18bbe184ed48de59689fc70f963",
+      "hash": "6da06650f13e7be483525069fb1a9931da45bba8c5a33237a0e22ebddf58495e",
       "route": "/en/utilities/categories/nature/urban-garden-rainwater-and-soil-planner/"
     },
     "https://www.gamebob.dev/en/utilities/categories/nature/wildlife-camera-trap-effort-planner/": {
-      "hash": "4f5c769e780c276c0adc8d0def23d8269699ae5c7465251ca56715e657c791fd",
+      "hash": "2c7caf0df61483f527ce3fc145cc20d93cebd19595389443c9c31a8e596cbc3d",
       "route": "/en/utilities/categories/nature/wildlife-camera-trap-effort-planner/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/nature/calculateur-eau-pluie/": {
-      "hash": "cf856fa6d7dbcc9379761dbceb52dd9b6edb0b80f620c496eaec3918c31ed67b",
+      "hash": "e44a107b8b03416366eb70bc9ab2e5a8938289874ffeac9866df8be596159bb5",
       "route": "/fr/utilitaires/categories/nature/calculateur-eau-pluie/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/nature/calculateur-empreinte-carbone-numerique/": {
-      "hash": "e80ec09f0098d86b6b4b40a161af7a30f5b9ecb26745b089e184bd375e605c6b",
+      "hash": "0b6bc33126e350dc8777007df87a1f374f2daaba09ae598f3bb91659b447cccc",
       "route": "/fr/utilitaires/categories/nature/calculateur-empreinte-carbone-numerique/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/nature/calculateur-substrat-et-eau-de-pluie-jardin-urbain/": {
-      "hash": "55fae41bc93800877b0cf19513d86b82f55c80825adce7065bf27ebb9d45bd95",
+      "hash": "10bd7816a53b94d9c0a8e5ebd5bb772422b0851fadee9c96d03cb8edeaa6919d",
       "route": "/fr/utilitaires/categories/nature/calculateur-substrat-et-eau-de-pluie-jardin-urbain/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/nature/calculateur-volume-composteur-ratio-bruns-verts/": {
-      "hash": "0d348477a5c5cc24a9de11756365e6013c58fa14265406b91bc411973f1cfb5a",
+      "hash": "b96ed3463968410a3ac90144e70aac3576fa06ddc65f687316b7d0f32e09a4b8",
       "route": "/fr/utilitaires/categories/nature/calculateur-volume-composteur-ratio-bruns-verts/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/nature/calculatrice-semis/": {
-      "hash": "b571b792bd9da71addc3c0212c7bdc70a6f38a680ba9e75a596977d044c560f2",
+      "hash": "248d604298ec0062d7e17a649dda46802ec1169356a79e40ccd56a6d8fa2e6df",
       "route": "/fr/utilitaires/categories/nature/calculatrice-semis/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/nature/calendrier-stratification-graines/": {
-      "hash": "b4c6fdf5f9a30547c0fbe40bc0ce2103ae94b17bfd2b994b44be8011b9f6e2ab",
+      "hash": "2d61cbda86ca90646be4a36a30d4c135c97beea71b43e9d3c17fea38382d3675",
       "route": "/fr/utilitaires/categories/nature/calendrier-stratification-graines/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/nature/": {
-      "hash": "15856c506b7a8ea1ddea740b1e252fd986744b99cbfe34400980b6316b675e3e",
+      "hash": "94d147d9fa22d70cbb23b6fc182027f72c219c1305074a5652203eb660ec8517",
       "route": "/fr/utilitaires/categories/nature/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/nature/planificateur-effort-pieges-photographiques-faune/": {
-      "hash": "41fae5fbcfd02044805fb5aea70d3e7e6d84f8df982fa38302ceb193dcc0f4df",
+      "hash": "c45b282578765d5a3799098c38630b11be5242609c476924020385cb52da87dc",
       "route": "/fr/utilitaires/categories/nature/planificateur-effort-pieges-photographiques-faune/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/nature/thermometre-grillon/": {
-      "hash": "9772c53e40bc58f2079a80467bcf0775ca5f8f4efc835b28bcd6d780ead0a241",
+      "hash": "624cbfa3efb56ffb46be54b6e168df445e69efed8e1ccf87bc7b9a146deb058f",
       "route": "/fr/utilitaires/categories/nature/thermometre-grillon/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/alam/": {
-      "hash": "cfcc277b6b3f9e3a8eecbe4b388163476342cc4ea0314098b25bc05c3666313a",
+      "hash": "1f056bb564ef78513ab6411a7a70cb90f0904dc28a0501f06765af8ee23f1547",
       "route": "/id/utilitas/kategori/alam/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/alam/kalender-stratifikasi-benih/": {
-      "hash": "82479ae6a324212b3c16e26f26438f2b4351064af0a1ebb0ce56918e8a2eeeea",
+      "hash": "70a33e9f6eb1232088609a5da2ff063e14dd5e82dab4bb3bd587458fe71a50be",
       "route": "/id/utilitas/kategori/alam/kalender-stratifikasi-benih/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/alam/kalkulator-air-hujan/": {
-      "hash": "1340620f964c1c6a19c6f0c4a91839b8a3483e7b08616e02db23b502d632146b",
+      "hash": "a7d5c23606e832e42be487cf994eab51ded841eca9850983e1562ba920ff1c16",
       "route": "/id/utilitas/kategori/alam/kalkulator-air-hujan/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/alam/kalkulator-benih/": {
-      "hash": "9152ea09268e7aab392015ee9dcd5c46ec3a234ac29854b0bfa0b704b1c388e5",
+      "hash": "89fdb820bed8afec242c9eb7b84d24c702b3be9df0d185ae3a974d2e7744434b",
       "route": "/id/utilitas/kategori/alam/kalkulator-benih/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/alam/kalkulator-jejak-karbon-digital/": {
-      "hash": "87e14a4a337c9a2afcbf927a51986b4be8bc000749dc9ba0023358232679e9b1",
+      "hash": "17b1dfcaeec7ab77b94af1f3aa5907b977889e69f63cb860081ddd371c839580",
       "route": "/id/utilitas/kategori/alam/kalkulator-jejak-karbon-digital/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/alam/kalkulator-volume-tempat-kompos-rasio-cokelat-hijau/": {
-      "hash": "17c0625bcecee4ce9c2c402b2c43e25895a360455c1f872ebfd040d1561642e1",
+      "hash": "6b3beadb6c2c3da660de8763cb269caf3fc86f0f4b2a6bf2404f3949123dd72f",
       "route": "/id/utilitas/kategori/alam/kalkulator-volume-tempat-kompos-rasio-cokelat-hijau/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/alam/perencana-upaya-kamera-jebak-satwa/": {
-      "hash": "9c674199a9920b830814b58554ac47600b84346b4a5a70e56fe083e05499b49d",
+      "hash": "412bc86f7cf917597dc58beae6a2518afd2662deada78503815812fe4e53c3cd",
       "route": "/id/utilitas/kategori/alam/perencana-upaya-kamera-jebak-satwa/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/alam/perencana-volume-media-tanam-dan-air-hujan/": {
-      "hash": "24c3061fe4e8548f87f7ae42b81143131940fbb9f4b0ebc206b6cdd7518c748c",
+      "hash": "fd28ae97655b9011d31ee9abc6131e1007fe5112972c2315ecb5d6eddb00a7a2",
       "route": "/id/utilitas/kategori/alam/perencana-volume-media-tanam-dan-air-hujan/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/alam/termometer-jangkrik/": {
-      "hash": "3088a299cd8741e1f84fad2d2d162117774f786f5c7831771138ab7d8ed83aae",
+      "hash": "d765acc822e2b3843bee586c487496a23c4f3706a3f0f74fd8e43674e5ff18c2",
       "route": "/id/utilitas/kategori/alam/termometer-jangkrik/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/natura/calcolatore-acqua-piovana/": {
-      "hash": "0e5400c2baddb2f30eb5899b10d9fdefdff6b8fffdd88ee50791d1ed13318ab5",
+      "hash": "3bfaeb4a7d85cfe1f33016bfc238d2f0e64292518898735771aac22394b5ba94",
       "route": "/it/utilita/categorie/natura/calcolatore-acqua-piovana/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/natura/calcolatore-impronta-carbonio-digitale/": {
-      "hash": "a4a5980821b809d9beb6a33e540de3e361a8560983a1ad5902aa71156d081a95",
+      "hash": "abdb6e49960c44cfa15c824735ace901d60ee8a3faec4b4af71e1d20da4a1d32",
       "route": "/it/utilita/categorie/natura/calcolatore-impronta-carbonio-digitale/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/natura/calcolatore-semina/": {
-      "hash": "3f6b15397b3e576f2050823d25bfc2c6797f36062a4ba3eda3b52103dcb10b24",
+      "hash": "901de8cd0277aad83162b567b5f4cf44349c5279093cba1c68c10111a264a9c1",
       "route": "/it/utilita/categorie/natura/calcolatore-semina/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/natura/calcolatore-terriccio-e-raccolta-acqua-piovana/": {
-      "hash": "017293c74ba0b97e3aca12afb1aeeacb7bb8f19ae4c24078df6e6b7b48828922",
+      "hash": "abc72a2f890b41d6758792c4dc6a808434617f1e47426c48c8d225993986d7b1",
       "route": "/it/utilita/categorie/natura/calcolatore-terriccio-e-raccolta-acqua-piovana/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/natura/calcolatore-volume-compostiera-rapporto-marroni-verdi/": {
-      "hash": "b929e7bdf4a9e2e39a5b2b54c09439a5ee3e3516793cde32db63161e3080c6a7",
+      "hash": "ee212d0a07137fc7dbf5e2b8e363e640479c9abac60f7c682d1a058ceede11dc",
       "route": "/it/utilita/categorie/natura/calcolatore-volume-compostiera-rapporto-marroni-verdi/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/natura/calendario-stratificazione-semi/": {
-      "hash": "1b795fee1aeac5a07fa0b6263781b74370a76a7169a2b12b4fb85ba76de99f89",
+      "hash": "23320982aea6f9df3b614ae353e2f958b74d4aed325c91c1307c4593ed38b103",
       "route": "/it/utilita/categorie/natura/calendario-stratificazione-semi/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/natura/": {
-      "hash": "f19cbca9602c3306bd5def8e45ec855e503672ca45c56ae7e1c17ddf7a95b634",
+      "hash": "0aca5dbc778ff7f14512deeb2bd0371245b92f9a100b971d813c1e2ed3a14ded",
       "route": "/it/utilita/categorie/natura/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/natura/pianificatore-sforzo-fototrappole-fauna/": {
-      "hash": "354a7c91d54fc08efb0b02a7ae3963beb404d63db5044708dcbdc9b17287f9b2",
+      "hash": "ecef82e762deaf2845dea67e6220e02b4aee582cae73caebb27fc0cf5001f294",
       "route": "/it/utilita/categorie/natura/pianificatore-sforzo-fototrappole-fauna/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/natura/termometro-a-grillo/": {
-      "hash": "d27fd869ae028f4a36d793becaf420f96d3aa1e49c33a780cf13d7c680375e37",
+      "hash": "c29699c72c2accd8fb20ee554db2018095ded7bb89f601f4191eaeea5b2fdbd6",
       "route": "/it/utilita/categorie/natura/termometro-a-grillo/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/nature/compost-bin-volume-and-browns-greens-ratio-calculator/": {
-      "hash": "1fd01dcd7eb29c1a8a1de27c76a6610c7486a3cd63ce4fa0f394ad786f1b7feb",
+      "hash": "e2d52e3ee515ea813ddba0e1b75e9a426d542ce897382a2106117864d87da94e",
       "route": "/ja/utilities/categories/nature/compost-bin-volume-and-browns-greens-ratio-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/nature/cricket-thermometer/": {
-      "hash": "9c1613c9a63953929493ae584c46db330b3974f3e84d324be43a63ca9fd21167",
+      "hash": "78fa71351bdf6edbda6bfd1d1bed88caa8749d04a046de3d55e7bda39a67445e",
       "route": "/ja/utilities/categories/nature/cricket-thermometer/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/nature/digital-carbon-footprint-calculator/": {
-      "hash": "7223ba41ace9b9a59c70c81a541e144dd042341d9214764a5c78b5239e803131",
+      "hash": "fd383ebd0c3ac3baaab1418e2b7756f3c162b1e36ea75a296661b33fd5d079ac",
       "route": "/ja/utilities/categories/nature/digital-carbon-footprint-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/nature/": {
-      "hash": "0c1d57ca44b2254ee6682d673b02891e93096d79375c3caaea6fffeffac17de9",
+      "hash": "04d0d58d6006aa9deb0067866a1577ef2f418a5349059b162b8f9abe48766c7d",
       "route": "/ja/utilities/categories/nature/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/nature/rainwater-calculator/": {
-      "hash": "6750937420eb28897456e3ce9c90884302dcc2f236a2efe9dc13b5a1a52ec601",
+      "hash": "70ea8fb8b935cc48c8b49e14db600838a1c23c6ac6749e16d09d5bb5529db2b0",
       "route": "/ja/utilities/categories/nature/rainwater-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/nature/seed-calculator/": {
-      "hash": "8344be37610a0d591e5d644312bf45a62a85dbc37c182ef4cd0b79ddb358695c",
+      "hash": "7d970ded35d2e5013e4067964957f14993c430514f6936b8694a02044ad1abdc",
       "route": "/ja/utilities/categories/nature/seed-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/nature/seed-stratification-calendar/": {
-      "hash": "c26d27cc61459ad78a1a34104644ec1eee23acf85ac050223b2463d67c577aef",
+      "hash": "b12629d77d164b8b1f8c0904497bedcc5650a973ce802af7f08ca95459175b69",
       "route": "/ja/utilities/categories/nature/seed-stratification-calendar/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/nature/urban-garden-rainwater-and-soil-planner/": {
-      "hash": "aaad0a8fad1c736504943a75ca694106fece91902793bdbf08d032a029801cc4",
+      "hash": "11ecc7dbf59dd9fda4887f5c1b5362867844769f079335121b11a21fc918c294",
       "route": "/ja/utilities/categories/nature/urban-garden-rainwater-and-soil-planner/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/nature/wildlife-camera-trap-effort-planner/": {
-      "hash": "c5011991d39982bb64723b50655c73a4a7abcd369d7e2006d8b9ba2ce5a10e87",
+      "hash": "0e199d408c65d1d8eff6880d932f2dbcc35e0f6bc253bd1fc3ed743160798d90",
       "route": "/ja/utilities/categories/nature/wildlife-camera-trap-effort-planner/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/nature/compost-bin-volume-and-browns-greens-ratio-calculator/": {
-      "hash": "63c447eab2df426728e485c7d8470e69416fbb94fe0c45a131678e70f5df19af",
+      "hash": "f482f8ff968507d5988356b12135095630c1fade5eeb22f2c88928440747d5a4",
       "route": "/ko/utilities/categories/nature/compost-bin-volume-and-browns-greens-ratio-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/nature/cricket-thermometer/": {
-      "hash": "6de005c0df76eb51d7d7ce05ae5855988c7037fc4327ab4f5578ff098d5be346",
+      "hash": "4a2eb70093280e5b485770be0dc94497dc4e529bc7bc40e3f5cb5cc4665640c9",
       "route": "/ko/utilities/categories/nature/cricket-thermometer/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/nature/digital-carbon-footprint-calculator/": {
-      "hash": "6b784e0238a2bc8a0a4f7914f5815c6c812f516118cad2332da0880565ecdcae",
+      "hash": "729f57ba248f6126c209892a0b4d44ff51094580c0d3105c97941a9c078a190b",
       "route": "/ko/utilities/categories/nature/digital-carbon-footprint-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/nature/": {
-      "hash": "78c9be90609d1a774f8f9047a26d6bab423a185934f2f7b2fae888887cd62875",
+      "hash": "57d34dfc5755cd81d341a53f5847c0b496f61216279bfcddba64d08d06014ac5",
       "route": "/ko/utilities/categories/nature/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/nature/rainwater-calculator/": {
-      "hash": "eda20d421dd5321df38b9f3cd2674f3d737361c4960582070c47cecfa2fa9898",
+      "hash": "bfd5dde2a1f70caefe9072d50f4dba9ec699e00cb6a2cefb95045d1d5d3624ca",
       "route": "/ko/utilities/categories/nature/rainwater-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/nature/seed-calculator/": {
-      "hash": "97399bbba40d548c29c5dc4387841b870582d05a29692c472b8e3383b56d3c27",
+      "hash": "fb045d1bf064547da0716b5fbace8546a0cfc24227c8319a3a4afe24711560c2",
       "route": "/ko/utilities/categories/nature/seed-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/nature/seed-stratification-calendar/": {
-      "hash": "267bec13685402af61affbe997c37bb30a5d791c3d26a530e41393cc53f194fa",
+      "hash": "b5f6a622bdf08ce963e710dcc8289d4c3a66e5e802e2e08cdd9f74979f7d9008",
       "route": "/ko/utilities/categories/nature/seed-stratification-calendar/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/nature/urban-garden-rainwater-and-soil-planner/": {
-      "hash": "287ba3a3b9def30cc7bb003759c3ec41f6b7d45ca78056877f7999227c11ad2d",
+      "hash": "0ca4139d7ccd951fb15676159e2618216421c5bc6cb36b63aae8a50bcebfc21f",
       "route": "/ko/utilities/categories/nature/urban-garden-rainwater-and-soil-planner/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/nature/wildlife-camera-trap-effort-planner/": {
-      "hash": "7a810688e7d75b9e8debac6ee40b67cede785013430e44c71745675949e97275",
+      "hash": "1b0a4eee9da551e1ead962958d987b28d771dec3805221dc335f3271309d8b57",
       "route": "/ko/utilities/categories/nature/wildlife-camera-trap-effort-planner/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/natuur/berekenaar-potgrond-en-regenwater-stadstuin/": {
-      "hash": "e98eb5a6c3746da8ebd2c6a108fc242378ef26ce1ae6679acd766afbbf3c0c38",
+      "hash": "950017b775ad0b5228822f695fb2c6ac6ce00e7b95a63f9315edaedca153b78a",
       "route": "/nl/hulpmiddelen/categorieen/natuur/berekenaar-potgrond-en-regenwater-stadstuin/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/natuur/compostvat-volume-bruin-groen-verhouding-rekenmachine/": {
-      "hash": "60ec6fe47989434491c09ebf9fbd853fba6fb960acca51e01797e492dd7c8969",
+      "hash": "06b18b161d2c84ef68641f8e886cbf8efd9bc5d281c3adfb7055a7e796338ef2",
       "route": "/nl/hulpmiddelen/categorieen/natuur/compostvat-volume-bruin-groen-verhouding-rekenmachine/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/natuur/digitale-co2-voetafdruk-calculator/": {
-      "hash": "3d0d5fea81f0f8e1ee7b4260797bb0f6ab9e90cf8a36370747c3dd9cde536a7e",
+      "hash": "d8b966b148a5209011e18ea9055d70fb85ddbf538d2a2d9ff0890c0ca2cf4c7e",
       "route": "/nl/hulpmiddelen/categorieen/natuur/digitale-co2-voetafdruk-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/natuur/": {
-      "hash": "a6262c2e58394a33f2b7f9a46c18f5664880a16cf0cf387836c1711554a03380",
+      "hash": "ec775c35948184b34a8dfeb2d22b2249e526b4b3c8350455e0e78a2e668522af",
       "route": "/nl/hulpmiddelen/categorieen/natuur/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/natuur/kalender-zaadstratificatie/": {
-      "hash": "393d7ee7294869229c0a850c9c0c2f031cd41167a40431acadcdfc746df07211",
+      "hash": "92d3b72c8f40721dd219c14fa38841722a1a937d71104c95b609da612a3c7b1b",
       "route": "/nl/hulpmiddelen/categorieen/natuur/kalender-zaadstratificatie/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/natuur/krekels-thermometer/": {
-      "hash": "c4cd39ff1c871e974c40972ae21a88dbb1aa344cab793d86327f67de711c5ca8",
+      "hash": "863d426bf6e5bda13e61d789f4bebbf05d87ca4750bb6dd0165970b3012cfb46",
       "route": "/nl/hulpmiddelen/categorieen/natuur/krekels-thermometer/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/natuur/planner-inspanning-wildcamera/": {
-      "hash": "4017b0d1e95635d0e2a960a36515e34edc0f24d84fcc3b4021f82fc26d584ec4",
+      "hash": "2a5e4469ae45a156dbdafb04372b994f1495310584e6a2b28864ea60e8f635d9",
       "route": "/nl/hulpmiddelen/categorieen/natuur/planner-inspanning-wildcamera/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/natuur/regenwater-opvang-calculator/": {
-      "hash": "17106e721aad588fc7bdae6e491a7601236093f5151f1a9715e0bd6627a2df6d",
+      "hash": "fb7a3db607a182870e55ba58a491a3efc490db6dcefaef949e20dd8be8bc22ce",
       "route": "/nl/hulpmiddelen/categorieen/natuur/regenwater-opvang-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/natuur/zaaiafstand-zaaimachine-kalibratiecalculator/": {
-      "hash": "bcdc63ba507e2528fe501be075925a635cb75c93c4b327bc9427f1eba95b6fa0",
+      "hash": "fc3c048f8945b2e547419692160dcd8692a1c3284d333b58908ca87a4757123a",
       "route": "/nl/hulpmiddelen/categorieen/natuur/zaaiafstand-zaaimachine-kalibratiecalculator/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/natura/": {
-      "hash": "59e30ef01c50cd8b3cb8f943ba6466a2f4909c65fadc93d40a2482be22c6e434",
+      "hash": "8fcbfc56589726b7084a45c6d338d9b53b2591278afba9d724b2edc755ccb8e5",
       "route": "/pl/narzedzia/kategorie/natura/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/natura/kalendar-stratyfikacji-nasion/": {
-      "hash": "bd2ac47f0cfb84de762ec226c0f077ca6d922600b01c8670172e2b0872f9c22f",
+      "hash": "cb46d09bc74b74ffaf90d57963915282bb1bb26fcc8b8255f909e03c5474ba7a",
       "route": "/pl/narzedzia/kategorie/natura/kalendar-stratyfikacji-nasion/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/natura/kalkulator-cyfrowego-sladu-weglowego/": {
-      "hash": "80a39b252506fb38359c9e56034af66518c5b6619ef5e0b8c6a2f3e553105cf3",
+      "hash": "37bdc314f1303ce8f8f1c4318a65b67ff327c5d218f7ad39ef820aef09d073d8",
       "route": "/pl/narzedzia/kategorie/natura/kalkulator-cyfrowego-sladu-weglowego/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/natura/kalkulator-podloza-i-deszczowki-do-ogrodu/": {
-      "hash": "15c76f532b4090f2cd00a507b99471198699160dee9aa479b4f149b54f8ace8e",
+      "hash": "2a2651c6f563c84c1edf01326ec39a67bb42d4726b7a5ba9eeda5bb12f0785b2",
       "route": "/pl/narzedzia/kategorie/natura/kalkulator-podloza-i-deszczowki-do-ogrodu/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/natura/kalkulator-pojemnosci-kompostownika-proporcje-brazowe-zielone/": {
-      "hash": "afa0cce3dbe75c4689b67e1b8e0fa8dfe42228d13025acee2efb7f4c8ace257d",
+      "hash": "ff2525b583cc7d05578fb4ed6e5ec9e0569b77c80e35403a480a78565264a952",
       "route": "/pl/narzedzia/kategorie/natura/kalkulator-pojemnosci-kompostownika-proporcje-brazowe-zielone/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/natura/kalkulator-wody-deszczowej/": {
-      "hash": "102fe1fe7af4db8564ddd990ae5c5b8378f7c72a74e8a7ef4f80d78abd0b981a",
+      "hash": "8bd12a927d13596caed0904dffee59075a5af1edb944507cc49905692efa25e5",
       "route": "/pl/narzedzia/kategorie/natura/kalkulator-wody-deszczowej/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/natura/kalkulator-wysiewu/": {
-      "hash": "b90754fa400b2135ba3c1affd95b846aa7bbefadabd3d44f2f51855d83f1318e",
+      "hash": "8236c94467b711a6963ea0bdce456890b5294f644bdc737ee89fba941f0a3cfe",
       "route": "/pl/narzedzia/kategorie/natura/kalkulator-wysiewu/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/natura/planer-wysilku-fotopulapek-przyrodniczych/": {
-      "hash": "7e5e886763bedf258e74a7c8ce77e1f1ec5d81d2d7bb1d3b7e584e2d525322e7",
+      "hash": "502d6eaa9f0a469a22fbe10b8468811013512aedc808eb68fec9b1d29f9c4fff",
       "route": "/pl/narzedzia/kategorie/natura/planer-wysilku-fotopulapek-przyrodniczych/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/natura/termometr-swierszczy/": {
-      "hash": "37fdb5388592d8f1dd9233538f6d310dbcdf3330f4193cea04c1272ad7665047",
+      "hash": "31ca81b4c8cb85632b31ffa708d532bfdbbf8e63569c446ad18f76321feebcab",
       "route": "/pl/narzedzia/kategorie/natura/termometr-swierszczy/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/natureza/calculadora-agua-da-chuva/": {
-      "hash": "62e1c243e51b0987bd598a82c8188b0ac0c5f7f9db0e01f593489c189548efc1",
+      "hash": "fce071fb51988d509ee145e83ff1bcc4c11b01b093f864369fb7dc4638a24254",
       "route": "/pt/utilidades/categorias/natureza/calculadora-agua-da-chuva/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/natureza/calculadora-pegada-carbono-digital/": {
-      "hash": "6af0fc79876a839ca64708bb47dd8bd95c37150bda6be815e6d2e262de73ac52",
+      "hash": "031a156957942ff85809fa9171e5eaa8327c2f2ffaad4191e35957af46d48040",
       "route": "/pt/utilidades/categorias/natureza/calculadora-pegada-carbono-digital/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/natureza/calculadora-sementes/": {
-      "hash": "158c5a9a1db35bcb0c3cd6ef3ce39ca2a14181fee459cf0c777f28f7b7cae269",
+      "hash": "34f0ba5a4213d5caaca5ce7714c8cccf570a112c26b7c263c3cb3ba288265b71",
       "route": "/pt/utilidades/categorias/natureza/calculadora-sementes/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/natureza/calculadora-substrato-e-captacao-agua-chuva/": {
-      "hash": "0d59e5bd26e5f794399d5bda10cca0c81ad2bb31949cc9dac91cfb164e9e2c49",
+      "hash": "db54f9e294f50f5478e010f14c8be69ab35bffe71c5403420e3676171a99ffa0",
       "route": "/pt/utilidades/categorias/natureza/calculadora-substrato-e-captacao-agua-chuva/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/natureza/calculadora-volume-composteira-proporcao-castanhos-verdes/": {
-      "hash": "54aa4a3d024b2f5b505ff70269c84abd171ebf04b5c1c78521b8ef775ff789b7",
+      "hash": "f0fc7892c7b1f06145b04a991a23e55edc903170a6cd16e7ffe85c6969b279b7",
       "route": "/pt/utilidades/categorias/natureza/calculadora-volume-composteira-proporcao-castanhos-verdes/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/natureza/calendario-estratificacao-sementes/": {
-      "hash": "3c46cb7bed2c59bb2e00ca88959f1dc5821b50d613c910129313b4dccee62e43",
+      "hash": "2fc085fa06a92d821e74e9b249d75f2d90ec460e5cf2f0064956c49e111fa8d4",
       "route": "/pt/utilidades/categorias/natureza/calendario-estratificacao-sementes/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/natureza/": {
-      "hash": "58f449b47c3b6664a70f28a2aa4d98eec528936151892ab7cd5f178793d06564",
+      "hash": "d8c47eb6e06efa0cac720852f9ecfd1052336f58b7fb6b2db772f05478bb0e33",
       "route": "/pt/utilidades/categorias/natureza/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/natureza/planejador-esforco-armadilhas-fotograficas/": {
-      "hash": "441a3c5dea4bc488432f33755c893df0d31b7b7f09c1d68c5d776e4dd49b2ab4",
+      "hash": "639d00fc3a6c37f4686f34173f264a7d062dfa00c9e5f1cdcaeb7945601542d4",
       "route": "/pt/utilidades/categorias/natureza/planejador-esforco-armadilhas-fotograficas/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/natureza/termometro-grilo/": {
-      "hash": "c1e3afaf1b8c656170fa6266f405a35168bca70030451e32fefea524919df8a2",
+      "hash": "01ede93504ac1b017c8f3c1d68a42b984894c99da22d062c8185922765e602b7",
       "route": "/pt/utilidades/categorias/natureza/termometro-grilo/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/priroda/": {
-      "hash": "c4dfc429a25fd5fa3610cbf909864ae7dced74e86391503b24dee2e78871b6c9",
+      "hash": "a5db72cb92f27fee9799b069be3034254bfd7eec9437c6df333f13312b142c52",
       "route": "/ru/instrumenty/kategorii/priroda/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/priroda/kalendar-stratifikacii-semyan/": {
-      "hash": "c642a9740d20622d4455b5afa4f1b17a383557d4063bf74a2eed2aa3f462b9d8",
+      "hash": "76c9f79a930dbcf804a10dc0416a6b2d487eb7ee749faa70954d57299ab755b6",
       "route": "/ru/instrumenty/kategorii/priroda/kalendar-stratifikacii-semyan/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/priroda/kalkulyator-dozhdevoy-vody/": {
-      "hash": "b357207dcc9a5e958bee9005ec4d03301d0c3897f9ae373752afa597578b7f33",
+      "hash": "ef7b7ce32557f32fd70352ae0d40080ab298a0354fbad464ac5df7933c63e939",
       "route": "/ru/instrumenty/kategorii/priroda/kalkulyator-dozhdevoy-vody/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/priroda/kalkulyator-grunta-i-dozhdevoy-vody-dlya-sada/": {
-      "hash": "690919fed680785a00f0954f5ffcaf15487119910b5d513a5d6e16d09185d88f",
+      "hash": "a58bbeb1b80e59655be1aa537a4e6b442a1fb1fa95b7585c835f222472668fbb",
       "route": "/ru/instrumenty/kategorii/priroda/kalkulyator-grunta-i-dozhdevoy-vody-dlya-sada/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/priroda/kalkulyator-obema-kompostnera-sootnoshenie-korichnevyh-i-zelenyh/": {
-      "hash": "326f24da6b7fe01cd5f0e29500f3e8ed1a87b14da7ac06d7a3b2088b2790535a",
+      "hash": "71239f2bc7c88b8c6fc1a22cb89611e37ad616540c7c41e32796aa8f4af514bf",
       "route": "/ru/instrumenty/kategorii/priroda/kalkulyator-obema-kompostnera-sootnoshenie-korichnevyh-i-zelenyh/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/priroda/kalkulyator-tsifrovogo-uglerodnogo-sleda/": {
-      "hash": "5dccc747591f80c7a3e12d11080dbbf3f31e9246f08a5db73d0103e7bff5f783",
+      "hash": "8a0785558f9af7e340b9b928e72dc6d697473515678e782293156bc160f26218",
       "route": "/ru/instrumenty/kategorii/priroda/kalkulyator-tsifrovogo-uglerodnogo-sleda/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/priroda/kalkulyator-vyseva/": {
-      "hash": "fee559f4130229eaf4337ab65884714f8b9d8500240ed90925524ee5cc38c199",
+      "hash": "675430e2790bfea0b03b3f31e6587a5570624aeedec8435156a9fea4105d22b5",
       "route": "/ru/instrumenty/kategorii/priroda/kalkulyator-vyseva/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/priroda/planirovshchik-usilii-fotolovushek/": {
-      "hash": "c011c3a9bb6bc6d22d6c22f2b70c76ddf5f7d84bbd5458c4fb5f03be509db24c",
+      "hash": "c794f46bce202e3767aaeaf9f27f451cf5537bcf2526e0e99778928b8d4ba714",
       "route": "/ru/instrumenty/kategorii/priroda/planirovshchik-usilii-fotolovushek/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/priroda/sverchkovyy-termometr/": {
-      "hash": "814c66b6ad7708049c89ad23ee42b3b4d1535dc49393ad1e5f86834d2d2001de",
+      "hash": "2bfc42548629dd49a997a469e240f3d1883ff4fabcbd4973c59286c2f8ec75bf",
       "route": "/ru/instrumenty/kategorii/priroda/sverchkovyy-termometr/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/natur/digitalt-koldioxidavtryck-kalkylator/": {
-      "hash": "91fa75bf54033cb92d489e407f8d48443dd6defb332694e4a867654572f890a0",
+      "hash": "96d98adc601922c17a7664e949ed27b2707e75e7b38db3358440ed53036f7fe9",
       "route": "/sv/verktyg/kategorier/natur/digitalt-koldioxidavtryck-kalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/natur/fro-kalkylator/": {
-      "hash": "eaa3d0dff0d1fc27fd4dc9c37ee260005fba5c5eeb3740c5d1c79f6c66095dd0",
+      "hash": "fbb4a0b27313a312a817c749ee44d8365aba51f28375c7ffc7d9b2f6a4ccc74f",
       "route": "/sv/verktyg/kategorier/natur/fro-kalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/natur/": {
-      "hash": "75de2d677eb6428f6e23560006ead37020bcdff4d99782f955d11a15b71d9ee8",
+      "hash": "c1f7596e8ee27f9ebdd931e8323624e109a454f8bf1f0c139517bc34d760977b",
       "route": "/sv/verktyg/kategorier/natur/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/natur/kalender-frostratifiering/": {
-      "hash": "0e8b011b5baef90e4a4b864611d2599509236080d065b550f24efcbe88871117",
+      "hash": "71b37ad1cb9916900bdfacb0e1815ed8a7fed19bfdd23f4881ff2940d27e5638",
       "route": "/sv/verktyg/kategorier/natur/kalender-frostratifiering/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/natur/kalkylator-jordvolym-och-regnvatten/": {
-      "hash": "ade0e433066420ebb5b237e46df543c99e055a72aa077e526973c203bda20c8b",
+      "hash": "dac53ffbe96cbe4ec5262acf21676f4261c5741e0197286766f4d634e1137a6e",
       "route": "/sv/verktyg/kategorier/natur/kalkylator-jordvolym-och-regnvatten/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/natur/kompostbehallare-volym-brunt-gront-forhallande-raknare/": {
-      "hash": "293aaf0035981074bf2f4505bca22e7775a74189f63974263badd4947b1cf3a8",
+      "hash": "5c9dd41b7b713c50b32c7724e7a2c0a071d412932fafbd96c3e1095e0d2eed5f",
       "route": "/sv/verktyg/kategorier/natur/kompostbehallare-volym-brunt-gront-forhallande-raknare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/natur/planer-for-viltkamerors-insats/": {
-      "hash": "6693927af1c6fb1b242d83ed9caf46bad5b19053bd1655866086e04b9b85a8c6",
+      "hash": "e194ec8414798c521fcd4752e9c7c8379a022fccb19eca24bd958a8fe9e4064f",
       "route": "/sv/verktyg/kategorier/natur/planer-for-viltkamerors-insats/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/natur/regnvatten-kalkylator/": {
-      "hash": "93e6ce6e67c56c66b91d9a5e3fb08197ed00fb8bf4d47985b8458e6c163c6aa9",
+      "hash": "3106e863fb529e86a18a83516e37adcdee01c049781ec8db44bc591531259ec5",
       "route": "/sv/verktyg/kategorier/natur/regnvatten-kalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/natur/syrstermometer/": {
-      "hash": "2b83c9f18ab4644654d5a00884f69bde80fdedd86289780c394495b4fe6ce582",
+      "hash": "93a8ecc03ff89b156703fb21869c6e8cd47902a4a190fc025057528b730f8f37",
       "route": "/sv/verktyg/kategorier/natur/syrstermometer/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/doga/cricket-termometer/": {
-      "hash": "bec7533a865e841ec6ffcfa77d15bd9523e2d7eb33ae45a02f195295e6621044",
+      "hash": "d400929a38eb887599e1bc1e7c174a0d5e2ef208349407704e2a4dcf36651796",
       "route": "/tr/araclar/kategoriler/doga/cricket-termometer/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/doga/dijital-karbon-ayak-izi-hesaplayici/": {
-      "hash": "ba1fa82b4297dee60ff28e08909764d46aabb25814074bcf0719f68e6eac4754",
+      "hash": "593f31dc5c8610e39a9dff1fffede16276c9e1ffc8119e2e10c3a4bce8220518",
       "route": "/tr/araclar/kategoriler/doga/dijital-karbon-ayak-izi-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/doga/": {
-      "hash": "b5b3ad5735925716dcdfa63e48d8bddbf2d7e116aa20b1528cd03e04b4104e54",
+      "hash": "0f4681533641774e46d6d87c7d0d57136dab66ed61b87ac244e59d21c7aff8fd",
       "route": "/tr/araclar/kategoriler/doga/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/doga/kompost-kutusu-hacmi-kahverengi-yesil-oran-hesaplayici/": {
-      "hash": "a754e50357470298825c6f9b074b7921f8c984595cfc80af8c501cf97f0794ec",
+      "hash": "bd000bf3b2493d42aca2a5004a889c81ef081e39a3e6c1d3cb276f679c75a7ef",
       "route": "/tr/araclar/kategoriler/doga/kompost-kutusu-hacmi-kahverengi-yesil-oran-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/doga/sehir-bahcesi-toprak-ve-yagmur-suyu-planlayici/": {
-      "hash": "dc7ca1047d24c10871464a70fde92102d2f42b5524661ab0292fd68466b7720a",
+      "hash": "bceb95474311f204ee3ffcbc5f069339ad292bd57cf9527f9d43107c5c1dcdd0",
       "route": "/tr/araclar/kategoriler/doga/sehir-bahcesi-toprak-ve-yagmur-suyu-planlayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/doga/tohum-hesaplayici/": {
-      "hash": "b040512ed973c69631840524805b6ea536aab42606e6a066d39e4c856c108cca",
+      "hash": "50b88950006b14c6efd6ded76f37513add74ed33c97fac47c0ae4c6283ed024d",
       "route": "/tr/araclar/kategoriler/doga/tohum-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/doga/tohum-tabakalandirma-takvimi/": {
-      "hash": "0382180e1d918eb3f33a40a5e61e9893a93116ab13587f49b53b0fe945fcf436",
+      "hash": "77758a4860bbd93bafef32460c35a3b5ed6d6b15a454e3ef2ab4c3145a587b93",
       "route": "/tr/araclar/kategoriler/doga/tohum-tabakalandirma-takvimi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/doga/yaban-hayati-fotokapan-caba-planlayici/": {
-      "hash": "32773448630e06b6b6f6a074da5e3086690a4ce60346b2c8f4785c60f25e9b77",
+      "hash": "b77acbac1d7e8519722568b77ff6e4388390bd158886830a9e06977c6d346f9e",
       "route": "/tr/araclar/kategoriler/doga/yaban-hayati-fotokapan-caba-planlayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/doga/yagmur-suyu-hesaplayici/": {
-      "hash": "0dc0ca446c157cec8a5b96bfce5f16469fad151f895ae809a921afce7a45a7c1",
+      "hash": "d48fbf94248b6a6acd03edac714c2f0eb635f8b8d994858cea4b653bf6c4016c",
       "route": "/tr/araclar/kategoriler/doga/yagmur-suyu-hesaplayici/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-agua-lluvia/": {
-      "hash": "c5d96de3dbd0b7801d8aa6e38f29a6b0bc59241fca756fe78f67a02191d3f656",
+      "hash": "1e38c05739c66748e5617d13019f0724e55aacfe51885d5b116b4e5d8e8c7ef3",
       "route": "/utilidades/calculadora-agua-lluvia/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-huella-carbono-digital/": {
-      "hash": "d4528d303274055bc1edd02df75ffe1f20bd878b38addfd6b91ae019cf6f668c",
+      "hash": "f17eec58f5f43596ba92f375b47cc3499aa1b224525d062918d4c75d79916f8e",
       "route": "/utilidades/calculadora-huella-carbono-digital/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-siembra/": {
-      "hash": "507d313cb22c232b6035b25b732bdb4ba950a86fe25c1a9960c2d57132c18e8b",
+      "hash": "cdb47f49392187de0783a0ce1ca47180c27c1f9743c37a21222b83357c159991",
       "route": "/utilidades/calculadora-siembra/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-sustrato-y-captacion-agua-lluvia/": {
-      "hash": "64eeb7ac18dab4c2e1995028486915170b23a2493ea93127fc5e01b5b5bfb27d",
+      "hash": "bf97c41d89aa4c2bc960d90a573e66e2f72d3041ac2cafe36044c58abfcfe2a7",
       "route": "/utilidades/calculadora-sustrato-y-captacion-agua-lluvia/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-volumen-compostador-proporcion-marrones-verdes/": {
-      "hash": "66d5659ed282bb06376a0659437a026a7b951182c268a362dce94c5fcdce772a",
+      "hash": "081cf0cf9fcd46c97cc440f7c103848b126fb11925e0de465f080a8f53c92395",
       "route": "/utilidades/calculadora-volumen-compostador-proporcion-marrones-verdes/"
     },
     "https://www.jjlmoya.es/utilidades/calendario-estratificacion-semillas/": {
-      "hash": "a57db061ee606bb2b75e93946ed1a63ca8f4e8ff1f6cefbcb125a4e80758998a",
+      "hash": "1cc705e04672586c6e0584a341c149cf2747474e25ae21ca5b118038b609ac4d",
       "route": "/utilidades/calendario-estratificacion-semillas/"
     },
     "https://www.jjlmoya.es/utilidades/categorias/naturaleza/": {
-      "hash": "01c3d130f5f46e35e4e0d6fc0377b33607dd712f584c81b90dc8fe1926f797b4",
+      "hash": "5562fbad47c75b4ff3e6c8859daddd1673abcafb74019a0367392170e2911094",
       "route": "/utilidades/categorias/naturaleza/"
     },
     "https://www.jjlmoya.es/utilidades/planificador-esfuerzo-fototrampeo-fauna/": {
-      "hash": "aba42ef1a1f48c89f3a7aa8f851e99c072504d6f69b299dec1e59dd97c4c97cf",
+      "hash": "78dbf9eb8317d9eced21beb643cfc1c1cb968fa5949c50ca05a1b1e022379d30",
       "route": "/utilidades/planificador-esfuerzo-fototrampeo-fauna/"
     },
     "https://www.jjlmoya.es/utilidades/termometro-grillo/": {
-      "hash": "16ed4c09d7a6d6860e99cf1b1ff0b00ca6e623591ef1aae092499333298baeec",
+      "hash": "36a4a333749508a4e6d7e89a396d65061f776e682f565a955a7c6057b29a2d6c",
       "route": "/utilidades/termometro-grillo/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/nature/compost-bin-volume-and-browns-greens-ratio-calculator/": {
-      "hash": "3e151aaa27e22a6a98b0ab4be004b02127e00e1efaed04c25ffe38c770208d09",
+      "hash": "03fd62df2750c4c969a1130d1a584794d1d4893d2c0b72c21dd805d32217efe3",
       "route": "/zh/utilities/categories/nature/compost-bin-volume-and-browns-greens-ratio-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/nature/cricket-thermometer/": {
-      "hash": "eb8d6fb0d309b6ee79ccd71de4ea03eba3a265a11da6681599aade9b2ab1ff62",
+      "hash": "d364cb3f2683d0546beee9615c96aa2628e8866395be699dc27ea5b196ccde3a",
       "route": "/zh/utilities/categories/nature/cricket-thermometer/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/nature/digital-carbon-footprint-calculator/": {
-      "hash": "6e2eeefed10a0d043ac5789ffcfee020d191a14de508db84e9315736e65fa7fb",
+      "hash": "5b5d82b0ba79bee7ae4d683b05bb9fbd45bc9e13f9c51a1bfd6d5d038c264ece",
       "route": "/zh/utilities/categories/nature/digital-carbon-footprint-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/nature/": {
-      "hash": "1683500be10086971b925cfeabd3e6a7b3e58338d062c47e0da75839d9dae786",
+      "hash": "00d9dd2de834bd02b85b862fe1b6aeb9065061e21b41725998cddd15f7e4c776",
       "route": "/zh/utilities/categories/nature/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/nature/rainwater-calculator/": {
-      "hash": "8971b635106b03c12c76c2b3131435a3eda219c57712d588b43ef7a287fa876b",
+      "hash": "c795eccdd90e377ea5ae442eb4c5db750ec6c72f4616b5d44aaf19429e0e12a9",
       "route": "/zh/utilities/categories/nature/rainwater-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/nature/seed-calculator/": {
-      "hash": "b88e723ede52fc67ecb8cd5d4cfb7db23fddd4788ebbb29920eab72b65b17ceb",
+      "hash": "83a2702351767510dbdd8f969836d52aaa3e6cf940f3d1d4adfcb293aafe1b89",
       "route": "/zh/utilities/categories/nature/seed-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/nature/seed-stratification-calendar/": {
-      "hash": "40d334fb87658cc1687dca67778d1599a97a21cc0996f824c0a38a73bd402f5d",
+      "hash": "766ff33fa4b75d68cbddf9e6161c9f5741c4de92ae6e0198b0792da4c0d69fb2",
       "route": "/zh/utilities/categories/nature/seed-stratification-calendar/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/nature/urban-garden-rainwater-and-soil-planner/": {
-      "hash": "9a278311a12cde11a14e1df446cf750a16432c10b02020da69b16d86b17cc6c4",
+      "hash": "241e73d13443e8d1e3c2d70e0a4526fd82279d8f0c5c5e21b2f8cb3f92266f9b",
       "route": "/zh/utilities/categories/nature/urban-garden-rainwater-and-soil-planner/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/nature/wildlife-camera-trap-effort-planner/": {
-      "hash": "9221a92526450e49c7b48e57bdb0ad4bba04083a80bbdf623635129a0f0cdd3c",
+      "hash": "f6b6984ab051d2b1c6f3cd56a452412471d1ae1e55b62619a13c93e34aef86dc",
       "route": "/zh/utilities/categories/nature/wildlife-camera-trap-effort-planner/"
     }
   }

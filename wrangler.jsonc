@@ -35,6 +35,10 @@
             "zone_name": "jjlmoya.es"
         },
         {
+            "pattern": "www.jjlmoya.es/utilidades/calendario-estratificacion-semillas*",
+            "zone_name": "jjlmoya.es"
+        },
+        {
             "pattern": "www.jjlmoya.es/utilidades/calculadora-sustrato-y-captacion-agua-lluvia*",
             "zone_name": "jjlmoya.es"
         },
